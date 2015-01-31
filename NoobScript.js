@@ -15,12 +15,12 @@ function noobScript() {
     $('<link type="text/css" rel="Styles" href="https://rawgit.com/vav17/NoobScript-331/master/Styles.css"/>').appendTo("head")
     $('<div id="Intro" style ="color: #4169E1; border: 1px solid #D3D3D3; font-size: 14pt; font-family: Lucida Console; text-align: center">Running NoobScript V1.2!</div>').appendTo("#chat-messages")
     
-    $('<div id="Madyby" style ="width: 120px; height: 27px"><a href="http://sd.keepcalm-o-matic.co.uk/i/we-are-sexy-people.png" target="_blank" style="font-family: Lucida Console; color: #D3D3D3; text-align: center">Running NoobScript</a></div>').appendTo("#app")
+    $('<a id="Madeby" href="http://sd.keepcalm-o-matic.co.uk/i/we-are-sexy-people.png" target="_blank">Running NoobScript</a></div>').appendTo("#app")
     //$('#Madyby').css('position', 'absolute')
     //$('#Madyby').css('top', 550);
     //('#Madyby').css('left', 0)
     //
-    CT = ["BOW TO US"];
+    CT = ["WhoOurScript"];
     //Chat Triggers ^
     CMDS = ["cmds", "credits"];
     //Chat commands ^
@@ -35,12 +35,13 @@ function noobScript() {
         }
     }
     //Chat Triggers
-    API.on(API.CHAT, chatKey);
+    /*API.on(API.CHAT, chatKey);
     function chatKey(data){
         if (data.message.slice(0,12) === CT[0] && data.un === "donvoo" || "SnakedMusique") {
-            API.sendChat("*Bows*")
+            API.sendChat("I'm Running NoobScript!")
         } 
     }
+    */
 }
 
 
