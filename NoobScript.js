@@ -19,30 +19,34 @@ function noobScript() {
     //$('#Madyby').css('position', 'absolute')
     //$('#Madyby').css('top', 550);
     //('#Madyby').css('left', 0)
-    //
     CT = ["BOW TO US"];
     //Chat Triggers ^
-    CMDS = ["cmds", "credits"];
+    CMDS = ["cmds", "credits", "kill"];
     //Chat commands ^
     API.on(API.CHAT_COMMAND, commands);
     function commands(data) {
         this.data = data;
+        	//cmds
         if (data === "/" + CMDS[0]) {
-            API.chatLog("Commands: "+CMDS.toString(),1)
-        }
-        if (data === "/" + CMDS[1]) {
+            API.chatLog("Commands: " + CMDS.toString(),1)
+            //credits
+        }else if(data === "/" + CMDS[1]) {
             $('<div class="BasicText" style ="color: #4169E1; border: 1px solid #D3D3D3; font-size: 12pt; font-family: Lucida Console; text-align: center">Made By donvoo & SnakedMusique</div>').appendTo("#chat-messages")
+            //kill
+        }else if(data === "/" + CMDS[2]) {
+        	API.chatLog("OH GOD WHY WOULD YOU DO THAT!?!?!");
+        	throw "Killing NoobScript";
         }
     }
+
     //Chat Triggers
     API.on(API.CHAT, chatKey);
-    function chatKey(data){
-        if (data.message.slice(0,12) === CT[0] && data.un === "donvoo" || "SnakedMusique") {
-            API.sendChat("*Bows*")
+    function chatKey(keyData){
+        if (/BOW TO US/i.test(keyData.message) && API.getUser().id === 4251764 || API.getUser().id ===  4537120) {
+            API.sendChat("*Bows*");
         } 
     }
 }
-
 
 //https://rawgit.com/vav17/NoobScript-331/master/NoobScript.js
 //javascript:(function(){$.getScript('https://rawgit.com/vav17/NoobScript-331/master/NoobScript.js');}());
