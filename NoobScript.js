@@ -20,7 +20,7 @@ function noobScript() {
     //$('#Madyby').css('top', 550);
     //('#Madyby').css('left', 0)
     //
-    CT = ["WhoOurScript"];
+    CT = ["BOW TO US"];
     //Chat Triggers ^
     CMDS = ["cmds", "credits"];
     //Chat commands ^
@@ -35,13 +35,12 @@ function noobScript() {
         }
     }
     //Chat Triggers
-    /*API.on(API.CHAT, chatKey);
+    API.on(API.CHAT, chatKey);
     function chatKey(data){
         if (data.message.slice(0,12) === CT[0] && data.un === "donvoo" || "SnakedMusique") {
-            API.sendChat("I'm Running NoobScript!")
+            API.sendChat("*Bows*")
         } 
     }
-    */
 }
 
 
