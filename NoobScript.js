@@ -43,3 +43,7 @@ function noobScript() {
     }
     */
 }
+
+
+//https://rawgit.com/vav17/NoobScript-331/master/NoobScript.js
+//javascript:(function(){$.getScript('https://rawgit.com/vav17/NoobScript-331/master/NoobScript.js');}());
