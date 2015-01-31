@@ -41,4 +41,8 @@ function noobScript() {
         } 
     }
     */
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/master
