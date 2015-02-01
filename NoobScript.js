@@ -47,6 +47,8 @@ var noobScript = function() {
             //kill
         } else if (data === "/" + CMDS[2]) {
             API.chatLog("OH GOD WHY WOULD YOU DO THAT!?!?!");
+            var foot = document.getElementById("foot")
+            foot.parentNode.removeChild(foot)
             API.off();
             noobScript = null;
             //raw
@@ -56,6 +58,8 @@ var noobScript = function() {
         } else if (data == "/" + CMDS[4]) {
             console.log("NSMain: reloading");
             API.chatLog("Reloading NoobScript-331",true);
+            var foot = document.getElementById("foot")
+            foot.parentNode.removeChild(foot)
             API.off();
             noobScript = null;
             //refreshEmotes
