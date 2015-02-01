@@ -39,7 +39,7 @@ var noobScript = function() {
         } else if (data == "/" + CMDS[3]) {
             newTab("https://rawgit.com/vav17/NoobScript-331/master/NoobScript.js");
             //NSreload
-        } else if (Data == "/" + CMDS[4]) {
+        } else if (data == "/" + CMDS[4]) {
             console.log("NSMain: reloading");
             API.chatLog("Reloading NoobScript-331",true);
             API.off();
