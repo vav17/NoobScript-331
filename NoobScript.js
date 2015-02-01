@@ -44,6 +44,10 @@ var noobScript = function() {
             API.chatLog("Reloading NoobScript-331",true);
             API.off();
             noobScript = null;
+        } else if (data == "/refreshCommands"){
+            API.sendChat("/reload");
+            API.sendChat("/NSreload")
+            setTimeout(function(){API.sendChat("/addemotes https://dl.dropboxusercontent.com/s/e59a3abu8j02sqw/Nightcore-331Emotes.json"))}, 7500);
         }
     }
 
