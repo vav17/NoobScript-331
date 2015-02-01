@@ -38,14 +38,14 @@ function noobScript() {
     }
 
     //Chat Triggers
-   // API.on(API.CHAT, chatKey);
-
+    API.on(API.CHAT, chatKey);
     function chatKey(keyData) {
-        if (/BOW TO US/i.test(keyData.message) && keyData.un === "donvoo" || keyData.un === "SnakedMusique") {
-            API.sendChat("*Bows*");
+        if (keyData.message == CT[0]) {
+            if (keyData.un === "donvoo" || keyData.un === "SnakedMusique"){
+                API.sendChat("*Bows*");
+            }
         }
     }
 }
-
 //https://rawgit.com/vav17/NoobScript-331/master/NoobScript.js
 //javascript:(function(){$.getScript('https://rawgit.com/vav17/NoobScript-331/master/NoobScript.js');}());
