@@ -1,9 +1,8 @@
-#Madeby {
+#foot {
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
   position: absolute;
-  top: 550px;
-  left: 0px;
-  color: #D3D3D3;
-  text-align: center;
-  font-family: Lucida;
-  font-size: 100pt;
+  bottom: 54;
+  right: 345;
 }
