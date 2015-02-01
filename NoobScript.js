@@ -10,7 +10,7 @@ setTimeout(startScript, 200);
 
 var noobScript = function() {
 
-        //sounds
+    //sounds
     $('head').append($('<audio id="SUGOI" src="http://vav17.com/wp-content/uploads/SUGOI.wav" />'));
     $('head').append($('<audio id="KAMI" src="http://k007.kiwi6.com/hotlink/j4qk58007e/smobyp.mp3" />'));
 
