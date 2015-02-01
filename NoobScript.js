@@ -59,31 +59,31 @@ var noobScript = function() {
             API.sendChat("/NSreload")
             setTimeout(function(){API.sendChat("/addemotes https://dl.dropboxusercontent.com/s/e59a3abu8j02sqw/Nightcore-331Emotes.json")}, 7500);
             //banned
-        } else if (cmdData == "/" + CMDS[5]) {
+        } else if (data == "/" + CMDS[5]) {
             API.sendChat("http://vav17.com/wp-content/uploads/2014/12/Good-luck-being-banned.gif");
             //API
-        } else if (cmdData == "/" + CMDS[6]) {
+        } else if (data == "/" + CMDS[6]) {
             newTab("http://support.plug.dj/hc/en-us/categories/200123567-API");
             //noskip
-        } else if (cmdData == "/" + CMDS[7]) {
+        } else if (data == "/" + CMDS[7]) {
             API.sendChat("http://vav17.com/wp-content/uploads/No-skip.png");
             //YES
-        } else if (cmdData == "/" + CMDS[8]) {
+        } else if (data == "/" + CMDS[8]) {
             API.sendChat("http://vav17.com/wp-content/uploads/YES.gif");
             //dafaq
-        } else if (cmdData == "/" + CMDS[9]) {
+        } else if (data == "/" + CMDS[9]) {
             API.sendChat("http://vav17.com/wp-content/uploads/Dafaq.png");
             //EHD
-        } else if (cmdData == "/" + CMDS[10]) {
+        } else if (data == "/" + CMDS[10]) {
             API.sendChat("http://vav17.com/wp-content/uploads/Extreme_Head_Desk.gif");
             //sowwy
-        } else if (cmdData == "/" + CMDS[11]) {
+        } else if (data == "/" + CMDS[11]) {
             API.sendChat("http://vav17.com/wp-content/uploads/sowwy.jpg");
             //copysong
-        } else if (cmdData == "/" + CMDS[12]) {
+        } else if (data == "/" + CMDS[12]) {
             copySong();
             //hahano
-        } else if (cmdData == "/" + CMDS[13]) {
+        } else if (data == "/" + CMDS[13]) {
             API.sendChat("http://vav17.com/wp-content/uploads/hahano.jpg")
         }
     }
