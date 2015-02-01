@@ -36,19 +36,19 @@
             "width": "35px"
         },
         "rspin": {
-            "height": "75%",
+            "height": "100%",
             "url": "http://i.imgur.com/RyyXwFC.gif",
-            "width": "75%"
+            "width": "100%"
         },
         "DNN": {
             "height": "35px",
             "url": "http://i.imgur.com/uiyQ3SB.png",
-            "width": "35px"
+            "width": "100%"
         },
         "jenny": {
             "height": "80px",
             "url": "http://i.imgur.com/eghUwsP.gif",
-            "width": "100%"
+            "width": "80%"
         }
     }
 }
