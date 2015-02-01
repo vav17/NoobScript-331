@@ -52,3 +52,57 @@
         }
     }
 }
+{
+    "Nightcore-331": {
+        "twerk": {
+            "height": "50px",
+            "url": "http://i.imgur.com/kF7m9Ab.gif",
+            "width": "50px"
+        },
+        "SNM": {
+            "height": "50px",
+            "url": "http://i.imgur.com/EHmrAp9.png",
+            "width": "50px"
+        },
+        "SnakedMusique": {
+            "height": "50px",
+            "url": "http://i.imgur.com/EHmrAp9.png",
+            "width": "50px"
+        },
+        "CarltonDance": {
+            "height": "35px",
+            "url": "https://fungustime.pw/tastyplug/emotes/gifs/29.gif",
+            "width": "51px"
+        },
+        "Fireworks": {
+            "height": "35px",
+            "url": "https://fungustime.pw/tastyplug/emotes/gifs/40.gif",
+            "width": "37px"
+        },
+        "Headbang": {
+            "height": "35px",
+            "url": "https://fungustime.pw/tastyplug/emotes/gifs/35.gif",
+            "width": "35px"
+        },
+        "HighShere": {
+            "height": "35px",
+            "url": "https://fungustime.pw/tastyplug/emotes/gifs/25.gif",
+            "width": "35px"
+        },
+        "rspin": {
+            "height": "75%",
+            "url": "http://i.imgur.com/RyyXwFC.gif",
+            "width": "75%"
+        },
+        "DNN": {
+            "height": "35px",
+            "url": "http://i.imgur.com/uiyQ3SB.png",
+            "width": "35px"
+        },
+        "jenny": {
+            "height": "160px",
+            "url": "http://i.imgur.com/eghUwsP.gif",
+            "width": "90px"
+        }
+    }
+}
