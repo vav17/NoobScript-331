@@ -41,9 +41,9 @@
             "width": "75%"
         },
         "DNN": {
-            "height": "50%",
+            "height": "35px",
             "url": "http://i.imgur.com/FRV1xsm.png",
-            "width": "50%"
+            "width": "35px"
         }
     }
 }
