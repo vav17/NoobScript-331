@@ -20,7 +20,7 @@ var noobScript = function() {
     $('<link type="text/css" rel="Styles" href="https://rawgit.com/vav17/NoobScript-331/master/Styles.css"/>').appendTo("#app")
     $('<div id="Intro" style ="color: #FF6600; border: 0px solid #D3D3D3; font-size: 16pt; font-family: Lucida Console; text-align: center">Running NoobScript V1.2!</div>').appendTo("#chat-messages")
     //$('<div id="foot" style ="background-color: black; border: 3px solid white; height: 30px; width: 30px; cursor: pointer"></div>').appendTo("#app")
-    $('<img id="foot" src="http://i.imgur.com/y72DG4H.png" style ="height: 30px; width: 30px; cursor: pointer"/>').appendTo("#app")
+    $('<img id="foot" src="http://i.imgur.com/4Ck5ULB.png" style ="height: 30px; width: 30px; cursor: pointer"/>').appendTo("#app")
     $('#foot').css('position', 'absolute');
     $('#foot').css('bottom', 54);
     $('#foot').css('right', 345);
