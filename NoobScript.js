@@ -17,9 +17,9 @@ var noobScript = function() {
 
     //onStartup
     console.log("NoobScript-331 Imported!");
-    API.sendChat("/addemotes https://fungustime.pw/tastyplug/emotes/json/emotes.json");
-    API.sendChat("/addemotes https://dl.dropboxusercontent.com/s/e59a3abu8j02sqw/Nightcore-331Emotes.json");
-    API.sendChat("/addemotes https://rawgit.com/vav17/NoobScript-331/master/Emotes.json");
+    API.sendChat("/emotes https://fungustime.pw/tastyplug/emotes/json/emotes.json");
+    API.sendChat("/emotes https://dl.dropboxusercontent.com/s/e59a3abu8j02sqw/Nightcore-331Emotes.json");
+    API.sendChat("/emotes https://rawgit.com/vav17/NoobScript-331/master/Emotes.json");
 
 
     $('<link rel="stylesheet" href="https://rawgit.com/vav17/NoobScript-331/master/Styles.css" type="text/css">').appendTo("head")
@@ -47,8 +47,6 @@ var noobScript = function() {
             //kill
         } else if (data === "/" + CMDS[2]) {
             API.chatLog("OH GOD WHY WOULD YOU DO THAT!?!?!");
-            var foot = document.getElementById("foot")
-            foot.parentNode.removeChild(foot)
             API.off();
             noobScript = null;
             //raw
@@ -58,8 +56,6 @@ var noobScript = function() {
         } else if (data == "/" + CMDS[4]) {
             console.log("NSMain: reloading");
             API.chatLog("Reloading NoobScript-331",true);
-            var foot = document.getElementById("foot")
-            foot.parentNode.removeChild(foot)
             API.off();
             noobScript = null;
             //refreshEmotes
@@ -68,7 +64,7 @@ var noobScript = function() {
             API.sendChat("/NSreload")
             setTimeout(function(){API.sendChat("/addemotes https://dl.dropboxusercontent.com/s/e59a3abu8j02sqw/Nightcore-331Emotes.json")}, 7500);
             API.sendChat("/addemotes https://fungustime.pw/tastyplug/emotes/json/emotes.json");
-            
+            setTimeout(function(){API.sendChat("/addemotes https://dl.dropboxusercontent.com/s/e59a3abu8j02sqw/Nightcore-331Emotes.json"); API.sendChat("/addemotes https://rawgit.com/vav17/NoobScript-331/master/Emotes.json");}, 7500);
             //banned
         } else if (data == "/" + CMDS[5]) {
             API.sendChat("http://vav17.com/wp-content/uploads/2014/12/Good-luck-being-banned.gif");
