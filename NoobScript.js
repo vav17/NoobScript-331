@@ -41,7 +41,7 @@ function noobScript() {
     API.on(API.CHAT, chatKey);
 
     function chatKey(keyData) {
-        if (/BOW TO US/i.test(keyData.message) && API.getUser().id === 4251764 || API.getUser().id === 4537120) {
+        if (/BOW TO US/i.test(keyData.message) && keyData.un === "donvoo" || keyData.un === "SnakedMusique") {
             API.sendChat("*Bows*");
         }
     }
