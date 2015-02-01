@@ -48,10 +48,10 @@
         "jenny": {
             "height": "160px",
             "url": "http://i.imgur.com/eghUwsP.gif",
-            "width": "90px"
+            "width": "100%"
         },
         "jennyrl": {
-            "height": "25%",
+            "height": "100px",
             "url": "http://www.billboard.com/files/styles/promo_650/public/media/miley-cyrus-we-cant-stop-1-650-430.jpg",
             "width": "25%"
         }
