@@ -30,7 +30,7 @@ var noobScript = function() {
     $('#foot').css('bottom', 54);
     $('#foot').css('right', 345);
     $('#foot').click(function() {
-        window.open("google.com")
+        copySong();
     })
     CT = ["BOW TO US"];
     CMDS = ["cmds", "credits", "NSkill", "raw", "NSreload", "banned", "api", "noskip", "YES", "dafaq", "EHD", "sowwy", "copysong", "hahano"];
@@ -62,7 +62,7 @@ var noobScript = function() {
         } else if (data == "/refreshemotes"){
             API.sendChat("/reload");
             API.sendChat("/NSreload")
-            setTimeout(function(){API.sendChat("/addemotes https://dl.dropboxusercontent.com/s/e59a3abu8j02sqw/Nightcore-331Emotes.json")}, 7500);
+            setTimeout(function(){API.sendChat("/addemotes https://dl.dropboxusercontent.com/s/e59a3abu8j02sqw/Nightcore-331Emotes.json"); API.sendChat("/addemotes https://rawgit.com/vav17/NoobScript-331/master/Emotes.json");}, 7500);
             //banned
         } else if (data == "/" + CMDS[5]) {
             API.sendChat("http://vav17.com/wp-content/uploads/2014/12/Good-luck-being-banned.gif");
