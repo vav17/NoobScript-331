@@ -17,11 +17,13 @@ var noobScript = function() {
     //onStartup
     $('<link type="text/css" rel="Styles" href="https://rawgit.com/vav17/NoobScript-331/master/Styles.css"/>').appendTo("#app")
     $('<div id="Intro" style ="color: #FF6600; border: 0px solid #D3D3D3; font-size: 16pt; font-family: Lucida Console; text-align: center">Running NoobScript V1.2!</div>').appendTo("#chat-messages")
-
-    $('<a id="Madeby" href="http://sd.keepcalm-o-matic.co.uk/i/we-are-sexy-people.png" target="_blank">Running NoobScript</a></div>').appendTo("#app")
-    //$('#Madyby').css('position', 'absolute')
-    //$('#Madyby').css('top', 550);
-    //('#Madyby').css('left', 0)
+    $('<div id="foot" style ="background-color: black; border: 3px solid white; height: 30px; width: 30px; cursor: pointer"></div>').appendTo("#app")
+    $('#foot').css('position', 'absolute');
+    $('#foot').css('bottom', 54);
+    $('#foot').css('right', 345);
+    $('#foot').click(function() {
+        window.open("google.com")
+    })
     CT = ["BOW TO US"];
     CMDS = ["cmds", "credits", "NSkill", "raw", "NSreload", "banned", "api", "noskip", "YES", "dafaq", "EHD", "sowwy", "copysong", "hahano"];
 
