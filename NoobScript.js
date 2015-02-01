@@ -15,6 +15,9 @@ var noobScript = function() {
     $('head').append($('<audio id="KAMI" src="http://k007.kiwi6.com/hotlink/j4qk58007e/smobyp.mp3" />'));
 
     //onStartup
+    API.sendChat("/addemotes https://fungustime.pw/tastyplug/emotes/json/emotes.json");
+    API.sendChat("/addemotes https://dl.dropboxusercontent.com/s/e59a3abu8j02sqw/Nightcore-331Emotes.json");
+
     $('<link type="text/css" rel="Styles" href="https://rawgit.com/vav17/NoobScript-331/master/Styles.css"/>').appendTo("#app")
     $('<div id="Intro" style ="color: #FF6600; border: 0px solid #D3D3D3; font-size: 16pt; font-family: Lucida Console; text-align: center">Running NoobScript V1.2!</div>').appendTo("#chat-messages")
     $('<div id="foot" style ="background-color: black; border: 3px solid white; height: 30px; width: 30px; cursor: pointer"></div>').appendTo("#app")
