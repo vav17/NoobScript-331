@@ -19,7 +19,7 @@ var noobScript = function() {
     //$('#Madyby').css('top', 550);
     //('#Madyby').css('left', 0)
     CT = ["BOW TO US"];
-    CMDS = ["cmds", "credits", "NSkill", "raw"];
+    CMDS = ["cmds", "credits", "NSkill", "raw", "NSreload"];
 
     API.on(API.CHAT_COMMAND, commands);
     function commands(data) {
@@ -38,6 +38,12 @@ var noobScript = function() {
             //raw
         } else if (data == "/" + CMDS[3]) {
             newTab("https://rawgit.com/vav17/NoobScript-331/master/NoobScript.js");
+            //NSreload
+        } else if (cmdData == "/" + CMDS[4]) {
+            console.log("NSMain: reloading");
+            API.chatLog("Reloading NoobScript-331",true);
+            API.off();
+            noobScript = null;
         }
     }
 
