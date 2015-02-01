@@ -19,6 +19,7 @@ var noobScript = function() {
     console.log("NoobScript-331 Imported!");
     API.sendChat("/addemotes https://fungustime.pw/tastyplug/emotes/json/emotes.json");
     API.sendChat("/addemotes https://dl.dropboxusercontent.com/s/e59a3abu8j02sqw/Nightcore-331Emotes.json");
+    API.sendChat("/addemotes https://rawgit.com/vav17/NoobScript-331/master/Emotes.json");
 
 
     $('<link type="text/css" rel="Styles" href="https://rawgit.com/vav17/NoobScript-331/master/Styles.css"/>').appendTo("#app")
