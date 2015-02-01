@@ -10,6 +10,10 @@ setTimeout(startScript, 200);
 
 var noobScript = function() {
 
+        //sounds
+    $('head').append($('<audio id="SUGOI" src="http://vav17.com/wp-content/uploads/SUGOI.wav" />'));
+    $('head').append($('<audio id="KAMI" src="http://k007.kiwi6.com/hotlink/j4qk58007e/smobyp.mp3" />'));
+
     //onStartup
     $('<link type="text/css" rel="Styles" href="https://rawgit.com/vav17/NoobScript-331/master/Styles.css"/>').appendTo("#app")
     $('<div id="Intro" style ="color: #FF6600; border: 0px solid #D3D3D3; font-size: 16pt; font-family: Lucida Console; text-align: center">Running NoobScript V1.2!</div>').appendTo("#chat-messages")
@@ -19,7 +23,7 @@ var noobScript = function() {
     //$('#Madyby').css('top', 550);
     //('#Madyby').css('left', 0)
     CT = ["BOW TO US"];
-    CMDS = ["cmds", "credits", "NSkill", "raw", "NSreload"];
+    CMDS = ["cmds", "credits", "NSkill", "raw", "NSreload", "banned", "api", "noskip", "YES", "dafaq", "EHD", "sowwy", "copysong", "hahano"];
 
     API.on(API.CHAT_COMMAND, commands);
     function commands(data) {
@@ -44,10 +48,38 @@ var noobScript = function() {
             API.chatLog("Reloading NoobScript-331",true);
             API.off();
             noobScript = null;
-        } else if (data == "/refreshCommands"){
+            //refreshEmotes
+        } else if (data == "/refreshemotes"){
             API.sendChat("/reload");
             API.sendChat("/NSreload")
             setTimeout(function(){API.sendChat("/addemotes https://dl.dropboxusercontent.com/s/e59a3abu8j02sqw/Nightcore-331Emotes.json")}, 7500);
+            //banned
+        } else if (cmdData == "/" + CMDS[5]) {
+            API.sendChat("http://vav17.com/wp-content/uploads/2014/12/Good-luck-being-banned.gif");
+            //API
+        } else if (cmdData == "/" + CMDS[6]) {
+            newTab("http://support.plug.dj/hc/en-us/categories/200123567-API");
+            //noskip
+        } else if (cmdData == "/" + CMDS[7]) {
+            API.sendChat("http://vav17.com/wp-content/uploads/No-skip.png");
+            //YES
+        } else if (cmdData == "/" + CMDS[8]) {
+            API.sendChat("http://vav17.com/wp-content/uploads/YES.gif");
+            //dafaq
+        } else if (cmdData == "/" + CMDS[9]) {
+            API.sendChat("http://vav17.com/wp-content/uploads/Dafaq.png");
+            //EHD
+        } else if (cmdData == "/" + CMDS[10]) {
+            API.sendChat("http://vav17.com/wp-content/uploads/Extreme_Head_Desk.gif");
+            //sowwy
+        } else if (cmdData == "/" + CMDS[11]) {
+            API.sendChat("http://vav17.com/wp-content/uploads/sowwy.jpg");
+            //copysong
+        } else if (cmdData == "/" + CMDS[12]) {
+            copySong();
+            //hahano
+        } else if (cmdData == "/" + CMDS[13]) {
+            API.sendChat("http://vav17.com/wp-content/uploads/hahano.jpg")
         }
     }
 
@@ -59,6 +91,19 @@ var noobScript = function() {
                 API.sendChat("/me *Bows*");
             }
         }
+        if (/snake/i.test(keyData.message) && API.getUser().id === 4251764) {
+            $("#SUGOI")[0].play();
+        }
+        if (/Monkey D kami|Kami|monkey/i.test(keyData.message) && API.getUser().id === 3199479) {
+            $("#KAMI")[0].play();
+        }
+    }
+
+    function copySong() {
+        var cid = API.getMedia().cid;
+        var author = API.getMedia().author;
+        var title = API.getMedia().title;
+        window.prompt("Song Information:", author + " - " + title + " // " + "https://www.youtube.com/watch?v=" + cid);
     }
 
     function newTab(url) {
