@@ -9,6 +9,7 @@ function startScript() {
 setTimeout(startScript, 200);
 
 var noobScript = function() {
+
     //onStartup
     $('<link type="text/css" rel="Styles" href="https://rawgit.com/vav17/NoobScript-331/master/Styles.css"/>').appendTo("#app")
     $('<div id="Intro" style ="color: #4169E1; border: 1px solid #D3D3D3; font-size: 14pt; font-family: Lucida Console; text-align: center">Running NoobScript V1.2!</div>').appendTo("#chat-messages")
@@ -18,10 +19,9 @@ var noobScript = function() {
     //$('#Madyby').css('top', 550);
     //('#Madyby').css('left', 0)
     CT = ["BOW TO US"];
-    CMDS = ["cmds", "credits", "NSkill"];
-    //Chat commands ^
-    API.on(API.CHAT_COMMAND, commands);
+    CMDS = ["cmds", "credits", "NSkill", "raw"];
 
+    API.on(API.CHAT_COMMAND, commands);
     function commands(data) {
         this.data = data;
         //cmds
@@ -33,8 +33,11 @@ var noobScript = function() {
             //kill
         } else if (data === "/" + CMDS[2]) {
             API.chatLog("OH GOD WHY WOULD YOU DO THAT!?!?!");
-          API.off()
-            noobScript = null
+            API.off();
+            noobScript = null;
+            //raw
+        } else if (data == "/" + CMDS[3]) {
+            newTab("https://rawgit.com/vav17/NoobScript-331/master/NoobScript.js");
         }
     }
 
@@ -46,6 +49,12 @@ var noobScript = function() {
                 API.sendChat("*Bows*");
             }
         }
+    }
+
+
+    function newTab(url) {
+        var win = window.open(url, '_blank');
+        win.focus();
     }
 }
 
