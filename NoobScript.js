@@ -38,7 +38,7 @@ function noobScript() {
     }
 
     //Chat Triggers
-    API.on(API.CHAT, chatKey);
+   // API.on(API.CHAT, chatKey);
 
     function chatKey(keyData) {
         if (/BOW TO US/i.test(keyData.message) && keyData.un === "donvoo" || keyData.un === "SnakedMusique") {
