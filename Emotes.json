@@ -43,12 +43,12 @@
         "DNN": {
             "height": "35px",
             "url": "http://i.imgur.com/uiyQ3SB.png",
-            "width": "50%"
+            "width": "35px"
         },
-        "DNN": {
+        "jenny": {
             "height": "35px",
             "url": "http://i.imgur.com/ulvrIqm.gif",
-            "width": "25%"
+            "width": "100%"
         }
     }
 }
