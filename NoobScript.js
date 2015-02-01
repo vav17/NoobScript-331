@@ -22,13 +22,13 @@ var noobScript = function() {
     API.sendChat("/addemotes https://rawgit.com/vav17/NoobScript-331/master/Emotes.json");
 
 
-    $('<link type="text/css" rel="Styles" href="https://rawgit.com/vav17/NoobScript-331/master/Styles.css"/>').appendTo("#app")
+    $('<link rel="stylesheet" href="https://rawgit.com/vav17/NoobScript-331/master/Styles.css" type="text/css">').appendTo("head")
     $('<div id="Intro" style ="color: #FF6600; border: 0px solid #D3D3D3; font-size: 16pt; font-family: Lucida Console; text-align: center">Running NoobScript V1.2!</div>').appendTo("#chat-messages")
     //$('<div id="foot" style ="background-color: black; border: 3px solid white; height: 30px; width: 30px; cursor: pointer"></div>').appendTo("#app")
     $('<img id="foot" src="http://i.imgur.com/4Ck5ULB.png" style ="height: 30px; width: 30px; cursor: pointer"/>').appendTo("#app")
-    $('#foot').css('position', 'absolute');
-    $('#foot').css('bottom', 54);
-    $('#foot').css('right', 345);
+    //$('#foot').css('position', 'absolute');
+    //$('#foot').css('bottom', 54);
+    //$('#foot').css('right', 345);
     $('#foot').click(function() {
         copySong();
     })
