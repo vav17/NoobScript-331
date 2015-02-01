@@ -12,7 +12,7 @@ var noobScript = function() {
 
     //onStartup
     $('<link type="text/css" rel="Styles" href="https://rawgit.com/vav17/NoobScript-331/master/Styles.css"/>').appendTo("#app")
-    $('<div id="Intro" style ="color: #4169E1; border: 1px solid #D3D3D3; font-size: 14pt; font-family: Lucida Console; text-align: center">Running NoobScript V1.2!</div>').appendTo("#chat-messages")
+    $('<div id="Intro" style ="color: #FF6600; border: 0px solid #D3D3D3; font-size: 16pt; font-family: Lucida Console; text-align: center">Running NoobScript V1.2!</div>').appendTo("#chat-messages")
 
     $('<a id="Madeby" href="http://sd.keepcalm-o-matic.co.uk/i/we-are-sexy-people.png" target="_blank">Running NoobScript</a></div>').appendTo("#app")
     //$('#Madyby').css('position', 'absolute')
@@ -52,7 +52,7 @@ var noobScript = function() {
     function chatKey(keyData) {
         if (keyData.message == CT[0]) {
             if (keyData.un === "donvoo" || keyData.un === "SnakedMusique"){
-                API.sendChat("*Bows*");
+                API.sendChat("/me *Bows*");
             }
         }
     }
@@ -74,3 +74,4 @@ API.on(API.CHAT_COMMAND, function NSkill(data){
 */
 //https://rawgit.com/vav17/NoobScript-331/master/NoobScript.js
 //javascript:(function(){$.getScript('https://rawgit.com/vav17/NoobScript-331/master/NoobScript.js');}());
+//javascript:(function(){$.getScript('https://raw.githubusercontent.com/vav17/NoobScript-331/master/NoobScriptLoader.js');}());
