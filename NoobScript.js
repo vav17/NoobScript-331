@@ -19,13 +19,8 @@ function noobScript() {
     //$('#Madyby').css('position', 'absolute')
     //$('#Madyby').css('top', 550);
     //('#Madyby').css('left', 0)
-<<<<<<< HEAD
     CT = ["BOW TO US"];
-=======
-    //
     CT = ["WhoOurScript"];
->>>>>>> origin/master
-    //Chat Triggers ^
     CMDS = ["cmds", "credits", "kill"];
     //Chat commands ^
     API.on(API.CHAT_COMMAND, commands);
@@ -45,21 +40,10 @@ function noobScript() {
     }
 
     //Chat Triggers
-<<<<<<< HEAD
     API.on(API.CHAT, chatKey);
     function chatKey(keyData){
         if (/BOW TO US/i.test(keyData.message) && API.getUser().id === 4251764 || API.getUser().id ===  4537120) {
             API.sendChat("*Bows*");
-=======
-    /*API.on(API.CHAT, chatKey);
-    function chatKey(data){
-        if (data.message.slice(0,12) === CT[0] && data.un === "donvoo" || "SnakedMusique") {
-            API.sendChat("I'm Running NoobScript!")
->>>>>>> origin/master
-        } 
-    }
-    */
-}
 
 //https://rawgit.com/vav17/NoobScript-331/master/NoobScript.js
 //javascript:(function(){$.getScript('https://rawgit.com/vav17/NoobScript-331/master/NoobScript.js');}());
