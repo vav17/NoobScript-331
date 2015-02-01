@@ -18,7 +18,6 @@ function noobScript() {
         //$('#Madyby').css('top', 550);
         //('#Madyby').css('left', 0)
     CT = ["BOW TO US"];
-    CT = ["WhoOurScript"];
     CMDS = ["cmds", "credits", "kill"];
     //Chat commands ^
     API.on(API.CHAT_COMMAND, commands);
