@@ -39,7 +39,7 @@ var noobScript = function() {
         } else if (data == "/" + CMDS[3]) {
             newTab("https://rawgit.com/vav17/NoobScript-331/master/NoobScript.js");
             //NSreload
-        } else if (cmdData == "/" + CMDS[4]) {
+        } else if (Data == "/" + CMDS[4]) {
             console.log("NSMain: reloading");
             API.chatLog("Reloading NoobScript-331",true);
             API.off();
@@ -57,21 +57,11 @@ var noobScript = function() {
         }
     }
 
-
     function newTab(url) {
         var win = window.open(url, '_blank');
         win.focus();
     }
 }
-
-/*
-API.on(API.CHAT_COMMAND, function NSkill(data){
-    if (data === "/" + CMDS[2]) {
-            API.chatLog("OH GOD WHY WOULD YOU DO THAT!?!?!");
-            throw new Error("Killing NoobScript-331");
-        }
-    });
-*/
 //https://rawgit.com/vav17/NoobScript-331/master/NoobScript.js
 //javascript:(function(){$.getScript('https://rawgit.com/vav17/NoobScript-331/master/NoobScript.js');}());
 //javascript:(function(){$.getScript('https://raw.githubusercontent.com/vav17/NoobScript-331/master/NoobScriptLoader.js');}());
