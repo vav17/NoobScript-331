@@ -51,7 +51,9 @@
             "width": "140px"
         },
         "totoro": {
-            "url": "http://i.imgur.com/QH2igL4.gif"
+            "height": "35px",
+            "url": "http://i.imgur.com/QH2igL4.gif",
+            "width": "40px"
         }
     }
 }
