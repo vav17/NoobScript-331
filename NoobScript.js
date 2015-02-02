@@ -59,7 +59,8 @@ var noobScript = function() {
             API.sendChat("/NSreload")
             setTimeout(function(){API.sendChat("/emotes https://dl.dropboxusercontent.com/s/e59a3abu8j02sqw/Nightcore-331Emotes.json")}, 7500);
             API.sendChat("/emotes https://fungustime.pw/tastyplug/emotes/json/emotes.json");
-            setTimeout(function(){API.sendChat("/emotes https://dl.dropboxusercontent.com/s/e59a3abu8j02sqw/Nightcore-331Emotes.json"); API.sendChat("/addemotes https://rawgit.com/vav17/NoobScript-331/master/Emotes.json");}, 7500);
+            setTimeout(function(){API.sendChat("/emotes https://dl.dropboxusercontent.com/s/e59a3abu8j02sqw/Nightcore-331Emotes.json"); 
+            API.sendChat("/addemotes https://rawgit.com/vav17/NoobScript-331/master/Emotes.json");}, 7500);
             //banned
         } else if (data == "/" + CMDS[5]) {
             API.sendChat("http://vav17.com/wp-content/uploads/2014/12/Good-luck-being-banned.gif");
@@ -119,7 +120,30 @@ var noobScript = function() {
         var title = API.getMedia().title;
         window.prompt("Song Information:", author + " - " + title + " // " + "https://www.youtube.com/watch?v=" + cid);
     }
-    
+
+    API.on(API.SCORE_UPDATE, skipTest);
+    function skipTest(score){
+        staff = API.getStaff();
+        currentPPL = API.getUsers().length;
+        manPlusVote = 0;
+        var maxMeh = Math.floor((currentPPL - 100) * 0.1);
+        if(maxMeh > score.negative){
+            if(maxMeh !=== score.grabs){
+                API.chatLog("This song exceeds the max amount of mehs, and so it should be skipped");
+            }
+        }
+        for (var i = 0; i < staff.length; i++) {
+            if (staff[i].role => 3) {
+                if (staff[i].vote = -1) {
+                    manPlusVote++;
+                    if (manPlusVote > 4) {
+                        API.chatLog("this song was Meh'd by more that 4 managers or above, and so it should be skipped!")
+                    }
+                }
+            }
+        }
+    }
+
     function getId(username) {
         username = username.replace("@", "");
         var users = API.getUsers();
