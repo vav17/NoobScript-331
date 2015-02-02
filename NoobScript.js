@@ -23,14 +23,11 @@ var noobScript = function() {
 
     $('<link rel="stylesheet" href="https://rawgit.com/vav17/NoobScript-331/master/Styles.css" type="text/css">').appendTo("head")
     $('<div id="Intro" style ="color: #FF6600; border: 0px solid #D3D3D3; font-size: 16pt; font-family: Lucida Console; text-align: center">Running NoobScript V1.2!</div>').appendTo("#chat-messages")
-    //$('<div id="foot" style ="background-color: black; border: 3px solid white; height: 30px; width: 30px; cursor: pointer"></div>').appendTo("#app")
     $('<img id="foot" src="http://i.imgur.com/4Ck5ULB.png" style ="height: 30px; width: 30px; cursor: pointer"/>').appendTo("#app")
-    $('#foot').css('position', 'absolute');
-    $('#foot').css('bottom', 54);
-    $('#foot').css('right', 345);
     $('#foot').click(function() {
         copySong();
     })
+    Devs = ["donvoo", "SnakedMusique"];
     CT = ["BOW TO US"];
     CMDS = ["cmds", "credits", "NSkill", "raw", "NSreload", "banned", "api", "noskip", "YES", "dafaq", "EHD", "sowwy", "copysong", "hahano"];
 
@@ -61,9 +58,9 @@ var noobScript = function() {
         } else if (data == "/refreshemotes"){
             API.sendChat("/reload");
             API.sendChat("/NSreload")
-            setTimeout(function(){API.sendChat("/addemotes https://dl.dropboxusercontent.com/s/e59a3abu8j02sqw/Nightcore-331Emotes.json")}, 7500);
-            API.sendChat("/addemotes https://fungustime.pw/tastyplug/emotes/json/emotes.json");
-            setTimeout(function(){API.sendChat("/addemotes https://dl.dropboxusercontent.com/s/e59a3abu8j02sqw/Nightcore-331Emotes.json"); API.sendChat("/addemotes https://rawgit.com/vav17/NoobScript-331/master/Emotes.json");}, 7500);
+            setTimeout(function(){API.sendChat("/emotes https://dl.dropboxusercontent.com/s/e59a3abu8j02sqw/Nightcore-331Emotes.json")}, 7500);
+            API.sendChat("/emotes https://fungustime.pw/tastyplug/emotes/json/emotes.json");
+            setTimeout(function(){API.sendChat("/emotes https://dl.dropboxusercontent.com/s/e59a3abu8j02sqw/Nightcore-331Emotes.json"); API.sendChat("/addemotes https://rawgit.com/vav17/NoobScript-331/master/Emotes.json");}, 7500);
             //banned
         } else if (data == "/" + CMDS[5]) {
             API.sendChat("http://vav17.com/wp-content/uploads/2014/12/Good-luck-being-banned.gif");
