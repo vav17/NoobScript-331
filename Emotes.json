@@ -61,9 +61,19 @@
             "width": "74px"
         },
         "kawaii": {
-            "height": "20px",
-            "url": "http://i.imgur.com/vNIFUN7.gif",
-            "width": "87px"
+            "height": "42px",
+            "url": "http://i.imgur.com/TC6h5uy.gif",
+            "width": "43px"
+        },
+        "spamgif": {
+            "height": "50px",
+            "url": "http://i.imgur.com/uHwd4sY.gif",
+            "width": "50px"
+        },
+        "banned": {
+            "height": "50px",
+            "url": "http://i.imgur.com/EOuLASw.gif",
+            "width": "50px"
         }
     }
 }
