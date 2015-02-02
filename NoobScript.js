@@ -99,7 +99,8 @@ var noobScript = function() {
     function chatKey(keyData) {
         if (keyData.message == CT[0]) {
             if (keyData.un === "donvoo" || keyData.un === "SnakedMusique"){
-                API.sendChat("/me *Bows*");
+                //API.sendChat("/me *Bows*");
+                API.chatLog("/me *Bows*",1);
             }
         }
         if (/snake/i.test(keyData.message) && API.getUser().id === 4251764) {
