@@ -19,6 +19,7 @@ var noobScript = function() {
     setTimeout(function(){API.sendChat("/emotes https://fungustime.pw/tastyplug/emotes/json/emotes.json");},1000)
     setTimeout(function(){API.sendChat("/emotes https://dl.dropboxusercontent.com/s/e59a3abu8j02sqw/Nightcore-331Emotes.json");},1000)
     setTimeout(function(){API.sendChat("/emotes https://rawgit.com/vav17/NoobScript-331/master/Emotes.json");},1000)
+    localStorage.setItem("nameSaid",0)
 
     $('<link rel="stylesheet" href="https://rawgit.com/vav17/NoobScript-331/master/Styles.css" type="text/css">').appendTo("head")
     $('<div id="Intro" style ="color: #FF6600; border: 0px solid #D3D3D3; font-size: 16pt; font-family: Lucida Console; text-align: center">Running NoobScript V1.2!</div>').appendTo("#chat-messages")
@@ -111,6 +112,11 @@ var noobScript = function() {
         }
         if (/Yolo/i.test(keyData.message) && API.getUser().id === 3774105) {
             $("#DONVOO")[0].play();
+        }
+        if (data.un === API.getUser().username) {
+            if (localStorage.nameSaid){
+                localStorage.nameSaid = parseInt(localStorage.nameSaid) + 1
+            }
         }
     }
 
