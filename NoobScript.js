@@ -14,7 +14,7 @@ var noobScript = function() {
     $('head').append($('<audio id="SUGOI" src="http://vav17.com/wp-content/uploads/SUGOI.wav" />'));
     $('head').append($('<audio id="KAMI" src="http://k007.kiwi6.com/hotlink/j4qk58007e/smobyp.mp3" />'));
     $('head').append($('<audio id="DONVOO" src="http://puu.sh/6CVzc.wav" />'));
-
+    $('head').append($('<audio id="YOLO" src="https://dl-web.dropbox.com/get/Comical%20Pop%20Sound.mp3?_subject_uid=363469932&w=AABcdBvsAfpkFT2ZTriRj690Bi5CPNeSLnUYFxeOH_2bFg" />'));
     //onStartup
     console.log("NoobScript-331 Imported!");
     setTimeout(function(){API.sendChat("/emotes https://fungustime.pw/tastyplug/emotes/json/emotes.json");},1000)
@@ -108,6 +108,9 @@ var noobScript = function() {
         }
         if (/donv/i.test(keyData.message) && API.getUser().id === 4537120) {
             $("#DONVOO")[0].play();
+        }
+        if (/yolo/i.test(keyData.message) && API.getUser().id === 3774105) {
+            $("#YOLO")[0].play();
         }
     }
 
