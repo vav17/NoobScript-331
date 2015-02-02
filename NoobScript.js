@@ -109,7 +109,7 @@ var noobScript = function() {
         if (/donv/i.test(keyData.message) && API.getUser().id === 4537120) {
             $("#DONVOO")[0].play();
         }
-        if (/yolo/i.test(keyData.message) && API.getUser().id === 3774105) {
+        if (/Yolo/i.test(keyData.message) && API.getUser().id === 3774105) {
             $("#YOLO")[0].play();
         }
     }
