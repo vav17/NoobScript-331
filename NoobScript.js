@@ -119,6 +119,16 @@ var noobScript = function() {
         var title = API.getMedia().title;
         window.prompt("Song Information:", author + " - " + title + " // " + "https://www.youtube.com/watch?v=" + cid);
     }
+    
+    function getId(username) {
+        username = username.replace("@", "");
+        var users = API.getUsers();
+        for (var i = 0; i < users.length; i++) {
+            if (username === users[i].username) {
+                return users[i].id;
+            }
+        }
+    }
 
     function newTab(url) {
         var win = window.open(url, '_blank');
