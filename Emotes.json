@@ -41,9 +41,9 @@
             "width": "100%"
         },
         "DNN": {
-            "height": "50%",
+            "height": "50px",
             "url": "http://i.imgur.com/uiyQ3SB.png",
-            "width": "50px"
+            "width": "50%"
         },
         "jenny": {
             "height": "80px",
@@ -56,7 +56,7 @@
             "width": "47px"
         },
         "rainbowllama": {
-            "height": "50%",
+            "height": "60px",
             "url": "http://i.imgur.com/f9ySiFr.gif",
             "width": "50%"
         }
