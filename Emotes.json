@@ -74,6 +74,16 @@
             "height": "50px",
             "url": "http://i.imgur.com/EOuLASw.gif",
             "width": "50px"
+        },
+        "stitchbra": {
+            "height": "50px",
+            "url": "http://i.imgur.com/z6D54UK.gif",
+            "width": "50px"
+        },
+        "stitchglasses": {
+            "height": "60px",
+            "url": "http://i.imgur.com/fwnAjHh.gif",
+            "width": "60px"
         }
     }
 }
