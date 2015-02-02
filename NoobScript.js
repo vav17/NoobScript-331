@@ -22,14 +22,14 @@ var noobScript = function() {
     localStorage.setItem("nameSaid",0)
 
     $('<link rel="stylesheet" href="https://rawgit.com/vav17/NoobScript-331/master/Styles.css" type="text/css">').appendTo("head")
-    $('<div id="Intro" style ="color: #FF6600; border: 0px solid #D3D3D3; font-size: 16pt; font-family: Lucida Console; text-align: center">Running NoobScript V1.2!</div>').appendTo("#chat-messages")
+    $('<div id="Intro" style ="color: #FF6600; border: 0px solid #D3D3D3; font-size: 16pt; font-family: Lucida Console; text-align: center">Running NoobScript V2.7!</div>').appendTo("#chat-messages")
     $('<img id="foot" src="http://i.imgur.com/4Ck5ULB.png" style ="height: 30px; width: 30px; cursor: pointer"/>').appendTo("#app")
     $('#foot').click(function() {
         copySong();
     })
     Devs = ["donvoo", "SnakedMusique"];
     CT = ["BOW TO US"];
-    CMDS = ["cmds", "credits", "NSkill", "raw", "NSreload", "banned", "api", "noskip", "YES", "dafaq", "EHD", "sowwy", "copysong", "hahano"];
+    CMDS = ["cmds", "credits", "NSkill", "raw", "NSreload", "banned", "api", "noskip", "YES", "dafaq", "EHD", "sowwy", "copysong", "hahano", "nameSaid"];
 
     API.on(API.CHAT_COMMAND, commands);
     function commands(data) {
@@ -89,6 +89,9 @@ var noobScript = function() {
             //hahano
         } else if (data == "/" + CMDS[13]) {
             API.sendChat("http://vav17.com/wp-content/uploads/hahano.jpg")
+            //nameSaid
+        } else if (data == "/" + CMDS[13]) {
+            API.chatLog("Times Your Name Has Been Mentioned: "+localStorage.getItem("nameSaid"),1)
         }
     }
 
