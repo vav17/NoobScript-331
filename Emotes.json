@@ -41,14 +41,19 @@
             "width": "100%"
         },
         "DNN": {
-            "height": "35px",
+            "height": "50px",
             "url": "http://i.imgur.com/uiyQ3SB.png",
-            "width": "100%"
+            "width": "50px"
         },
         "jenny": {
             "height": "80px",
             "url": "http://i.imgur.com/eghUwsP.gif",
             "width": "140px"
+        }.
+        "totoro": {
+            "height": "100%",
+            "url": "http://i.imgur.com/QH2igL4.gif",
+            "width": "100%"
         }
     }
 }
