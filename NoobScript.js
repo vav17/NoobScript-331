@@ -90,7 +90,7 @@ var noobScript = function() {
         } else if (data == "/" + CMDS[13]) {
             API.sendChat("http://vav17.com/wp-content/uploads/hahano.jpg")
             //nameSaid
-        } else if (data == "/" + CMDS[13]) {
+        } else if (data == "/" + CMDS[14]) {
             API.chatLog("Times Your Name Has Been Mentioned: "+localStorage.getItem("nameSaid"),1)
         }
     }
