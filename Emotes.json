@@ -64,6 +64,18 @@
             "height": "70%",
             "url": "http://i.imgur.com/f9ySiFr.gif",
             "width": "70%"
+        },
+        "amaze": {
+            "height": "75px",
+            "url": "http://i.imgur.com/oXNxsJ3.png",
+            "width": "103px"
+        }
+        "amazegif": {
+            "height": "75px",
+            "url": "http://i.imgur.com/Ufkm7f9.gif",
+            "width": "74px"
         }
     }
 }
+
+
