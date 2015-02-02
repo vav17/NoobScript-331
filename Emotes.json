@@ -40,11 +40,6 @@
             "url": "http://i.imgur.com/RyyXwFC.gif",
             "width": "100%"
         },
-        "DNN": {
-            "height": "50px",
-            "url": "http://i.imgur.com/uiyQ3SB.png",
-            "width": "50%"
-        },
         "jenny": {
             "height": "80px",
             "url": "http://i.imgur.com/eghUwsP.gif",
@@ -55,16 +50,6 @@
             "url": "http://i.imgur.com/QH2igL4.gif",
             "width": "47px"
         },
-        "rainbowllama": {
-            "height": "60px",
-            "url": "http://i.imgur.com/f9ySiFr.gif",
-            "width": "50%"
-        },
-        "dropBassFish": {
-            "height": "70%",
-            "url": "http://i.imgur.com/f9ySiFr.gif",
-            "width": "70%"
-        },
         "amaze": {
             "height": "75px",
             "url": "http://i.imgur.com/oXNxsJ3.png",
@@ -74,6 +59,11 @@
             "height": "75px",
             "url": "http://i.imgur.com/Ufkm7f9.gif",
             "width": "74px"
+        },
+        "kawaii": {
+            "height": "87px",
+            "url": "http://i.imgur.com/vNIFUN7.gif",
+            "width": "20px"
         }
     }
 }
