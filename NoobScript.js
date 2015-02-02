@@ -14,6 +14,7 @@ var noobScript = function() {
     $('head').append($('<audio id="SUGOI" src="http://vav17.com/wp-content/uploads/SUGOI.wav" />'));
     $('head').append($('<audio id="KAMI" src="http://k007.kiwi6.com/hotlink/j4qk58007e/smobyp.mp3" />'));
     $('head').append($('<audio id="DONVOO" src="http://puu.sh/6CVzc.wav" />'));
+    $('head').append($('<audio id="WATERDRIP" src="http://vav17.com/wp-content/uploads/WaterDrip.mp3" />'));
     //onStartup
     console.log("NoobScript-331 Imported!");
     setTimeout(function(){API.sendChat("/emotes https://fungustime.pw/tastyplug/emotes/json/emotes.json");},1000)
@@ -139,6 +140,7 @@ var noobScript = function() {
         if(score.negative > maxMeh){
             if(maxMeh > score.grabs){
                 API.chatLog("This song exceeds the max amount of mehs, and so it should be skipped");
+                $("#WATERDRIP")[0].play();
             }
         }
         for (var i = 0; i < staff.length; i++) {
@@ -147,7 +149,8 @@ var noobScript = function() {
                     manPlusVote++;
                     console.log("Manager's mehs amount: " + manPlusVote);
                     if (manPlusVote > 4) {
-                        API.chatLog("this song was Meh'd by more that 4 managers or above, and so it should be skipped!")
+                        API.chatLog("this song was Meh'd by more that 4 managers or above, and so it should be skipped!");
+                        $("#WATERDRIP")[0].play();
                     }
                 }
             }
