@@ -99,6 +99,16 @@
             "height": "50px",
             "url": "http://i.imgur.com/4RiZlaI.png",
             "width": "50px"
+        },
+        "axe": {
+            "height": "32px",
+            "url": "http://i.imgur.com/6pEwYRP.gif",
+            "width": "32px"
+        },
+        "chickengif": {
+            "height": "32px",
+            "url": "http://i.imgur.com/lZOAyMP.gif",
+            "width": "32px"
         }
     }
 }
