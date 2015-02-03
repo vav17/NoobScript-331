@@ -30,7 +30,8 @@ var noobScript = function() {
     })
     Devs = ["donvoo", "SnakedMusique"];
     CT = ["BOW TO US"];
-    CMDS = ["cmds", "credits", "NSkill", "raw", "NSreload", "banned", "api", "noskip", "YES", "dafaq", "EHD", "sowwy", "copysong", "hahano", "nameSaid"];
+    CMDS = ["cmds", "credits", "NSkill", "raw", "NSreload", "banned", "api", "noskip", "YES", "dafaq", "EHD", "sowwy", "copysong", "hahano", "nameSaid", "emotelist"];
+    EmoteList = ["twerk", "SNM", "SnakedMusique", "CarltonDance", "Fireworks", "Headbang", "HighShere", "rspin", "jenny", "totoro", "amaze", "amazegif", "kawaii", "spamgif", "banned", "stitchbra", "stitchglasses", "rainbowllama", "dorito", "DNN", "dotaaxerage", "dotachicken", "dotahorse", "dotaaxecry", "nat"];
 
     API.on(API.CHAT_COMMAND, commands);
     function commands(data) {
@@ -93,6 +94,9 @@ var noobScript = function() {
             //nameSaid
         } else if (data == "/" + CMDS[14]) {
             API.chatLog("Times Your Name Has Been Mentioned : "+localStorage.getItem("nameSaid"),1)
+        } else if (data == "/" + CMDS[15]) {
+            API.chatLog("There Are A Total Of "+EmoteList.length+" Emotes Added From NoobScript!",1)
+            API.chatLog("The Emotes Are:"+EmoteList.toString(),1)
         }
     }
 
