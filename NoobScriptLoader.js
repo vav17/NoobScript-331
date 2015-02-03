@@ -9,6 +9,7 @@ setTimeout(startScript, 200);
 
 function loader(){
 	$.getScript('https://rawgit.com/vav17/NoobScript-331/master/NoobScript.js');
+    console.log("NSloader: Imported!");
 
 	API.on(API.CHAT_COMMAND, checkReload);
 	function checkReload(cmdData) {

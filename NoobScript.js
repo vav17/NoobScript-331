@@ -167,6 +167,22 @@ var noobScript = function() {
         }
     }
 
+
+    API.on(API.ADVANCE, getYTData);
+    function getYTData(){
+        var media = API.getMedia();
+        var YTData;
+        $.getJSON('https://gdata.youtube.com/feeds/api/videos/' + media.cid + '?v=2&alt=jsonc',function(data,status,xhr){
+        YTData = data.data;
+        bannedSongAuthors(YTData);
+        });
+    }
+
+    function bannedSongAuthors(YTdata){
+        this.YTdata = YTdata;
+        return YTdata;
+    }
+
     function newTab(url) {
         var win = window.open(url, '_blank');
         win.focus();
