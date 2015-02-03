@@ -100,14 +100,24 @@
             "url": "http://i.imgur.com/4RiZlaI.png",
             "width": "50px"
         },
-        "axe": {
+        "dotaaxerage": {
             "height": "32px",
             "url": "http://i.imgur.com/6pEwYRP.gif",
             "width": "32px"
         },
-        "chickengif": {
+        "dotachicken": {
             "height": "32px",
             "url": "http://i.imgur.com/lZOAyMP.gif",
+            "width": "32px"
+        },
+        "dotahorse": {
+            "height": "32px",
+            "url": "http://i.imgur.com/RzRwDEG.gif",
+            "width": "32px"
+        },
+        "dotaaxecry": {
+            "height": "32px",
+            "url": "http://i.imgur.com/vGciRzT.gif",
             "width": "32px"
         }
     }
