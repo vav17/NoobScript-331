@@ -24,8 +24,12 @@ var noobScript = function() {
 
     $('<link rel="stylesheet" href="https://rawgit.com/vav17/NoobScript-331/master/Styles.css" type="text/css">').appendTo("head")
     $('<div id="Intro" style ="color: #FF6600; border: 0px solid #D3D3D3; font-size: 16pt; font-family: Lucida Console; text-align: center">Running NoobScript V2.7!</div>').appendTo("#chat-messages")
-    $('<img id="foot" src="http://i.imgur.com/4Ck5ULB.png" style ="height: 30px; width: 30px; cursor: pointer"/>').appendTo("#app")
+    $('<img id="foot" src="http://i.imgur.com/4Ck5ULB.png"/>').appendTo("#app")
+    $('<img id="autoWoot" src="http://i.imgur.com/Zv2ROW8.png"/>').appendTo("#app")
     $('#foot').click(function() {
+        copySong();
+    })
+    $('#autoWoot').click(function() {
         copySong();
     })
     Devs = ["donvoo", "SnakedMusique"];
