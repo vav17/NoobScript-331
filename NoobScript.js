@@ -30,7 +30,7 @@ var noobScript = function() {
         copySong();
     })
     $('#autoWoot').click(function() {
-        copySong();
+        $('#woot').click();
     })
     Devs = ["donvoo", "SnakedMusique"];
     CT = ["BOW TO US"];
