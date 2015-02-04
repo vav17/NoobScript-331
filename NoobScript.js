@@ -23,7 +23,7 @@ var noobScript = function() {
     localStorage.setItem("nameSaid",0)
 
     $('<link rel="stylesheet" href="https://rawgit.com/vav17/NoobScript-331/master/Styles.css" type="text/css">').appendTo("head")
-    $('<div id="Intro" style ="color: #FF6600; border: 0px solid #D3D3D3; font-size: 16pt; font-family: Lucida Console; text-align: center">Running NoobScript V2.7!</div>').appendTo("#chat-messages")
+    $('<div class="main">Running NoobScript V2.7!</div>').appendTo("#chat-messages")
     $('<img id="foot" src="http://i.imgur.com/4Ck5ULB.png"/>').appendTo("#app")
     $('<img id="autoWoot" src="http://i.imgur.com/Zv2ROW8.png"/>').appendTo("#app")
     $('#foot').click(function() {
@@ -31,12 +31,12 @@ var noobScript = function() {
     })
     $('#autoWoot').click(function autoWootChecker() {
         if (autoWootSet === 0){
-            API.chatLog("AutoWoot: ON",1)
+            $('<div class="main">AutoWoot: On</div>').appendTo("#chat-messages")
             $('#woot').click();
             autoWootSet = 1;
         }
         else if (autoWootSet === 1){
-            API.chatLog("AutoWoot: OFF",1)
+            $('<div class="main">AutoWoot: Off</div>').appendTo("#chat-messages")
             autoWootSet = 0;
         }
     })

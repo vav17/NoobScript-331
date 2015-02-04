@@ -14,3 +14,10 @@
   bottom: 54px;
   right: 414px;
 }
+.main {
+  color: #FF6600;
+  border: 0px solid #D3D3D3;
+  font-size: 16pt;
+  font-family: Lucida;
+  text-align: center;
+}
