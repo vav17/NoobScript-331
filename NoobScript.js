@@ -206,8 +206,8 @@ var noobScript = function() {
     }
     API.on(API.ADVANCE, autoWootDoer);
     function autoWootDoer(AWdata){
-        API.chatLog("Woots: "+AWdata.lastPlay.score.positive+" Grabs: "+AWdata.lastPlay.score.grabs+" Mehs: "+AWdata.lastPlay.score.negative,1)
-        API.chatLog("DJ: "+AWdata.lastPlay.dj.username,1)
+        //API.chatLog("Woots: "+AWdata.lastPlay.score.positive+" Grabs: "+AWdata.lastPlay.score.grabs+" Mehs: "+AWdata.lastPlay.score.negative,1)
+        //API.chatLog("DJ: "+AWdata.lastPlay.dj.username,1)
         if (autoWootSet === 1){
             setTimeout(function(){$('#woot').click();},2000)
         }
