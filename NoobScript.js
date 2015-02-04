@@ -44,7 +44,6 @@ var noobScript = function() {
     CT = ["BOW TO US"];
     CMDS = ["cmds", "credits", "NSkill", "raw", "NSreload", "banned", "api", "noskip", "YES", "dafaq", "EHD", "sowwy", "copysong", "hahano", "nameSaid", "emotelist"];
     EmoteList = ["twerk", "SNM", "SnakedMusique", "CarltonDance", "Fireworks", "Headbang", "HighShere", "rspin", "jenny", "totoro", "amaze", "amazegif", "kawaii", "spamgif", "banned", "stitchbra", "stitchglasses", "rainbowllama", "dorito", "DNN", "dotaaxerage", "dotachicken", "dotahorse", "dotaaxecry", "nat"];
-    autoWootSet = 0;
 
     API.on(API.CHAT_COMMAND, commands);
     function commands(data) {
@@ -208,7 +207,9 @@ var noobScript = function() {
     function autoWootDoer(AWdata){
         API.chatLog("Woots: "+AWdata.lastPlay.score.positive+" Grabs: "+AWdata.lastPlay.score.grabs+" Mehs: "+AWdata.lastPlay.score.negative,1)
         API.chatLog("DJ: "+AWdata.lastPlay.dj.username,1)
-        setTimeout(function(){$('#woot').click();},3000)
+        if (autoWootSet === 1){
+            setTimeout(function(){$('#woot').click();},2000)
+        }
     }
 
 }
