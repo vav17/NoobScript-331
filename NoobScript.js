@@ -43,7 +43,7 @@ var noobScript = function() {
     Devs = ["donvoo", "SnakedMusique"];
     CT = ["BOW TO US"];
     CMDS = ["cmds", "credits", "NSkill", "raw", "NSreload", "banned", "api", "noskip", "YES", "dafaq", "EHD", "sowwy", "copysong", "hahano", "nameSaid", "emotelist"];
-    EmoteList = ["twerk", "SNM", "SnakedMusique", "CarltonDance", "Fireworks", "Headbang", "HighShere", "rspin", "jenny", "totoro", "amaze", "amazegif", "kawaii", "spamgif", "banned", "stitchbra", "stitchglasses", "rainbowllama", "dorito", "DNN", "dotaaxerage", "dotachicken", "dotahorse", "dotaaxecry", "nat", "crikawaii";
+    EmoteList = ["twerk", "SNM", "SnakedMusique", "CarltonDance", "Fireworks", "Headbang", "HighShere", "rspin", "jenny", "totoro", "amaze", "amazegif", "kawaii", "spamgif", "banned", "stitchbra", "stitchglasses", "rainbowllama", "dorito", "DNN", "dotaaxerage", "dotachicken", "dotahorse", "dotaaxecry", "nat", "crikawaii"];
     autoWootSet = 0;
 
     API.on(API.CHAT_COMMAND, commands);
@@ -206,8 +206,8 @@ var noobScript = function() {
     }
     API.on(API.ADVANCE, autoWootDoer);
     function autoWootDoer(AWdata){
-        //API.chatLog("Woots: "+AWdata.lastPlay.score.positive+" Grabs: "+AWdata.lastPlay.score.grabs+" Mehs: "+AWdata.lastPlay.score.negative,1)
-        //API.chatLog("DJ: "+AWdata.lastPlay.dj.username,1)
+        API.chatLog("Woots: "+AWdata.lastPlay.score.positive+" Grabs: "+AWdata.lastPlay.score.grabs+" Mehs: "+AWdata.lastPlay.score.negative,1)
+        API.chatLog("DJ: "+AWdata.lastPlay.dj.username,1)
         if (autoWootSet === 1){
             setTimeout(function(){$('#woot').click();},2000)
         }
@@ -217,5 +217,4 @@ var noobScript = function() {
 //https://rawgit.com/vav17/NoobScript-331/master/NoobScript.js
 //javascript:(function(){$.getScript('https://rawgit.com/vav17/NoobScript-331/master/NoobScript.js');}());
 //javascript:(function(){$.getScript('https://raw.githubusercontent.com/vav17/NoobScript-331/master/NoobScriptLoader.js');}());
- //setTimeout(function(){javascript:(function(){$.getScript('https://dl.dropboxusercontent.com/s/bnecz1byja38twh/origem.js');}());},1000)
- //setTimeout(function(){javascript:(function(){$.getScript('https://rawgit.com/vav17/NoobScript-331/master/NoobScript.js');}());},5000)
+//
