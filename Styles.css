@@ -14,10 +14,17 @@
   bottom: 54px;
   right: 414px;
 }
-.main {
+#Intro {
   color: #FF6600;
   border: 0px solid #D3D3D3;
   font-size: 16pt;
-  font-family: Lucida;
+  font-family: Lucida console;
   text-align: center;
+}
+.main {
+  color: #FF6600;
+  border: 0px solid #D3D3D3;
+  font-size: 12pt;
+  font-family: Lucida console;
+  text-align: left;
 }

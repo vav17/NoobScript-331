@@ -23,7 +23,7 @@ var noobScript = function() {
     localStorage.setItem("nameSaid",0)
 
     $('<link rel="stylesheet" href="https://rawgit.com/vav17/NoobScript-331/master/Styles.css" type="text/css">').appendTo("head")
-    $('<div class="main">Running NoobScript V2.7!</div>').appendTo("#chat-messages")
+    $('<div id="Intro">Running NoobScript V2.7!</div>').appendTo("#chat-messages")
     $('<img id="foot" src="http://i.imgur.com/4Ck5ULB.png"/>').appendTo("#app")
     $('<img id="autoWoot" src="http://i.imgur.com/Zv2ROW8.png"/>').appendTo("#app")
     $('#foot').click(function() {
