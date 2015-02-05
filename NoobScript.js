@@ -20,7 +20,7 @@ var noobScript = function() {
     setTimeout(function(){API.sendChat("/emotes https://fungustime.pw/tastyplug/emotes/json/emotes.json");},1000)
     setTimeout(function(){API.sendChat("/emotes https://dl.dropboxusercontent.com/s/e59a3abu8j02sqw/Nightcore-331Emotes.json");},1000)
     setTimeout(function(){API.sendChat("/emotes https://rawgit.com/vav17/NoobScript-331/master/Emotes.json");},1000)
-    localStorage.setItem("nameSaid",0)
+    //localStorage.setItem("nameSaid",0)
 
     $('<link rel="stylesheet" href="https://rawgit.com/vav17/NoobScript-331/master/Styles.css" type="text/css">').appendTo("head")
     $('<div id="Intro">Running NoobScript V2.7!</div>').appendTo("#chat-messages")
@@ -42,7 +42,7 @@ var noobScript = function() {
     })
     Devs = ["donvoo", "SnakedMusique"];
     CT = ["BOW TO US"];
-    CMDS = ["cmds", "credits", "NSkill", "raw", "NSreload", "banned", "api", "noskip", "YES", "dafaq", "EHD", "sowwy", "copysong", "hahano", "nameSaid", "emotelist"];
+    CMDS = ["cmds", "credits", "NSkill", "raw", "NSreload", "banned", "api", "noskip", "YES", "dafaq", "EHD", "sowwy", "copysong", "hahano", "stats", "emotelist"];
     EmoteList = ["twerk", "SNM", "SnakedMusique", "CarltonDance", "Fireworks", "Headbang", "HighShere", "rspin", "jenny", "totoro", "amaze", "amazegif", "kawaii", "spamgif", "banned", "stitchbra", "stitchglasses", "rainbowllama", "dorito", "DNN", "dotaaxerage", "dotachicken", "dotahorse", "dotaaxecry", "nat", "crikawaii", "pug", "noice"];
     autoWootSet = 0;
 
@@ -106,7 +106,9 @@ var noobScript = function() {
             API.sendChat("http://vav17.com/wp-content/uploads/hahano.jpg")
             //nameSaid
         } else if (data == "/" + CMDS[14]) {
-            API.chatLog("Times Your Name Has Been Mentioned : "+localStorage.getItem("nameSaid"),1)
+            API.chatLog("Times Your Name Has Been Mentioned: "+localStorage.getItem("nameSaid"),1)
+            API.chatLog("Messarges You Have Sent: "+localStorage.getItem("msgSent"),1)
+            API.chatLog("Messarge Characters: "+localStorage.getItem("msglength"),1)
         } else if (data == "/" + CMDS[15]) {
             API.chatLog("There Are A Total Of "+EmoteList.length+" Emotes Added From NoobScript!",1)
             API.chatLog("The Emotes Are:"+EmoteList.toString(),1)
@@ -138,6 +140,19 @@ var noobScript = function() {
             if (localStorage.nameSaid){
                 localStorage.nameSaid = parseInt(localStorage.nameSaid) + 1
             }
+            else {localStorage.setItem("nameSaid", 1)}
+        }
+        if (keyData.message.uid === API.getUser.id){
+            if (localStorage.msgSent){
+                localStorage.msgSent = parseInt(localStorage.msgSent) + 1
+            }
+            else {localStorage.setItem("msgSent", 1)}
+        }
+        if (keyData.message.uid === API.getUser.id){
+            if (localStorage.msglength){
+                localStorage.msglength = parseInt(localStorage.msglength) + keyData.message.length
+            }
+            else {localStorage.setItem("msglength", 1)}
         }
     }
 
@@ -215,6 +230,3 @@ var noobScript = function() {
 
 }
 //https://rawgit.com/vav17/NoobScript-331/master/NoobScript.js
-//javascript:(function(){$.getScript('https://rawgit.com/vav17/NoobScript-331/master/NoobScript.js');}());
-//javascript:(function(){$.getScript('https://raw.githubusercontent.com/vav17/NoobScript-331/master/NoobScriptLoader.js');}());
-//
