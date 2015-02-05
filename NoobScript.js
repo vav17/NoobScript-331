@@ -104,11 +104,10 @@ var noobScript = function() {
             //hahano
         } else if (data == "/" + CMDS[13]) {
             API.sendChat("http://vav17.com/wp-content/uploads/hahano.jpg")
-            //nameSaid
+            //stats
         } else if (data == "/" + CMDS[14]) {
             API.chatLog("Times Your Name Has Been Mentioned: "+localStorage.getItem("nameSaid")+" |Messages You Have Sent: "+localStorage.getItem("msgSent")+" | Message Characters: "+localStorage.getItem("msglength"),1)
-            //API.chatLog("Messarges You Have Sent: "+localStorage.getItem("msgSent"),1)
-            //API.chatLog("Messarge Characters: "+localStorage.getItem("msglength"),1)
+            //emotelist
         } else if (data == "/" + CMDS[15]) {
             API.chatLog("There Are A Total Of "+EmoteList.length+" Emotes Added From NoobScript!",1)
             API.chatLog("The Emotes Are:"+EmoteList.toString(),1)
