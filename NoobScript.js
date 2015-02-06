@@ -24,11 +24,10 @@ var noobScript = function() {
 
     $('<link rel="stylesheet" href="https://rawgit.com/vav17/NoobScript-331/master/Styles.css" type="text/css">').appendTo("head")
     $('<div id="Intro">Running NoobScript V2.7!</div>').appendTo("#chat-messages")
-    $('<img id="foot" src="http://i.imgur.com/4Ck5ULB.png"/>').appendTo("#app")
+    //$('<img id="foot" src="http://i.imgur.com/4Ck5ULB.png"/>').appendTo("#app")
     $('<img id="autoWoot" src="http://i.imgur.com/Zv2ROW8.png"/>').appendTo("#app")
-    $('#foot').click(function() {
-        copySong();
-    })
+    $('#vote').append('<img id="copysong" src="http://i.imgur.com/ThOy4K5.png">');
+    $('#copysong').click(function(){copySong();})
     $('#autoWoot').click(function autoWootChecker() {
         if (autoWootSet === 0){
             $('<div class="main">AutoWoot: On</div>').appendTo("#chat-messages")

@@ -28,3 +28,13 @@
   font-family: Lucida console;
   text-align: left;
 }
+#copysong {
+  top: 61px;
+  left: 85px;
+  cursor: pointer;
+  position: absolute;
+}
+#vote {
+  top: 450px;
+  width: 254px;
+}
