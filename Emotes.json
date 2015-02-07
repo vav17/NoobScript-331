@@ -169,6 +169,11 @@
             "height": "75px",
             "url": "http://i.imgur.com/XsC2KuF.gif",
             "width": "100px"
+        },
+         "pets": {
+            "height": "50px",
+            "url": "http://i.imgur.com/nJHLaR9.gif",
+            "width": "101px"
         }
     }
 }
