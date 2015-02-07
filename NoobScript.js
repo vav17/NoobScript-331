@@ -41,7 +41,7 @@ var noobScript = function() {
     })*/
     Devs = ["donvoo", "SnakedMusique"];
     CT = ["BOW TO US"];
-    CMDS = ["cmds", "credits", "NSkill", "raw", "NSreload", "banned", "api", "noskip", "YES", "dafaq", "EHD", "sowwy", "copysong", "hahano", "stats", "emotelist", "addemote"];
+    CMDS = ["cmds", "credits", "NSkill", "raw", "NSreload", "banned", "api", "noskip", "YES", "dafaq", "EHD", "sowwy", "copysong", "hahano", "stats", "emotelist", "NSaddemote"];
     EmoteList = ["twerk", "SNM", "SnakedMusique", "CarltonDance", "Fireworks", "Headbang", "HighShere", "rspin", "jenny", "totoro", "amaze", "amazegif", "kawaii", "spamgif", "banned", "stitchbra", "stitchglasses", "rainbowllama", "dorito", "DNN", "dotaaxerage", "dotachicken", "dotahorse", "dotaaxecry", "nat", "crikawaii", "pug", "noice", "cute"];
     autoWootSet = 0;
 
@@ -230,22 +230,16 @@ var noobScript = function() {
 
     function addEmote(data){
         this.data = data;
-        var filter = data.split("/", "")
-        var splitted = data.split(" ",3)
+        var splitted = data.replace("/", "").split(" ",4);
         if(splitted[1] === help){
             API.chatLog("Use: /addemote name width height URL",true);
         }else{
-            var emote = "
-            },
-            '" + splitted[1] + "': {
-            'height': '" + splitted[3] + "px',
-            'url': '" + splitted[4] + "',
-            'width': '" + splitted[2] + "px'
-        }
-    }"
+            var emote = "},'" + splitted[1] + "': {'height': '" + splitted[3] + "px','url': '" + splitted[4] + "','width': '" + splitted[2] + "px'}}"
     API.chatLog(emote);
+    console.log(emote);
     return emote;
         }
     }
+
 }
 //https://rawgit.com/vav17/NoobScript-331/master/NoobScript.js
