@@ -159,5 +159,16 @@
             "height": "75px",
             "url": "http://i.imgur.com/AxNHAuY.gif",
             "width": "75px"
+        },
+         "hi": {
+            "height": "50px",
+            "url": "http://i.imgur.com/xgfPtib.gif",
+            "width": "50px"
+        },
+         "lick": {
+            "height": "75px",
+            "url": "http://i.imgur.com/XsC2KuF.gif",
+            "width": "100px"
+        }
     }
 }
