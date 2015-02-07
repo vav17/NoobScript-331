@@ -37,6 +37,7 @@
 }
 #vote {
   width: 254px;
+  top: 666px !important;
 }
 #meh, #meh .bottom {
   border-bottom-left-radius: 10px
