@@ -50,7 +50,7 @@ var noobScript = function() {
         this.data = data;
         //cmds
         if (data === "/" + CMDS[0]) {
-            API.chatLog("Commands: " + CMDS.toString(), 1)
+            API.chatLog("Commands: " + CMDS.toString().replace(/,/g, " "), 1)
             //credits
         } else if (data === "/" + CMDS[1]) {
             $('<div class="BasicText" style ="color: #4169E1; border: 1px solid #D3D3D3; font-size: 12pt; font-family: Lucida Console; text-align: center">Made By donvoo & SnakedMusique</div>').appendTo("#chat-messages")
