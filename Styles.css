@@ -33,8 +33,15 @@
   left: 85px;
   cursor: pointer;
   position: absolute;
+  border-bottom-right-radius: 10px;
 }
 #vote {
   top: 666px;
   width: 254px;
+}
+#meh {
+  border-bottom-left-radius: 10px
+}
+#grab {
+  border-top-right-radius: 10px
 }
