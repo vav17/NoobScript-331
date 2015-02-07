@@ -39,7 +39,7 @@
   top: 666px;
   width: 254px;
 }
-#meh {
+#meh, #meh .bottom {
   border-bottom-left-radius: 10px
 }
 #grab {
