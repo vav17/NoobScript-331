@@ -108,8 +108,8 @@ var noobScript = function() {
             API.chatLog("Times Your Name Has Been Mentioned: "+localStorage.getItem("nameSaid")+" |Messages You Have Sent: "+localStorage.getItem("msgSent")+" | Message Characters: "+localStorage.getItem("msglength"),1)
             //emotelist
         } else if (data == "/" + CMDS[15]) {
-            API.chatLog("There Are A Total Of "+EmoteList.length+" Emotes Added From NoobScript!",1)
-            API.chatLog("The Emotes Are:"+EmoteList.toString(),1)
+            API.chatLog("There Are A Total Of "+EmoteList.length+" Emotes Added From NoobScript!",true)
+            API.chatLog("The Emotes Are:" + EmoteList.toString().replace(/,/g, " "),true)
         }
     }
 
