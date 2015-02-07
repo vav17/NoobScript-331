@@ -29,19 +29,9 @@
   text-align: left;
 }
 #copysong {
-  top: 61px;
-  left: 85px;
   cursor: pointer;
   position: absolute;
-  border-bottom-right-radius: 10px;
 }
-#vote {
-  width: 254px;
-  /*top: 666px !important;*/
-}
-#meh, #meh .bottom {
-  border-bottom-left-radius: 10px
-}
-#grab {
-  border-top-right-radius: 10px
+#copysong:hover{
+  width:100px;
 }
