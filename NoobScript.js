@@ -109,7 +109,7 @@ var noobScript = function() {
             //emotelist
         } else if (data == "/" + CMDS[15]) {
             API.chatLog("There Are A Total Of "+EmoteList.length+" Emotes Added From NoobScript!",true)
-            API.chatLog("The Emotes Are:" + EmoteList.toString().replace(/,/g, " "),true)
+            API.chatLog("The Emotes Are: " + EmoteList.toString().replace(/,/g, " "),true)
         }
     }
 
