@@ -111,7 +111,7 @@ var noobScript = function() {
             API.chatLog("There Are A Total Of "+EmoteList.length+" Emotes Added From NoobScript!",true)
             API.chatLog("The Emotes Are: " + EmoteList.toString().replace(/,/g, " "),true)
         } else if (data == "/" + CMDS[16]) {
-            addEmote(data.toString());
+            addEmote(data);
         }
     }
 
@@ -230,11 +230,10 @@ var noobScript = function() {
 
     function addEmote(data){
         this.data = data;
-        var splitted = data.replace("/", "").split(" ",4);
-        if(splitted[1] === help){
+        if(data[1] === help){
             API.chatLog("Use: /addemote name width height URL",true);
         }else{
-            var emote = "},'" + splitted[1] + "': {'height': '" + splitted[3] + "px','url': '" + splitted[4] + "','width': '" + splitted[2] + "px'}}"
+            var emote = "},'" + data[1] + "': {'height': '" + data[3] + "px','url': '" + data[4] + "','width': '" + data[2] + "px'}}"
     API.chatLog(emote);
     console.log(emote);
     return emote;
