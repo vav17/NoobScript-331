@@ -25,10 +25,10 @@ var noobScript = function() {
     $('<link rel="stylesheet" href="https://rawgit.com/vav17/NoobScript-331/master/Styles.css" type="text/css">').appendTo("head")
     $('<div id="Intro">Running NoobScript V2.7!</div>').appendTo("#chat-messages")
     //$('<img id="foot" src="http://i.imgur.com/4Ck5ULB.png"/>').appendTo("#app")
-    $('<img id="autoWoot" src="http://i.imgur.com/Zv2ROW8.png"/>').appendTo("#app")
+   // $('<img id="autoWoot" src="http://i.imgur.com/Zv2ROW8.png"/>').appendTo("#app")
     $('#vote').append('<img id="copysong" src="http://i.imgur.com/ThOy4K5.png">');
     $('#copysong').click(function(){copySong();})
-    $('#autoWoot').click(function autoWootChecker() {
+    /*$('#autoWoot').click(function autoWootChecker() {
         if (autoWootSet === 0){
             $('<div class="main">AutoWoot: On</div>').appendTo("#chat-messages")
             $('#woot').click();
@@ -38,7 +38,7 @@ var noobScript = function() {
             $('<div class="main">AutoWoot: Off</div>').appendTo("#chat-messages")
             autoWootSet = 0;
         }
-    })
+    })*/
     Devs = ["donvoo", "SnakedMusique"];
     CT = ["BOW TO US"];
     CMDS = ["cmds", "credits", "NSkill", "raw", "NSreload", "banned", "api", "noskip", "YES", "dafaq", "EHD", "sowwy", "copysong", "hahano", "stats", "emotelist"];
