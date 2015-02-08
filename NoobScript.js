@@ -27,7 +27,7 @@ var noobScript = function() {
     $('<div id="Intro">Running NoobScript V2.7!</div>').appendTo("#chat-messages")
     //Stats part
     $('<div id="Stat"></div>').appendTo("#app")
-    document.getElementById('Stat').innerHTML = "<p>Messages Sent: </p>"+localStorage.getItem("msgSent") +"<p>Characters:</p>" +localStorage.getItem("msglength") + "<p>Name Mentioned:</p>" + localStorage.getItem("nameSaid")
+    document.getElementById('Stat').innerHTML = "<p>Messages Sent: </p>"+localStorage.getItem("msgSent") +"<p>Characters:</p>" +localStorage.getItem("msglength") + "<p>Name Mentioned:</p>" + localStorage.getItem("nameSaid") + "<p>Loli Counter:</p>" + localStorage.getItem("lolicounter")
     //End Of Stats part
     //$('<img id="foot" src="http://i.imgur.com/4Ck5ULB.png"/>').appendTo("#app")
    // $('<img id="autoWoot" src="http://i.imgur.com/Zv2ROW8.png"/>').appendTo("#app")
@@ -177,6 +177,14 @@ var noobScript = function() {
             if (localStorage.msglength === null){
                 localStorage.msglength = 0;
             }
+        }
+        if (/loli/i.test(keyData.message)) {
+            if(keyData.type === "message"){
+                var save = localStorage.getItem("lolicounter");
+                save++;
+                localStorage.setItem("lolicounter", save);
+                $('#lolicounter').html(localStorage.getItem('lolicounter'));
+            }   
         }
     }
 
