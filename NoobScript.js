@@ -150,7 +150,7 @@ var noobScript = function() {
                 localStorage.nameSaid = 0;
             }
         }
-        if (keyData.message.un === API.getUser.username){
+        if (keyData.un === API.getUser.username){
             if (localStorage.msgSent){
                 localStorage.msgSent = parseInt(localStorage.msgSent) + 1
                 document.getElementById('Stat').innerHTML = "<p>Messages Sent: </p>"+localStorage.getItem("msgSent") +"<p>Characters:</p>" +localStorage.getItem("msglength") + "<p>Name Mentioned:</p>" + localStorage.getItem("nameSaid")
@@ -160,7 +160,7 @@ var noobScript = function() {
                 localStorage.msgSent = 0;
             }
         }
-        if (keyData.message.u === API.getUser.username){
+        if (keyData.un === API.getUser.username){
             if (localStorage.msglength){
                 localStorage.msglength = parseInt(localStorage.msglength) + keyData.message.length
                 document.getElementById('Stat').innerHTML = "<p>Messages Sent: </p>"+localStorage.getItem("msgSent") +"<p>Characters:</p>" +localStorage.getItem("msglength") + "<p>Name Mentioned:</p>" + localStorage.getItem("nameSaid")
