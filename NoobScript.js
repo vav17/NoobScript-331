@@ -25,7 +25,7 @@ var noobScript = function() {
     $('<link rel="stylesheet" href="https://rawgit.com/vav17/NoobScript-331/master/Styles.css" type="text/css">').appendTo("head")
     $('<div id="Intro">Running NoobScript V2.7!</div>').appendTo("#chat-messages")
     //Stats part
-    $('<div id="Stat" style="height: 115px; width: 125px; background-color: black; position: absolute; bottom: 469px; opacity: .7">Test</div>').appendTo("#app")
+    $('<div id="Stat">Test</div>').appendTo("#app")
     document.getElementById('Stat').innerHTML = "<p>Messages Sent: </p>"+localStorage.getItem("msgSent") +"<p>Characters:</p>" +localStorage.getItem("msglength") + "<p>Name Mentioned:</p>" + localStorage.getItem("nameSaid")
     //End Of Stats part
     //$('<img id="foot" src="http://i.imgur.com/4Ck5ULB.png"/>').appendTo("#app")
@@ -150,7 +150,7 @@ var noobScript = function() {
                 localStorage.nameSaid = 0;
             }
         }
-        if (keyData.message.uid === API.getUser.id){
+        if (keyData.message.un === API.getUser.username){
             if (localStorage.msgSent){
                 localStorage.msgSent = parseInt(localStorage.msgSent) + 1
                 document.getElementById('Stat').innerHTML = "<p>Messages Sent: </p>"+localStorage.getItem("msgSent") +"<p>Characters:</p>" +localStorage.getItem("msglength") + "<p>Name Mentioned:</p>" + localStorage.getItem("nameSaid")
@@ -160,7 +160,7 @@ var noobScript = function() {
                 localStorage.msgSent = 0;
             }
         }
-        if (keyData.message.uid === API.getUser.id){
+        if (keyData.message.u === API.getUser.username){
             if (localStorage.msglength){
                 localStorage.msglength = parseInt(localStorage.msglength) + keyData.message.length
                 document.getElementById('Stat').innerHTML = "<p>Messages Sent: </p>"+localStorage.getItem("msgSent") +"<p>Characters:</p>" +localStorage.getItem("msglength") + "<p>Name Mentioned:</p>" + localStorage.getItem("nameSaid")
