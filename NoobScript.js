@@ -141,18 +141,27 @@ var noobScript = function() {
                 localStorage.nameSaid = parseInt(localStorage.nameSaid) + 1
             }
             else {localStorage.setItem("nameSaid", 1)}
+            if (localStorage.nameSaid === null){
+                localStorage.nameSaid = 0;
+            }
         }
         if (keyData.message.uid === API.getUser.id){
             if (localStorage.msgSent){
                 localStorage.msgSent = parseInt(localStorage.msgSent) + 1
             }
             else {localStorage.setItem("msgSent", 1)}
+            if (localStorage.msgSent === null){
+                localStorage.msgSent = 0;
+            }
         }
         if (keyData.message.uid === API.getUser.id){
             if (localStorage.msglength){
                 localStorage.msglength = parseInt(localStorage.msglength) + keyData.message.length
             }
             else {localStorage.setItem("msglength", 1)}
+            if (localStorage.msglength === null){
+                localStorage.msglength = 0;
+            }
         }
     }
 
