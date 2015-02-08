@@ -121,6 +121,7 @@ var noobScript = function() {
             localStorage.setItem("msglength",0)
             localStorage.setItem("msgSent",0)
             localStorage.setItem("nameSaid",0)
+            localStorage.setItem("lolicounter",0)
         }
     }
 
