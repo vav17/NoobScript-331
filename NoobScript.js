@@ -140,6 +140,9 @@ var noobScript = function() {
         if (/Yolo/i.test(keyData.message) && API.getUser().id === 3774105) {
             $("#DONVOO")[0].play();
         }
+        if (/EC/i.test(keyData.message) && API.getUser().id === 3816188) {
+            $("#DONVOO")[0].play();
+        }
         if (keyData.message.slice(0,API.getUser().username.length+1) === "@"+API.getUser().username) {
             if (localStorage.nameSaid){
                 localStorage.nameSaid = parseInt(localStorage.nameSaid) + 1
@@ -150,7 +153,7 @@ var noobScript = function() {
                 localStorage.nameSaid = 0;
             }
         }
-        if (keyData.un === API.getUser.username){
+        if (keyData.un === API.getUser().username){
             if (localStorage.msgSent){
                 localStorage.msgSent = parseInt(localStorage.msgSent) + 1
                 document.getElementById('Stat').innerHTML = "<p>Messages Sent: </p>"+localStorage.getItem("msgSent") +"<p>Characters:</p>" +localStorage.getItem("msglength") + "<p>Name Mentioned:</p>" + localStorage.getItem("nameSaid")
@@ -160,7 +163,7 @@ var noobScript = function() {
                 localStorage.msgSent = 0;
             }
         }
-        if (keyData.un === API.getUser.username){
+        if (keyData.un === API.getUser().username){
             if (localStorage.msglength){
                 localStorage.msglength = parseInt(localStorage.msglength) + keyData.message.length
                 document.getElementById('Stat').innerHTML = "<p>Messages Sent: </p>"+localStorage.getItem("msgSent") +"<p>Characters:</p>" +localStorage.getItem("msglength") + "<p>Name Mentioned:</p>" + localStorage.getItem("nameSaid")
