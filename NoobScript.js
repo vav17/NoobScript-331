@@ -119,7 +119,7 @@ var noobScript = function() {
         } else if (data == "/" + CMDS[17]) {
             localStorage.setItem("msglength",0)
             localStorage.setItem("msgSent",0)
-            localStorage.setItem("name",0)
+            localStorage.setItem("nameSaid",0)
         }
     }
 
