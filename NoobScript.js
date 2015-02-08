@@ -27,7 +27,7 @@ var noobScript = function() {
     $('<div id="Intro">Running NoobScript V2.7!</div>').appendTo("#chat-messages")
     //Stats part
     $('<div id="Stat"></div>').appendTo("#app")
-    document.getElementById('Stat').innerHTML = "<p>Messages Sent: </p>"+localStorage.getItem("msgSent") +"<p>Characters:</p>" +localStorage.getItem("msglength") + "<p>Name Mentioned:</p>" + localStorage.getItem("nameSaid") + "<p>Loli Counter:</p>" + localStorage.getItem("lolicounter")
+    document.getElementById('Stat').innerHTML = "<p>Messages Sent: </p>"+localStorage.getItem("msgSent") +"<p>Characters:</p>" +localStorage.getItem("msglength") + "<p>Name Mentioned:</p>" + localStorage.getItem("nameSaid") + "<p>Loli Counter: </p>" + localStorage.getItem("lolicounter")
     //End Of Stats part
     //$('<img id="foot" src="http://i.imgur.com/4Ck5ULB.png"/>').appendTo("#app")
    // $('<img id="autoWoot" src="http://i.imgur.com/Zv2ROW8.png"/>').appendTo("#app")
@@ -151,7 +151,7 @@ var noobScript = function() {
         if (keyData.message.slice(0,API.getUser().username.length+1) === "@"+API.getUser().username) {
             if (localStorage.nameSaid){
                 localStorage.nameSaid = parseInt(localStorage.nameSaid) + 1
-                document.getElementById('Stat').innerHTML = "<p>Messages Sent: </p>"+localStorage.getItem("msgSent") +"<p>Characters:</p>" +localStorage.getItem("msglength") + "<p>Name Mentioned:</p>" + localStorage.getItem("nameSaid")
+                document.getElementById('Stat').innerHTML = "<p>Messages Sent: </p>"+localStorage.getItem("msgSent") +"<p>Characters:</p>" +localStorage.getItem("msglength") + "<p>Name Mentioned:</p>" + localStorage.getItem("nameSaid") + "<p>Loli Counter: </p>" + localStorage.getItem("lolicounter")
             }
             else {localStorage.setItem("nameSaid", 1)}
             if (localStorage.nameSaid === null){
@@ -161,7 +161,7 @@ var noobScript = function() {
         if (keyData.un === API.getUser().username){
             if (localStorage.msgSent){
                 localStorage.msgSent = parseInt(localStorage.msgSent) + 1
-                document.getElementById('Stat').innerHTML = "<p>Messages Sent: </p>"+localStorage.getItem("msgSent") +"<p>Characters:</p>" +localStorage.getItem("msglength") + "<p>Name Mentioned:</p>" + localStorage.getItem("nameSaid")
+                document.getElementById('Stat').innerHTML = "<p>Messages Sent: </p>"+localStorage.getItem("msgSent") +"<p>Characters:</p>" +localStorage.getItem("msglength") + "<p>Name Mentioned:</p>" + localStorage.getItem("nameSaid") + "<p>Loli Counter: </p>" + localStorage.getItem("lolicounter")
             }
             else {localStorage.setItem("msgSent", 1)}
             if (localStorage.msgSent === null){
@@ -171,7 +171,7 @@ var noobScript = function() {
         if (keyData.un === API.getUser().username){
             if (localStorage.msglength){
                 localStorage.msglength = parseInt(localStorage.msglength) + keyData.message.length
-                document.getElementById('Stat').innerHTML = "<p>Messages Sent: </p>"+localStorage.getItem("msgSent") +"<p>Characters:</p>" +localStorage.getItem("msglength") + "<p>Name Mentioned:</p>" + localStorage.getItem("nameSaid")
+                document.getElementById('Stat').innerHTML = "<p>Messages Sent: </p>"+localStorage.getItem("msgSent") +"<p>Characters:</p>" +localStorage.getItem("msglength") + "<p>Name Mentioned:</p>" + localStorage.getItem("nameSaid") + "<p>Loli Counter: </p>" + localStorage.getItem("lolicounter")
             }
             else {localStorage.setItem("msglength", 1)}
             if (localStorage.msglength === null){
@@ -180,10 +180,14 @@ var noobScript = function() {
         }
         if (/loli/i.test(keyData.message)) {
             if(keyData.type === "message"){
-                var save = localStorage.getItem("lolicounter");
-                save++;
-                localStorage.setItem("lolicounter", save);
-                $('#lolicounter').html(localStorage.getItem('lolicounter'));
+                if (localStorage.lolicounter){
+                localStorage.lolicounter = parseInt(localStorage.lolicounter) + 1
+                document.getElementById('Stat').innerHTML = "<p>Messages Sent: </p>"+localStorage.getItem("msgSent") +"<p>Characters:</p>" +localStorage.getItem("msglength") + "<p>Name Mentioned:</p>" + localStorage.getItem("nameSaid") + "<p>Loli Counter: </p>" + localStorage.getItem("lolicounter")
+                }
+                else {localStorage.setItem("lolicounter", 1)}
+                if (localStorage.lolicounter === null){
+                localStorage.lolicounter = 0;
+                }
             }   
         }
     }
