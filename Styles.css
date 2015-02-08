@@ -40,5 +40,6 @@
   top: 54px;  
   opacity: .7;
   border: 1px solid black;
+  border-bottom-right-radius:10px;
   font-family: Lucida console;
 }
