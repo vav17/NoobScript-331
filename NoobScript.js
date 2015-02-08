@@ -45,7 +45,7 @@ var noobScript = function() {
     })*/
     Devs = ["donvoo", "SnakedMusique"];
     CT = ["BOW TO US"];
-    CMDS = ["cmds", "credits", "NSkill", "raw", "NSreload", "banned", "api", "noskip", "YES", "dafaq", "EHD", "sowwy", "copysong", "hahano", "stats", "emotelist", "NSaddemote"];
+    CMDS = ["cmds", "credits", "NSkill", "raw", "NSreload", "banned", "api", "noskip", "YES", "dafaq", "EHD", "sowwy", "copysong", "hahano", "stats", "emotelist", "NSaddemote", "resetstats"];
     EmoteList = ["twerk", "SNM", "SnakedMusique", "CarltonDance", "Fireworks", "Headbang", "HighShere", "rspin", "jenny", "totoro", "amaze", "amazegif", "kawaii", "spamgif", "banned", "stitchbra", "stitchglasses", "rainbowllama", "dorito", "DNN", "dotaaxerage", "dotachicken", "dotahorse", "dotaaxecry", "nat", "crikawaii", "pug", "noice", "cute"];
     autoWootSet = 0;
 
@@ -116,6 +116,10 @@ var noobScript = function() {
             API.chatLog("The Emotes Are: " + EmoteList.toString().replace(/,/g, " "),true)
         } else if (data == "/" + CMDS[16]) {
             addEmote(data);
+        } else if (data == "/" + CMDS[17]) {
+            localStorage.setItem("msglength",0)
+            localStorage.setItem("msgSent",0)
+            localStorage.setItem("name",0)
         }
     }
 
