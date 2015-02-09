@@ -22,14 +22,14 @@ var noobScript = function() {
     setTimeout(function(){API.sendChat("/emotes https://dl.dropboxusercontent.com/s/e59a3abu8j02sqw/Nightcore-331Emotes.json");},1000)
     setTimeout(function(){API.sendChat("/emotes https://rawgit.com/vav17/NoobScript-331/master/Emotes.json");},1000)
     //$.getScript("https://code.jquery.com/ui/jquery-ui-git.js");
-    $.getScript("https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js");
+    //$.getScript("https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js");
     //localStorage.setItem("nameSaid",0)
 
     $('<link rel="stylesheet" href="https://rawgit.com/vav17/NoobScript-331/master/Styles.css" type="text/css">').appendTo("head")
-    $('<link href="https://code.jquery.com/ui/jquery-ui-git.js" type="text/javascript">').appendTo("head")
+    $('<link href="https://rawgit.com/vav17/NoobScript-331/master/JQuery.js" type="text/javascript">').appendTo("head")
     $('<div id="Intro">Running NoobScript V2.7!</div>').appendTo("#chat-messages")
     //Stats part
-    $('<div id="Stat"></div>').appendTo("#app").draggable();
+    $('<div id="Stat"></div>').appendTo("#app")
     document.getElementById('Stat').innerHTML = "<p>Messages Sent: </p>"+localStorage.getItem("msgSent") +"<p>Characters:</p>" +localStorage.getItem("msglength") + "<p>Name Mentioned:</p>" + localStorage.getItem("nameSaid") + "<p>Loli Counter: </p>" + localStorage.getItem("lolicounter")
     //End Of Stats part
     //$('<img id="foot" src="http://i.imgur.com/4Ck5ULB.png"/>').appendTo("#app")
