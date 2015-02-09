@@ -24,17 +24,16 @@ var noobScript = function() {
     setTimeout(function(){API.sendChat("/emotes https://rawgit.com/vav17/NoobScript-331/master/Emotes.json");},1000)
 
     //$('<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css" />');
-    $('<script type="text/javascript" src="https://code.jquery.com/ui/jquery-ui-git.js"></script>');
+    //$('<script type="text/javascript" src="https://code.jquery.com/ui/jquery-ui-git.js"></script>');
     //$.getScript("https://code.jquery.com/ui/jquery-ui-git.js");
 
     //$.getScript("https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js");
 
     //$.getScript("https://fungustime.pw/jquery-ui-1.10.4.custom.min.js");
-
     //localStorage.setItem("nameSaid",0)
 
     $('<link rel="stylesheet" href="https://rawgit.com/vav17/NoobScript-331/master/Styles.css" type="text/css">').appendTo("head")
-    $('<link href="https://rawgit.com/vav17/NoobScript-331/master/JQuery.js" type="text/javascript">').appendTo("head")
+    $('<script src="https://rawgit.com/vav17/NoobScript-331/master/JQuery.js"></script>').appendTo("head")
     $('<div id="Intro">Running NoobScript V2.7!</div>').appendTo("#chat-messages")
     //Stats part
     $('<div id="Stat"></div>').appendTo("#app")
