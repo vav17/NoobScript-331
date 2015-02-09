@@ -206,7 +206,7 @@ var noobScript = function() {
         currentPPL = API.getUsers().length;
         manPlusVote = 0;
         var maxMeh = Math.floor((currentPPL - 100) * 0.1);
-        if(score.negative => maxMeh){
+        if(score.negative >= maxMeh){
             if(maxMeh > score.grabs){
                 API.chatLog("This song exceeds the max amount of mehs, and so it should be skipped",true);
                 $("#WATERDRIP")[0].play();
