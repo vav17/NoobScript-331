@@ -26,6 +26,7 @@ var noobScript = function() {
     //localStorage.setItem("nameSaid",0)
 
     $('<link rel="stylesheet" href="https://rawgit.com/vav17/NoobScript-331/master/Styles.css" type="text/css">').appendTo("head")
+    $('<link href="https://code.jquery.com/ui/jquery-ui-git.js" type="text/javascript">').appendTo("head")
     $('<div id="Intro">Running NoobScript V2.7!</div>').appendTo("#chat-messages")
     //Stats part
     $('<div id="Stat"></div>').appendTo("#app").draggable();
