@@ -35,6 +35,18 @@
   border-radius:5px;
 }
 #Stat {
+  cursor: pointer;
+  background-color: black; 
+  position: relative;
+  top: 54px;  
+  opacity: .7;
+  border: 1px solid black;
+  font-family: Lucida console;
+  width:10em;
+  border-radius:5px;
+}
+/*
+#Stat {
   background-color: black; 
   position: absolute;
   top: 54px;  
@@ -43,3 +55,4 @@
   border-bottom-right-radius:10px;
   font-family: Lucida console;
 }
+*/
