@@ -3,6 +3,7 @@ function startScript() {
     if (typeof API !== "object" || !API.enabled) {
         setTimeout(startScript, 200);
     } else {
+        //$.getScript("https://code.jquery.com/ui/jquery-ui-git.js");
         noobScript();
     }
 }
@@ -21,8 +22,11 @@ var noobScript = function() {
     setTimeout(function(){API.sendChat("/emotes https://fungustime.pw/tastyplug/emotes/json/emotes.json");},1000)
     setTimeout(function(){API.sendChat("/emotes https://dl.dropboxusercontent.com/s/e59a3abu8j02sqw/Nightcore-331Emotes.json");},1000)
     setTimeout(function(){API.sendChat("/emotes https://rawgit.com/vav17/NoobScript-331/master/Emotes.json");},1000)
+
+    //$('<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css" />');
+    //$('<script type="text/javascript" src="https://code.jquery.com/ui/jquery-ui-git.js"></script>');
     //$.getScript("https://code.jquery.com/ui/jquery-ui-git.js");
-    $.getScript("https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js");
+    //$.getScript("https://fungustime.pw/jquery-ui-1.10.4.custom.min.js");
     //localStorage.setItem("nameSaid",0)
 
     $('<link rel="stylesheet" href="https://rawgit.com/vav17/NoobScript-331/master/Styles.css" type="text/css">').appendTo("head")
