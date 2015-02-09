@@ -206,9 +206,9 @@ var noobScript = function() {
         currentPPL = API.getUsers().length;
         manPlusVote = 0;
         var maxMeh = Math.floor((currentPPL - 100) * 0.1);
-        if(score.negative > maxMeh){
+        if(score.negative => maxMeh){
             if(maxMeh > score.grabs){
-                API.chatLog("This song exceeds the max amount of mehs, and so it should be skipped");
+                API.chatLog("This song exceeds the max amount of mehs, and so it should be skipped",true);
                 $("#WATERDRIP")[0].play();
             }
         }
@@ -218,7 +218,7 @@ var noobScript = function() {
                     manPlusVote++;
                     console.log("Manager's mehs amount: " + manPlusVote);
                     if (manPlusVote > 4) {
-                        API.chatLog("this song was Meh'd by more that 4 managers or above, and so it should be skipped!");
+                        API.chatLog("this song was Meh'd by more that 4 managers or above, and so it should be skipped!",true);
                         $("#WATERDRIP")[0].play();
                     }
                 }
