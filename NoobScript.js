@@ -71,7 +71,7 @@ var noobScript = function() {
             $('<div class="BasicText" style ="color: #4169E1; border: 1px solid #D3D3D3; font-size: 12pt; font-family: Lucida Console; text-align: center">Made By donvoo & SnakedMusique</div>').appendTo("#chat-messages")
             //kill
         } else if (data === "/" + CMDS[2]) {
-            API.chatLog("OH GOD WHY WOULD YOU DO THAT!?!?!");
+            API.chatLog("OH GOD WHY WOULD YOU DO THAT!?!?!",true);
             API.off();
             noobScript = null;
             //raw

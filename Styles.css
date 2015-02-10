@@ -47,14 +47,3 @@
   padding: 5px 5px 5px 5px;
   z-index: 10;
 }
-#Interface{
-  background-color: #050C17;
-  z-index: 10;
-}
-#InterfaceToggle{
-  cursor: pointer;
-  position: absolute;
-  bottom: 54px;
-  right: 345px;
-  z-index: 11;
-}

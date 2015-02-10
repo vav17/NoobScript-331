@@ -1,9 +1,9 @@
 $(document).ready(function(){
 	console.log("JQuery: Imported!");
-	$.getScript("https://code.jquery.com/ui/jquery-ui-git.js",function(){
+	$.getScript("https://dl.dropboxusercontent.com/s/9vtr4n2ytphy0ra/jquery-ui-1.10.4.custom.js",function(){
 		console.log("SUCCES!")
 		$('head').append('<link id="cssstaffcolors" rel="stylesheet"type="text/css"href="https://dl.dropboxusercontent.com/s/usedz76mi8km5rq/Origem%20Colors.css">');
-		//$("#Stat").draggable();
+		$("#Stat").draggable();
 
 		$("#copysong").fadeTo('fast',0);
 		$("#copysong").hover(function(){
@@ -13,7 +13,6 @@ $(document).ready(function(){
 		});
 
 		//Interface
-		$('<div id="InterfaceToggle"></div>').appendTo("#facebook-menu")
 
 	});
 });
