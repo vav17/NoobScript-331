@@ -4,6 +4,7 @@ $(document).ready(function(){
 	$("#Stat").draggable();
 });
 
+$("#copysong").fadeTo('slow',0)
 $(document).ready(function(){
 	$("#copysong").mouseenter(function(){
 		$("#copysong").fadeTo('slow',1)
