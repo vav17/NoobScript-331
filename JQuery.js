@@ -4,11 +4,11 @@ $(document).ready(function(){
 		console.log("SUCCES!")
 		$("#Stat").draggable();
 
-	
+		$("#copysong").fadeTo('fast',0);
 		$("#copysong").hover(function(){
-   		$("#copysong").fadeTo('fast',1);
+   		$("#copysong").fadeTo('slow',1);
    		}, function(){
-  		$("#copysong").fadeTo('fast',0);
+  		$("#copysong").fadeTo('slow',0);
 		});
 
 		//Interface
