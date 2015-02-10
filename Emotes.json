@@ -209,6 +209,21 @@
             "height": "45px",
             "url": "http://i.imgur.com/uUlWSj3.gif",
             "width": "100px"
+        },
+        "lolirekt": {
+            "height": "50px",
+            "url": "http://i.imgur.com/7uR4UNC.gif",
+            "width": "44px"
+        },
+        "NSLogo": {
+            "height": "96px",
+            "url": "http://i.imgur.com/y8hGF8Q.png",
+            "width": "82px"
+        },
+        "NO": {
+            "height": "50px",
+            "url": "http://i.imgur.com/SbOwYm3.jpg",
+            "width": "40px"
         }
     }
 }
