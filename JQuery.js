@@ -5,12 +5,10 @@ $(document).ready(function(){
 		$("#Stat").draggable();
 
 	
-		$("#copysong").fadeTo('slow',0)
-		$("#copysong").mouseenter(function(){
-			$("#copysong").fadeTo('slow',1)
-		});
-		$("#copysong").mouseleave(function(){
-			$("#copysong").fadeTo('slow',0)
+		$("#copysong").hover(function(){
+   		$("#copysong").fadeTo('fast',1);
+   		}, function(){
+  		$("#copysong").fadeTo('fast',0);
 		});
 
 		//Interface
