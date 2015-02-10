@@ -199,6 +199,12 @@
             "height": "50px",
             "url": "http://i.imgur.com/jleilmo.gif",
             "width": "38px"
+        },
+        "miku": {
+            "height": "32px",
+            "url": "http://i.imgur.com/TSZpfTU.gif",
+            "width": "33px"
         }
+    }
     }
 }
