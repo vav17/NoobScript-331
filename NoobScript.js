@@ -283,7 +283,7 @@ var noobScript = function() {
             var emote = "},'" + data[1] + "': {'height': '" + data[3] + "px','url': '" + data[4] + "','width': '" + data[2] + "px'}}"
     API.chatLog(emote);
     console.log(emote);
-    return emote;
+    window.prompt("New chat Image:",emote);
         }
     }
 
