@@ -287,5 +287,18 @@ var noobScript = function() {
         }
     }
 
+    API.on(API.CHAT, historyKey);
+    function historyKey(historyData){
+            if (historyData.un === API.getUser().username){
+                lastMessage = historyData.message;
+            }
+            document.addEventListener('keydown', function (evt) {
+                if (evt.keyCode === 38) {
+                 document.getElementById("chat-input-field").value=lastMessage;
+                }
+            });
+
+    }
+
 }
 //https://rawgit.com/vav17/NoobScript-331/master/NoobScript.js
