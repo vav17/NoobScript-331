@@ -3,6 +3,7 @@ function startScript() {
     if (typeof API !== "object" || !API.enabled) {
         setTimeout(startScript, 200);
     } else {
+        //$.getScript("https://code.jquery.com/ui/jquery-ui-git.js");
         noobScript();
     }
 }
@@ -20,7 +21,16 @@ var noobScript = function() {
     console.log("NoobScript-331 Imported!");
     setTimeout(function(){API.sendChat("/emotes https://fungustime.pw/tastyplug/emotes/json/emotes.json");},1000)
     setTimeout(function(){API.sendChat("/emotes https://dl.dropboxusercontent.com/s/e59a3abu8j02sqw/Nightcore-331Emotes.json");},1000)
-    setTimeout(function(){API.sendChat("/emotes https://rawgit.com/vav17/NoobScript-331/master/Emotes.json");},1000
+    setTimeout(function(){API.sendChat("/emotes https://rawgit.com/vav17/NoobScript-331/master/Emotes.json");},1000)
+
+    //$('<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css" />');
+    //$('<script type="text/javascript" src="https://code.jquery.com/ui/jquery-ui-git.js"></script>');
+    //$.getScript("https://code.jquery.com/ui/jquery-ui-git.js");
+
+    //$.getScript("https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js");
+
+    //$.getScript("https://fungustime.pw/jquery-ui-1.10.4.custom.min.js");
+    //localStorage.setItem("nameSaid",0)
 
     $('<link rel="stylesheet" href="https://rawgit.com/vav17/NoobScript-331/master/Styles.css" type="text/css">').appendTo("head")
     $('<script src="https://rawgit.com/vav17/NoobScript-331/master/JQuery.js"></script>').appendTo("head")
@@ -29,6 +39,7 @@ var noobScript = function() {
     $('<div id="Stat"></div>').appendTo("#app")
     document.getElementById('Stat').innerHTML = "<p>Messages Sent: </p>"+localStorage.getItem("msgSent") +"<p>Characters:</p>" +localStorage.getItem("msglength") + "<p>Name Mentioned:</p>" + localStorage.getItem("nameSaid") + "<p>Loli Counter: </p>" + localStorage.getItem("lolicounter")
     //End Of Stats part
+    //$('<img id="foot" src="http://i.imgur.com/4Ck5ULB.png"/>').appendTo("#app")
    // $('<img id="autoWoot" src="http://i.imgur.com/Zv2ROW8.png"/>').appendTo("#app")
     $('#vote').append('<img id="copysong" src="http://i.imgur.com/ThOy4K5.png">');
     $('#copysong').click(function(){copySong();})
@@ -129,7 +140,8 @@ var noobScript = function() {
     function chatKey(keyData) {
         if (keyData.message == CT[0]) {
             if (keyData.un === "donvoo" || keyData.un === "SnakedMusique"){
-                API.chatLog("/me *Bows*",true);
+                //API.sendChat("/me *Bows*");
+                API.chatLog("/me *Bows*",1);
             }
         }
         if (/snake/i.test(keyData.message) && API.getUser().id === 4251764) {
@@ -256,6 +268,8 @@ var noobScript = function() {
     }
     API.on(API.ADVANCE, autoWootDoer);
     function autoWootDoer(AWdata){
+        //API.chatLog("Woots: "+AWdata.lastPlay.score.positive+" Grabs: "+AWdata.lastPlay.score.grabs+" Mehs: "+AWdata.lastPlay.score.negative,1)
+        //API.chatLog("DJ: "+AWdata.lastPlay.dj.username,1)
         if (autoWootSet === 1){
             setTimeout(function(){$('#woot').click();},2000)
         }
