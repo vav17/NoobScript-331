@@ -289,13 +289,20 @@ var noobScript = function() {
 
     API.on(API.CHAT, historyKey);
     function historyKey(historyData){
-            if (historyData.un === API.getUser().username){
-                lastMessage = historyData.message;
-            }
             document.addEventListener('keydown', function (evt) {
-                if (evt.keyCode === 38) {
+            if (evt.keyCode === 38) {
                  document.getElementById("chat-input-field").value=lastMessage;
                 }
+            });
+            document.addEventListener('keyup', function (evt) {
+                if ($("#chat-input-field").is(":focus")) {
+                    if(evt.keyCode === 13 || evt.keyCode === 38 || evt.keyCode === 17 || evt.keyCode === 18 || evt.keyCode === 19 || evt.keyCode === 27 || evt.keyCode === 33 || evt.keyCode === 34 || evt.keyCode === 35 || evt.keyCode === 36 || evt.keyCode === 37 || evt.keyCode === 39 || evt.keyCode === 40 || evt.keyCode === 45 || evt.keyCode === 46 || evt.keyCode === 91 || evt.keyCode === 92 || evt.keyCode === 93 || evt.keyCode === 112 || evt.keyCode === 113 || evt.keyCode === 114 || evt.keyCode === 115 || evt.keyCode === 116 || evt.keyCode === 117 || evt.keyCode === 118 || evt.keyCode === 119 || evt.keyCode === 120 || evt.keyCode === 121 || evt.keyCode === 122 || evt.keyCode === 123 || evt.keyCode === 144 || evt.keyCode === 145 || evt.keyCode === 16) {
+                        console.log("Enter pressed!")
+                    }
+                    else{
+                        lastMessage = document.getElementById("chat-input-field").value
+                    }
+                }   
             });
 
     }
