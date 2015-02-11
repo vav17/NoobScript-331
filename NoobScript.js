@@ -56,7 +56,7 @@ var noobScript = function() {
     })*/
     Devs = ["donvoo", "SnakedMusique"];
     CT = ["BOW TO US"];
-    CMDS = ["cmds", "credits", "NSkill", "raw", "NSreload", "banned", "api", "noskip", "YES", "dafaq", "EHD", "sowwy", "copysong", "hahano", "stats", "emotelist", "NSaddemote", "resetstats"];
+    CMDS = ["cmds", "credits", "NSkill", "raw", "NSreload", "banned", "api", "noskip", "YES", "dafaq", "EHD", "sowwy", "copysong", "hahano", "stats", "emotelist", "NSaddemote", "resetstats", "hidecounter"];
     EmoteList = ["twerk", "SNM", "SnakedMusique", "CarltonDance", "Fireworks", "Headbang", "HighShere", "rspin", "jenny", "totoro", "amaze", "amazegif", "kawaii", "spamgif", "banned", "stitchbra", "stitchglasses", "rainbowllama", "dorito", "DNN", "dotaaxerage", "dotachicken", "dotahorse", "dotaaxecry", "nat", "crikawaii", "pug", "noice", "cute", "loli", "suchfan", "squid", "hi", "lick", "pets", "chickendance", "pingu", "flipstable", "lennygif", "firelenny", "miku", "nyannyan", "lolirekt", "NSLogo", "NO"];
     autoWootSet = 0;
 
@@ -132,6 +132,8 @@ var noobScript = function() {
             localStorage.setItem("msgSent",0)
             localStorage.setItem("nameSaid",0)
             localStorage.setItem("lolicounter",0)
+        } else if (data == "/" + CMDS[18]) {
+            $("#Stat").toggle("explode");
         }
     }
 
@@ -292,10 +294,7 @@ var noobScript = function() {
             document.addEventListener('keydown', function (evt) {
             if (evt.keyCode === 38) {
                  document.getElementById("chat-input-field").value=lastMessage;
-            }
-            if (evt.keyCode === 113){
-            $("#Stat").toggle("explode");
-            }  
+            } 
             });
             document.addEventListener('keyup', function (evt) {
                 if ($("#chat-input-field").is(":focus")) {
