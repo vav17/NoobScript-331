@@ -58,6 +58,7 @@ var noobScript = function() {
     CT = ["BOW TO US"];
     CMDS = ["cmds", "credits", "NSkill", "raw", "NSreload", "banned", "api", "noskip", "YES", "dafaq", "EHD", "sowwy", "copysong", "hahano", "stats", "emotelist", "NSaddemote", "resetstats", "hidecounter"];
     EmoteList = ["twerk", "SNM", "SnakedMusique", "CarltonDance", "Fireworks", "Headbang", "HighShere", "rspin", "jenny", "totoro", "amaze", "amazegif", "kawaii", "spamgif", "banned", "stitchbra", "stitchglasses", "rainbowllama", "dorito", "DNN", "dotaaxerage", "dotachicken", "dotahorse", "dotaaxecry", "nat", "crikawaii", "pug", "noice", "cute", "loli", "suchfan", "squid", "hi", "lick", "pets", "chickendance", "pingu", "flipstable", "lennygif", "firelenny", "miku", "nyannyan", "lolirekt", "NSLogo", "NO"];
+    CSS = ["#Stat", "#copysong", ".main", "#Intro", "#autoWoot", "#foot"]
     autoWootSet = 0;
 
     API.on(API.CHAT_COMMAND, commands);
@@ -205,12 +206,19 @@ var noobScript = function() {
         }
     }
 
+    function removeCSS(){
+        for(var i = 0;CSS.length; i++){
+            $(CSS[i]).remove();
+            console.log("Removing: " + CSS[i]);
+        };
+    };
+
     function copySong() {
         var cid = API.getMedia().cid;
         var author = API.getMedia().author;
         var title = API.getMedia().title;
         window.prompt("Song Information:", author + " - " + title + " // " + "https://www.youtube.com/watch?v=" + cid);
-    }
+    };
 
     API.on(API.SCORE_UPDATE, skipTest);
     function skipTest(score){
@@ -236,7 +244,7 @@ var noobScript = function() {
                 }
             }
         }
-    }
+    };
 
     function getId(username) {
         username = username.replace("@", "");
