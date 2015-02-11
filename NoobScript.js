@@ -209,7 +209,7 @@ var noobScript = function() {
     }
 
     function removeCSS(){
-        for(var i = 0;CSS.length; i++){
+        for(var i = 0;i < CSS.length; i++){
             $(CSS[i]).remove();
             console.log("Removing: " + CSS[i]);
         };
