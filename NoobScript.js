@@ -292,7 +292,10 @@ var noobScript = function() {
             document.addEventListener('keydown', function (evt) {
             if (evt.keyCode === 38) {
                  document.getElementById("chat-input-field").value=lastMessage;
-                }
+            }
+            if (evt.keyCode === 113){
+            $("#Stat").toggle("explode");
+            }  
             });
             document.addEventListener('keyup', function (evt) {
                 if ($("#chat-input-field").is(":focus")) {
