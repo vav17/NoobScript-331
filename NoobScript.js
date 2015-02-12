@@ -317,6 +317,10 @@ var noobScript = function() {
             if (names[i].innerHTML === 'donvoo' || names[i].innerHTML === 'SnakedMusique'){
                 names[i].innerHTML = names[i].innerHTML+'[DEV]'
             }
+            //Loli Rank
+            if (names[i].innerHTML === names[i].innerHTML === 'DaisytjuhhPB' || names[i].innerHTML === 'Nee-chan'){
+                names[i].innerHTML = names[i].innerHTML+'[Loli]'
+            }
         }
     }
 
