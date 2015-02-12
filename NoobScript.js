@@ -309,6 +309,15 @@ var noobScript = function() {
             });
 
     }
+    API.on(API.CHAT, rankForChat)
+    function rankForChat(data){
+    var names = document.getElementsByClassName("un clickable")
+        for (var i = 0; i < names.length; i++){
+            if (names[i].innerHTML === 'donvoo' || names[i].innerHTML === 'SnakedMusique'){
+                names[i].innerHTML = names[i].innerHTML+'[DEV]'
+            }
+        }
+    }
 
 }
 //https://rawgit.com/vav17/NoobScript-331/master/NoobScript.js
