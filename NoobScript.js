@@ -313,8 +313,13 @@ var noobScript = function() {
     function rankForChat(data){
     var names = document.getElementsByClassName("un clickable")
         for (var i = 0; i < names.length; i++){
+            //Dev Rank
             if (names[i].innerHTML === 'donvoo' || names[i].innerHTML === 'SnakedMusique'){
                 names[i].innerHTML = names[i].innerHTML+'[DEV]'
+            }
+            //Loli Rank
+            if (names[i].innerHTML === 'DJ_YoloSwaggins33' || names[i].innerHTML === 'DaisytjuhhPB' || names[i].innerHTML === 'Nee-chan'){
+                names[i].innerHTML = names[i].innerHTML+'[Loli]'
             }
         }
     }
