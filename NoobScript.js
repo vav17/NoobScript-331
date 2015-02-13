@@ -54,7 +54,13 @@ var noobScript = function() {
         } else if (data === "/" + CMDS[2]) {
             API.chatLog("OH GOD WHY WOULD YOU DO THAT!?!?!",true);
             removeCSS();
-            API.off();
+            API.off(API.CHAT_COMMAND, commands);
+            API.off(API.CHAT, chatKey);
+            API.off(API.SCORE_UPDATE, skipTest);
+            API.off(API.ADVANCE, getYTData);
+            API.off(API.ADVANCE, autoWootDoer);
+            API.off(API.CHAT, historyKey);
+            API.off(API.CHAT, rankForChat);
             noobScript = null;
             //raw
         } else if (data == "/" + CMDS[3]) {
@@ -64,7 +70,13 @@ var noobScript = function() {
             console.log("NSMain: reloading");
             API.chatLog("Reloading NoobScript-331",true);
             removeCSS();
-            API.off();
+            API.off(API.CHAT_COMMAND, commands);
+            API.off(API.CHAT, chatKey);
+            API.off(API.SCORE_UPDATE, skipTest);
+            API.off(API.ADVANCE, getYTData);
+            API.off(API.ADVANCE, autoWootDoer);
+            API.off(API.CHAT, historyKey);
+            API.off(API.CHAT, rankForChat);
             noobScript = null;
             //refreshEmotes
         } else if (data == "/refreshemotes"){
@@ -284,9 +296,9 @@ var noobScript = function() {
             API.chatLog("Use: /addemote name width height URL",true);
         }else{
             var emote = "},'" + data[1] + "': {'height': '" + data[3] + "px','url': '" + data[4] + "','width': '" + data[2] + "px'}}"
-    API.chatLog(emote);
-    console.log(emote);
-    window.prompt("New chat Image:",emote);
+            API.chatLog(emote);
+            console.log(emote);
+            window.prompt("New chat Image:",emote);
         }
     }
 
@@ -309,7 +321,7 @@ var noobScript = function() {
             });
 
     }
-    API.on(API.CHAT, rankForChat)
+    API.on(API.CHAT, rankForChat);
     function rankForChat(data){
     var names = document.getElementsByClassName("un clickable")
         for (var i = 0; i < names.length; i++){
