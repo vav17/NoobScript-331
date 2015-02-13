@@ -55,11 +55,10 @@
   background-clip: text;
 }
 #NSms {
-  height: 100px;
-  width: 100px;
+  height: 150px;
+  width: 150px;
   background-color: #00FFFF;
   position: relative;
-  bottom: 400px;
-  z-index: 10;
+  z-index: 100;
   cursor: pointer;
 }
