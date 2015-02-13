@@ -335,6 +335,11 @@ var noobScript = function() {
             }
         }
     }
+    function MaintenanceModeFun(){
+        if (document.title === "maintenance mode - plug.dj"){
+            $('<div id="NSms" class="rainbow">Here...<br>-From NS</div>').appendTo("body")
+        }
+    }
 
 }
 //https://rawgit.com/vav17/NoobScript-331/master/NoobScript.js
