@@ -54,11 +54,3 @@
   -webkit-background-clip: text;
   background-clip: text;
 }
-#NSms {
-  height: 150px;
-  width: 150px;
-  background-color: #00FFFF;
-  position: relative;
-  z-index: 100;
-  cursor: pointer;
-}
