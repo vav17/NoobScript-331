@@ -17,7 +17,7 @@ var noobScript = function() {
     setTimeout(function(){API.sendChat("/emotes https://rawgit.com/vav17/NoobScript-331/master/Emotes.json");},1000)
     $('<link rel="stylesheet" href="https://rawgit.com/vav17/NoobScript-331/master/Styles.css" type="text/css">').appendTo("head")
     $('<script src="https://rawgit.com/vav17/NoobScript-331/master/JQuery.js"></script>').appendTo("head")
-    $('<div id="Intro">Running NoobScript V2.7!</div>').appendTo("#chat-messages")
+    $('<div id="Intro"><span class="rainbow">Running NoobScript V2.7!</span></div>').appendTo("#chat-messages")
     $('<div id="Stat"></div>').appendTo("#app")
     document.getElementById('Stat').innerHTML = "<p>Messages Sent: </p>"+localStorage.getItem("msgSent") +"<p>Characters:</p>" +localStorage.getItem("msglength") + "<p>Name Mentioned:</p>" + localStorage.getItem("nameSaid") + "<p>Loli Counter: </p>" + localStorage.getItem("lolicounter")
     $('#vote').append('<img id="copysong" src="http://i.imgur.com/ThOy4K5.png">');
