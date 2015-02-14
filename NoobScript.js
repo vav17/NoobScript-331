@@ -49,7 +49,7 @@ var noobScript = function() {
             break;
             
             case "/credits":
-                $('<div class="BasicText" style ="color: #4169E1; border: 1px solid #D3D3D3; font-size: 12pt; font-family: Lucida Console; text-align: center">Made By donvoo & SnakedMusique</div>').appendTo("#chat-messages");
+                $('<div class="rainbow" style ="font-size: 12pt; font-family: Lucida Console; text-align: center"><span>Made By donvoo & SnakedMusique</span></div>').appendTo("#chat-messages");
             break;
             
             case "/NSkill":
