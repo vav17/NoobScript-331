@@ -54,13 +54,7 @@ var noobScript = function() {
         } else if (data === "/" + CMDS[2]) {
             API.chatLog("OH GOD WHY WOULD YOU DO THAT!?!?!",true);
             removeCSS();
-            API.off(API.CHAT_COMMAND, commands);
-            API.off(API.CHAT, chatKey);
-            API.off(API.SCORE_UPDATE, skipTest);
-            API.off(API.ADVANCE, getYTData);
-            API.off(API.ADVANCE, autoWootDoer);
-            API.off(API.CHAT, historyKey);
-            API.off(API.CHAT, rankForChat);
+            APITurnOff();
             noobScript = null;
             //raw
         } else if (data == "/" + CMDS[3]) {
@@ -70,13 +64,7 @@ var noobScript = function() {
             console.log("NSMain: reloading");
             API.chatLog("Reloading NoobScript-331",true);
             removeCSS();
-            API.off(API.CHAT_COMMAND, commands);
-            API.off(API.CHAT, chatKey);
-            API.off(API.SCORE_UPDATE, skipTest);
-            API.off(API.ADVANCE, getYTData);
-            API.off(API.ADVANCE, autoWootDoer);
-            API.off(API.CHAT, historyKey);
-            API.off(API.CHAT, rankForChat);
+            APITurnOff();
             noobScript = null;
             //refreshEmotes
         } else if (data == "/refreshemotes"){
@@ -330,6 +318,15 @@ var noobScript = function() {
                 names[i].innerHTML = names[i].innerHTML+' [NS Loli]'
             }
         }
+    }
+    function APITurnOff(){
+        API.off(API.CHAT_COMMAND, commands);
+        API.off(API.CHAT, chatKey);
+        API.off(API.SCORE_UPDATE, skipTest);
+        API.off(API.ADVANCE, getYTData);
+        API.off(API.ADVANCE, autoWootDoer);
+        API.off(API.CHAT, historyKey);
+        API.off(API.CHAT, rankForChat);
     }
 
 }
