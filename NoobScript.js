@@ -131,7 +131,9 @@ var noobScript = function() {
             $("#Stat").toggle("explode");
         }
     }
-
+    $('head').append($('<audio id="DONVOO" src="http://puu.sh/6CVzc.wav" />'));
+    $('head').append($('<audio id="KAMI" src="http://k007.kiwi6.com/hotlink/j4qk58007e/smobyp.mp3" />'));
+     $('head').append($('<audio id="SUGOI" src="http://vav17.com/wp-content/uploads/SUGOI.wav" />'));
     //Chat Triggers
     API.on(API.CHAT, chatKey);
     function chatKey(keyData) {
@@ -141,23 +143,19 @@ var noobScript = function() {
             }
         }
         if (/snake/i.test(keyData.message) && API.getUser().id === 4251764) {
-            $('head').append($('<audio id="SUGOI" src="http://vav17.com/wp-content/uploads/SUGOI.wav" />'));
-            $("#SUGOI")[0].play();
+           $("#SUGOI")[0].play();
         }
         if (/Monkey D kami|Kami|monkey/i.test(keyData.message) && API.getUser().id === 3199479) {
-            $('head').append($('<audio id="KAMI" src="http://k007.kiwi6.com/hotlink/j4qk58007e/smobyp.mp3" />'));
             $("#KAMI")[0].play();
         }
         if (/donv/i.test(keyData.message) && API.getUser().id === 4537120) {
-            $('head').append($('<audio id="DONVOO" src="http://puu.sh/6CVzc.wav" />'));
             $("#DONVOO")[0].play();
         }
         if (/Yolo/i.test(keyData.message) && API.getUser().id === 3774105) {
-            $('head').append($('<audio id="DONVOO" src="http://puu.sh/6CVzc.wav" />'));
             $("#DONVOO")[0].play();
         }
         if (/EC/i.test(keyData.message) && API.getUser().id === 3816188) {
-            $('head').append($('<audio id="DONVOO" src="http://puu.sh/6CVzc.wav" />'));
+            
             $("#DONVOO")[0].play();
         }
         if (keyData.message.slice(0,API.getUser().username.length+1) === "@"+API.getUser().username) {
@@ -217,7 +215,7 @@ var noobScript = function() {
         var title = API.getMedia().title;
         window.prompt("Song Information:", author + " - " + title + " // " + "https://www.youtube.com/watch?v=" + cid);
     };
-
+    $('head').append($('<audio id="WATERDRIP" src="http://vav17.com/wp-content/uploads/WaterDrip.mp3" />'));
     API.on(API.SCORE_UPDATE, skipTest);
     function skipTest(score){
         staff = API.getStaff();
@@ -228,7 +226,6 @@ var noobScript = function() {
             if(maxMeh > score.grabs){
                 if (skipTestVar === 1){
                     skipTestVar = 0 
-                    $('head').append($('<audio id="WATERDRIP" src="http://vav17.com/wp-content/uploads/WaterDrip.mp3" />'));
                     API.chatLog("This song exceeds the max amount of mehs, and so it should be skipped",true);
                     $("#WATERDRIP")[0].play();
                 }
@@ -241,8 +238,7 @@ var noobScript = function() {
                     console.log("Manager's mehs amount: " + manPlusVote);
                     if (manPlusVote > 4) {
                         if (skipTestVar === 1){
-                            skipTestVar = 0
-                            $('head').append($('<audio id="WATERDRIP" src="http://vav17.com/wp-content/uploads/WaterDrip.mp3" />'));
+                            skipTestVar = 0                          
                             API.chatLog("this song was Meh'd by more that 4 managers or above, and so it should be skipped!",true);
                             $("#WATERDRIP")[0].play();
                         }
