@@ -330,7 +330,7 @@ var noobScript = function() {
                 names[i].innerHTML = names[i].innerHTML+' [NS DEV]'
             }
             //Loli Rank
-            if (names[i].innerHTML === 'DaisytjuhhPB' || names[i].innerHTML === 'Nee-chan'){
+            if (names[i].innerHTML === 'DaisytjuhhPB' || names[i].innerHTML === 'Nee-chan' || names[i].innerHTML === 'SushiNatilie'){
                 names[i].innerHTML = names[i].innerHTML+' [NS Loli]'
             }
         }
