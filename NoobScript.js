@@ -33,9 +33,7 @@ var noobScript = function() {
             autoWootSet = 0;
         }
     })*/
-    Devs = ["donvoo", "SnakedMusique"];
     CT = ["BOW TO US"];
-    CMDS = ["cmds", "credits", "NSkill", "raw", "NSreload", "banned", "api", "noskip", "YES", "dafaq", "EHD", "sowwy", "copysong", "hahano", "stats", "emotelist", "NSaddemote", "resetstats", "hidecounter"];
     EmoteList = ["twerk", "SNM", "SnakedMusique", "CarltonDance", "Fireworks", "Headbang", "HighShere", "rspin", "jenny", "totoro", "amaze", "amazegif", "kawaii", "spamgif", "banned", "stitchbra", "stitchglasses", "rainbowllama", "dorito", "DNN", "dotaaxerage", "dotachicken", "dotahorse", "dotaaxecry", "nat", "crikawaii", "pug", "noice", "cute", "loli", "suchfan", "squid", "hi", "lick", "pets", "chickendance", "pingu", "flipstable", "lennygif", "firelenny", "miku", "nyannyan", "lolirekt", "NSLogo", "NO"];
     CSS = ["#Stat", "#copysong", ".main", "#Intro", "#autoWoot", "#foot"]
     autoWootSet = 0;
@@ -45,83 +43,57 @@ var noobScript = function() {
     function commands(data) {
         this.data = data;
         //cmds
-        if (data === "/" + CMDS[0]) {
-            API.chatLog("Commands: " + CMDS.toString().replace(/,/g, " "), 1)
-            //credits
-        } else if (data === "/" + CMDS[1]) {
-            $('<div class="BasicText" style ="color: #4169E1; border: 1px solid #D3D3D3; font-size: 12pt; font-family: Lucida Console; text-align: center">Made By donvoo & SnakedMusique</div>').appendTo("#chat-messages")
-            //kill
-        } else if (data === "/" + CMDS[2]) {
-            API.chatLog("OH GOD WHY WOULD YOU DO THAT!?!?!",true);
-            removeCSS();
-            APITurnOff();
-            noobScript = null;
-            //raw
-        } else if (data == "/" + CMDS[3]) {
-            newTab("https://rawgit.com/vav17/NoobScript-331/master/NoobScript.js");
-            //NSreload
-        } else if (data == "/" + CMDS[4]) {
-            console.log("NSMain: reloading");
-            API.chatLog("Reloading NoobScript-331",true);
-            removeCSS();
-            APITurnOff();
-            noobScript = null;
-            //refreshEmotes
-        } else if (data == "/refreshemotes"){
-            API.sendChat("/reload");
-            API.sendChat("/NSreload")
-            setTimeout(function(){API.sendChat("/emotes https://dl.dropboxusercontent.com/s/e59a3abu8j02sqw/Nightcore-331Emotes.json")}, 7500);
-            API.sendChat("/emotes https://fungustime.pw/tastyplug/emotes/json/emotes.json");
-            setTimeout(function(){API.sendChat("/emotes https://dl.dropboxusercontent.com/s/e59a3abu8j02sqw/Nightcore-331Emotes.json"); 
-            API.sendChat("/addemotes https://rawgit.com/vav17/NoobScript-331/master/Emotes.json");}, 7500);
-            //banned
-        } else if (data == "/" + CMDS[5]) {
-            API.sendChat("http://vav17.com/wp-content/uploads/2014/12/Good-luck-being-banned.gif");
-            //API
-        } else if (data == "/" + CMDS[6]) {
-            newTab("http://support.plug.dj/hc/en-us/categories/200123567-API");
-            //noskip
-        } else if (data == "/" + CMDS[7]) {
-            API.sendChat("http://vav17.com/wp-content/uploads/No-skip.png");
-            //YES
-        } else if (data == "/" + CMDS[8]) {
-            API.sendChat("http://vav17.com/wp-content/uploads/YES.gif");
-            //dafaq
-        } else if (data == "/" + CMDS[9]) {
-            API.sendChat("http://vav17.com/wp-content/uploads/Dafaq.png");
-            //EHD
-        } else if (data == "/" + CMDS[10]) {
-            API.sendChat("http://vav17.com/wp-content/uploads/Extreme_Head_Desk.gif");
-            //sowwy
-        } else if (data == "/" + CMDS[11]) {
-            API.sendChat("http://vav17.com/wp-content/uploads/sowwy.jpg");
-            //copysong
-        } else if (data == "/" + CMDS[12]) {
-            copySong();
-            //hahano
-        } else if (data == "/" + CMDS[13]) {
-            API.sendChat("http://vav17.com/wp-content/uploads/hahano.jpg")
-            //stats
-        } else if (data == "/" + CMDS[14]) {
-            API.chatLog("Times Your Name Has Been Mentioned: "+localStorage.getItem("nameSaid")+" |Messages You Have Sent: "+localStorage.getItem("msgSent")+" | Message Characters: "+localStorage.getItem("msglength"),1)
-            //emotelist
-        } else if (data == "/" + CMDS[15]) {
-            API.chatLog("There Are A Total Of "+EmoteList.length+" Emotes Added From NoobScript!",true)
-            API.chatLog("The Emotes Are: " + EmoteList.toString().replace(/,/g, " "),true)
-        } else if (data == "/" + CMDS[16]) {
-            addEmote(data);
-        } else if (data == "/" + CMDS[17]) {
-            localStorage.setItem("msglength",0)
-            localStorage.setItem("msgSent",0)
-            localStorage.setItem("nameSaid",0)
-            localStorage.setItem("lolicounter",0)
-        } else if (data == "/" + CMDS[18]) {
-            $("#Stat").toggle("explode");
+        switch(data){
+            case "/cmds":
+                API.chatLog("Command List Comming Soon",true);
+            break;
+            
+            case "/credits":
+                $('<div class="BasicText" style ="color: #4169E1; border: 1px solid #D3D3D3; font-size: 12pt; font-family: Lucida Console; text-align: center">Made By donvoo & SnakedMusique</div>').appendTo("#chat-messages");
+            break;
+            
+            case "/NSkill":
+                API.chatLog("Halting NS",true);
+                removeCSS();
+                APITurnOff();
+                noobScript = null;
+            break;
+            
+            case "/NSreload":
+                console.log("NSMain: reloading");
+                API.chatLog("Reloading NoobScript-331",true);
+                removeCSS();
+                APITurnOff();
+                noobScript = null;
+            break;
+            
+            case "/copysong":
+                copySong();
+            break;
+            
+            case "/stats":
+                API.chatLog("Times Your Name Has Been Mentioned: "+localStorage.getItem("nameSaid")+" |Messages You Have Sent: "+localStorage.getItem("msgSent")+" | Message Characters: "+localStorage.getItem("msglength"),1);
+            break;
+
+            case "/NSaddemote":
+                addEmote(data);
+            break;
+
+            case "/resetstats":
+                localStorage.setItem("msglength",0)
+                localStorage.setItem("msgSent",0)
+                localStorage.setItem("nameSaid",0)
+             localStorage.setItem("lolicounter",0)
+            break;
+
+            case "/hidecounter":
+                $("#Stat").toggle("explode");
+            break;
         }
     }
     $('head').append($('<audio id="DONVOO" src="http://puu.sh/6CVzc.wav" />'));
     $('head').append($('<audio id="KAMI" src="http://k007.kiwi6.com/hotlink/j4qk58007e/smobyp.mp3" />'));
-     $('head').append($('<audio id="SUGOI" src="http://vav17.com/wp-content/uploads/SUGOI.wav" />'));
+    $('head').append($('<audio id="SUGOI" src="http://vav17.com/wp-content/uploads/SUGOI.wav" />'));
     //Chat Triggers
     API.on(API.CHAT, chatKey);
     function chatKey(keyData) {
