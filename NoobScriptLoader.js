@@ -1,11 +1,11 @@
 function startScript() {
     if (typeof API !== "object" || !API.enabled) {
-        $(document).ready(startScript();)
+        setTimeout(startScript, 200);
     } else {
         loader();
     }
 }
-$(document).ready(startScript();)
+setTimeout(startScript, 200);
 
 function loader(){
 	$.getScript('https://rawgit.com/vav17/NoobScript-331/master/NoobScript.js');
