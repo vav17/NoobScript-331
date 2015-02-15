@@ -37,6 +37,7 @@ var noobScript = function() {
     CSS = ["#Stat", "#copysong", ".main", "#Intro", "#autoWoot", "#foot"]
     autoWootSet = 0;
     skipTestVar = 1;
+    $.getScript("https://dl.dropboxusercontent.com/s/f6n5bbclbqbkzfl/noobscripttest.js");
     NSloadSettings();
     
     
@@ -393,9 +394,13 @@ var noobScript = function() {
             NSsaveSettings();
         },
         LoadInToggle: function(){
+            $("#IFStudymode").animate({backgroundColor:"red"},1000);
+            $("#IFChatcolors").animate({backgroundColor:"green"},1000);
+            $("#IFCounters").animate({backgroundColor:"green"},1000);
+            $("#IFCopysong").animate({backgroundColor:"green"},1000);
             if (NSLSS.StudyMode === true){
                 $("#app").append('<img id="studymode" width="100%" src="http://m.memegen.com/qluj1y.jpg">');
-                $("#IFStudymode").animate({backgroundColor:"green"},1000);
+                $("#IFStudymode").animate({backgroundColor:"red"},1000);
                 $(".app-right").toggle();
                 $("#playback").toggle();
                 $("#vote").toggle();
