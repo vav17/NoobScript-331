@@ -322,7 +322,7 @@ var noobScript = function() {
         CopySong: true,
         Counter: true,
         ChatColors: true,
-        StudyMode: true
+        StudyMode: false
     };
     if (localStorage.getItem("NSSET")){
         console.log("Settings Loaded!")
