@@ -9,7 +9,6 @@ function startScript() {
 setTimeout(startScript, 200);
 
 var noobScript = function() {    
-    
     //onStartup
     console.log("NoobScript-331 Imported!");
     setTimeout(function(){API.sendChat("/emotes https://fungustime.pw/tastyplug/emotes/json/emotes.json");},1000)
@@ -311,21 +310,28 @@ var noobScript = function() {
         API.off(API.CHAT, rankForChat);
     }
 
+    togglers = {
+        toggleCopySong: function(){
+            if(/*the localstorage is true*/){
+                $("#copysong").toggle("explode");
+            }
+            //save the settings here
+            },
+        toggleCounters: function(){
+            if(/*the localstorage is true*/){
+                $("#Stat").toggle("explode");
+            }
+        },
+        toggleChatColors: function(){
+            if(/*the localstorage is true*/){
+                $('head').append('<link id="cssstaffcolors" rel="stylesheet"type="text/css"href="https://dl.dropboxusercontent.com/s/usedz76mi8km5rq/Origem%20Colors.css">');
+            }else{
+                $('#cssstaffcolors').remove();
+            }
+        }
+    };
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-}
-
+};
 //https://rawgit.com/vav17/NoobScript-331/master/NoobScript.js
