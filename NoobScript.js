@@ -312,19 +312,20 @@ var noobScript = function() {
 
     togglers = {
         toggleCopySong: function(){
-                $("#copysong").toggle("explode");
-                //save the settings here
-            },
+            $("#copysong").toggle("explode");
+            //save the settings here
+        },
         toggleCounters: function(){
-                $("#Stat").toggle("explode");
-                //save the settings here
-            },
+            $("#Stat").toggle("explode");
+            //save the settings here
+        },
         toggleChatColors: function(){
             if(/*the localstorage is true*/){
                 $('#cssstaffcolors').remove();
             }else{
                 $('head').append('<link id="cssstaffcolors" rel="stylesheet"type="text/css"href="https://dl.dropboxusercontent.com/s/usedz76mi8km5rq/Origem%20Colors.css">');
-            }
+            };
+            //save settings here
         }
     };
 
