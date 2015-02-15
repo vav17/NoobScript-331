@@ -354,7 +354,7 @@ var noobScript = function() {
                 NSLSS.Counter = false;
                 $("#IFCounters").animate({backgroundColor:"red"},1000);
             }else{
-                NSLSS.Counters = true;
+                NSLSS.Counter = true;
                 $("#IFCounters").animate({backgroundColor:"green"},1000);
             };
             $("#Stat").toggle("explode");
