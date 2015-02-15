@@ -38,7 +38,7 @@ var noobScript = function() {
     autoWootSet = 0;
     skipTestVar = 1;
     NSloadSettings();
-
+    
     
     API.on(API.CHAT_COMMAND, commands);
     function commands(data) {
@@ -329,7 +329,8 @@ var noobScript = function() {
     } else {
         localStorage.setItem("NSSET", JSON.stringify(NSsettings))
     }
-        NSLSS = JSON.parse(localStorage.getItem("NSSET")); 
+        NSLSS = JSON.parse(localStorage.getItem("NSSET"));
+        setTimeout(function(){NSTogglers.LoadInToggle();},3500) 
     }
 
     function NSsaveSettings(){
@@ -390,6 +391,31 @@ var noobScript = function() {
             $("#dj-booth").toggle();
             $("#Stat").toggle();
             NSsaveSettings();
+        },
+        LoadInToggle: function(){
+            if (NSLSS.StudyMode === true){
+                $("#app").append('<img id="studymode" width="100%" src="http://m.memegen.com/qluj1y.jpg">');
+                $("#IFStudymode").animate({backgroundColor:"green"},1000);
+                $(".app-right").toggle();
+                $("#playback").toggle();
+                $("#vote").toggle();
+                $("#dj-button").toggle();
+                $("#audience").toggle();
+                $("#dj-booth").toggle();
+                $("#Stat").toggle();
+            }
+            if (NSLSS.ChatColors === false){
+                $("#IFChatcolors").animate({backgroundColor:"red"},1000);
+                $('#cssstaffcolors').remove();
+            }
+            if (NSLSS.Counter === false){
+                $("#Stat").toggle("explode");
+                $("#IFCounters").animate({backgroundColor:"red"},1000);
+            }
+            if (NSLSS.CopySong === false){
+                $("#copysong").remove();
+                $("#IFCounters").animate({backgroundColor:"red"},1000);
+            }
         }
     }
 }
