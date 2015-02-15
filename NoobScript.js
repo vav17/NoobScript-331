@@ -1,12 +1,12 @@
 //NoobScript by donvoo & SnakedMusique is licensed under a Creative Commons Attribution-NoDerivatives 4.0 International License.
 function startScript() {
     if (typeof API !== "object" || !API.enabled) {
-        $(document).ready(startScript())
+        setTimeout(startScript, 200);
     } else {
         noobScript();
     }
 }
-$(document).ready(startScript())
+setTimeout(startScript, 200);
 
 var noobScript = function() {    
     //onStartup
