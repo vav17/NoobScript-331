@@ -37,7 +37,6 @@ var noobScript = function() {
     CSS = ["#Stat", "#copysong", ".main", "#Intro", "#autoWoot", "#foot"]
     autoWootSet = 0;
     skipTestVar = 1;
-    $.getScript("https://dl.dropboxusercontent.com/s/f6n5bbclbqbkzfl/noobscripttest.js");
     NSloadSettings();
     
     
