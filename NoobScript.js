@@ -19,7 +19,6 @@ var noobScript = function() {
     $('<div id="Intro"><span class="rainbow">Running NoobScript V2.7!</span></div>').appendTo("#chat-messages")
     $('<div id="Stat"></div>').appendTo("#app")
     document.getElementById('Stat').innerHTML = "<p>Messages Sent: </p>"+localStorage.getItem("msgSent") +"<p>Characters:</p>" +localStorage.getItem("msglength") + "<p>Name Mentioned:</p>" + localStorage.getItem("nameSaid") + "<p>Loli Counter: </p>" + localStorage.getItem("lolicounter")
-    $('#vote').append('<img id="copysong" src="http://i.imgur.com/ThOy4K5.png">');
     $('#copysong').click(function(){copySong();})
     /*$('#autoWoot').click(function autoWootChecker() {
         if (autoWootSet === 0){
@@ -342,11 +341,12 @@ var noobScript = function() {
             if(NSLSS.CopySong === true){
                 NSLSS.CopySong = false;
                 $("#IFCopysong").animate({backgroundColor:"red"},1000);
+                $("#copysong").remove();
             }else{
                 NSLSS.CopySong = true;
                 $("#IFCopysong").animate({backgroundColor:"green"},1000);
+                $('#vote').append('<img id="copysong" src="http://i.imgur.com/ThOy4K5.png">');
             };
-            $("#copysong").toggle("explode");
             NSsaveSettings();
         },
         toggleCounters: function(){
