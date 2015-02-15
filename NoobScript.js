@@ -350,8 +350,8 @@ var noobScript = function() {
             NSsaveSettings();
         },
         toggleCounters: function(){
-            if(NSLSS.Counters === true){
-                NSLSS.Counters = false;
+            if(NSLSS.Counter === true){
+                NSLSS.Counter = false;
                 $("#IFCounters").animate({backgroundColor:"red"},1000);
             }else{
                 NSLSS.Counters = true;
