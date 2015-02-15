@@ -93,6 +93,7 @@ var noobScript = function() {
     $('head').append($('<audio id="DONVOO" src="http://puu.sh/6CVzc.wav" />'));
     $('head').append($('<audio id="KAMI" src="http://k007.kiwi6.com/hotlink/j4qk58007e/smobyp.mp3" />'));
     $('head').append($('<audio id="SUGOI" src="http://vav17.com/wp-content/uploads/SUGOI.wav" />'));
+    $('head').append($('<audio id="WATERDRIP" src="http://vav17.com/wp-content/uploads/WaterDrip.mp3" />'));
     //Chat Triggers
     API.on(API.CHAT, chatKey);
     function chatKey(keyData) {
@@ -102,7 +103,7 @@ var noobScript = function() {
             }
         }
         if (/snake/i.test(keyData.message) && API.getUser().id === 4251764) {
-           $("#SUGOI")[0].play();
+           $("#WATERDRIP")[0].play();
         }
         if (/Monkey D kami|Kami|monkey/i.test(keyData.message) && API.getUser().id === 3199479) {
             $("#KAMI")[0].play();
@@ -174,7 +175,7 @@ var noobScript = function() {
         var title = API.getMedia().title;
         window.prompt("Song Information:", author + " - " + title + " // " + "https://www.youtube.com/watch?v=" + cid);
     };
-    $('head').append($('<audio id="WATERDRIP" src="http://vav17.com/wp-content/uploads/WaterDrip.mp3" />'));
+
     API.on(API.SCORE_UPDATE, skipTest);
     function skipTest(score){
         staff = API.getStaff();
