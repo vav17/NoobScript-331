@@ -33,9 +33,7 @@ var noobScript = function() {
             autoWootSet = 0;
         }
     })*/
-    Devs = ["donvoo", "SnakedMusique"];
     CT = ["BOW TO US"];
-    CMDS = ["cmds", "credits", "NSkill", "raw", "NSreload", "banned", "api", "noskip", "YES", "dafaq", "EHD", "sowwy", "copysong", "hahano", "stats", "emotelist", "NSaddemote", "resetstats", "hidecounter"];
     EmoteList = ["twerk", "SNM", "SnakedMusique", "CarltonDance", "Fireworks", "Headbang", "HighShere", "rspin", "jenny", "totoro", "amaze", "amazegif", "kawaii", "spamgif", "banned", "stitchbra", "stitchglasses", "rainbowllama", "dorito", "DNN", "dotaaxerage", "dotachicken", "dotahorse", "dotaaxecry", "nat", "crikawaii", "pug", "noice", "cute", "loli", "suchfan", "squid", "hi", "lick", "pets", "chickendance", "pingu", "flipstable", "lennygif", "firelenny", "miku", "nyannyan", "lolirekt", "NSLogo", "NO"];
     CSS = ["#Stat", "#copysong", ".main", "#Intro", "#autoWoot", "#foot"]
     autoWootSet = 0;
@@ -130,10 +128,57 @@ var noobScript = function() {
         } else if (data == "/" + CMDS[18]) {
             $("#Stat").toggle("explode");
         } else if (data == "/" + CMDS[19]) {
-            RAINBOWZ("");
+        switch(data){
+            case "/cmds":
+                API.chatLog("Command List Comming Soon",true);
+            break;
+            
+            case "/credits":
+                $('<div style ="font-size: 12pt; font-family: Lucida Console; text-align: center"><span>Made By <a href="https://www.youtube.com/channel/UCbb-SEWOIg1fBo6LZCK5CBg" target="_blank">donvoo</a> & <a href="https://www.youtube.com/user/SnakedMusique" target="_blank">SnakedMusique</a></span></div>').appendTo("#chat-messages");
+            break;
+            
+            case "/NSkill":
+                API.chatLog("Halting NS",true);
+                removeCSS();
+                APITurnOff();
+                noobScript = null;
+            break;
+            
+            case "/NSreload":
+                console.log("NSMain: reloading");
+                API.chatLog("Reloading NoobScript-331",true);
+                removeCSS();
+                APITurnOff();
+                noobScript = null;
+            break;
+            
+            case "/copysong":
+                copySong();
+            break;
+            
+            case "/stats":
+                API.chatLog("Times Your Name Has Been Mentioned: "+localStorage.getItem("nameSaid")+" |Messages You Have Sent: "+localStorage.getItem("msgSent")+" | Message Characters: "+localStorage.getItem("msglength"),1);
+            break;
+
+            case "/NSaddemote":
+                addEmote(data);
+            break;
+
+            case "/resetstats":
+                localStorage.setItem("msglength",0)
+                localStorage.setItem("msgSent",0)
+                localStorage.setItem("nameSaid",0)
+             localStorage.setItem("lolicounter",0)
+            break;
+
+            case "/hidecounter":
+                $("#Stat").toggle("explode");
+            break;
         }
     }
-
+    $('head').append($('<audio id="DONVOO" src="http://puu.sh/6CVzc.wav" />'));
+    $('head').append($('<audio id="KAMI" src="http://k007.kiwi6.com/hotlink/j4qk58007e/smobyp.mp3" />'));
+    $('head').append($('<audio id="SUGOI" src="http://vav17.com/wp-content/uploads/SUGOI.wav" />'));
     //Chat Triggers
     API.on(API.CHAT, chatKey);
     function chatKey(keyData) {
@@ -143,23 +188,19 @@ var noobScript = function() {
             }
         }
         if (/snake/i.test(keyData.message) && API.getUser().id === 4251764) {
-            $('head').append($('<audio id="SUGOI" src="http://vav17.com/wp-content/uploads/SUGOI.wav" />'));
-            $("#SUGOI")[0].play();
+           $("#SUGOI")[0].play();
         }
         if (/Monkey D kami|Kami|monkey/i.test(keyData.message) && API.getUser().id === 3199479) {
-            $('head').append($('<audio id="KAMI" src="http://k007.kiwi6.com/hotlink/j4qk58007e/smobyp.mp3" />'));
             $("#KAMI")[0].play();
         }
         if (/donv/i.test(keyData.message) && API.getUser().id === 4537120) {
-            $('head').append($('<audio id="DONVOO" src="http://puu.sh/6CVzc.wav" />'));
             $("#DONVOO")[0].play();
         }
         if (/Yolo/i.test(keyData.message) && API.getUser().id === 3774105) {
-            $('head').append($('<audio id="DONVOO" src="http://puu.sh/6CVzc.wav" />'));
             $("#DONVOO")[0].play();
         }
         if (/EC/i.test(keyData.message) && API.getUser().id === 3816188) {
-            $('head').append($('<audio id="DONVOO" src="http://puu.sh/6CVzc.wav" />'));
+            
             $("#DONVOO")[0].play();
         }
         if (keyData.message.slice(0,API.getUser().username.length+1) === "@"+API.getUser().username) {
@@ -219,7 +260,7 @@ var noobScript = function() {
         var title = API.getMedia().title;
         window.prompt("Song Information:", author + " - " + title + " // " + "https://www.youtube.com/watch?v=" + cid);
     };
-
+    $('head').append($('<audio id="WATERDRIP" src="http://vav17.com/wp-content/uploads/WaterDrip.mp3" />'));
     API.on(API.SCORE_UPDATE, skipTest);
     function skipTest(score){
         staff = API.getStaff();
@@ -230,7 +271,6 @@ var noobScript = function() {
             if(maxMeh > score.grabs){
                 if (skipTestVar === 1){
                     skipTestVar = 0 
-                    $('head').append($('<audio id="WATERDRIP" src="http://vav17.com/wp-content/uploads/WaterDrip.mp3" />'));
                     API.chatLog("This song exceeds the max amount of mehs, and so it should be skipped",true);
                     $("#WATERDRIP")[0].play();
                 }
@@ -243,8 +283,7 @@ var noobScript = function() {
                     console.log("Manager's mehs amount: " + manPlusVote);
                     if (manPlusVote > 4) {
                         if (skipTestVar === 1){
-                            skipTestVar = 0
-                            $('head').append($('<audio id="WATERDRIP" src="http://vav17.com/wp-content/uploads/WaterDrip.mp3" />'));
+                            skipTestVar = 0                          
                             API.chatLog("this song was Meh'd by more that 4 managers or above, and so it should be skipped!",true);
                             $("#WATERDRIP")[0].play();
                         }
@@ -342,10 +381,19 @@ var noobScript = function() {
                 names[i].innerHTML = names[i].innerHTML+' [NS DEV]'
             }
             //Loli Rank
-            if (names[i].innerHTML === 'DaisytjuhhPB' || names[i].innerHTML === 'Nee-chan'){
+            if (names[i].innerHTML === 'DaisytjuhhPB' || names[i].innerHTML === 'Nee-chan' || names[i].innerHTML === 'SushiNatilie'){
                 names[i].innerHTML = names[i].innerHTML+' [NS Loli]'
             }
         }
+    }
+    function APITurnOff(){
+        API.off(API.CHAT_COMMAND, commands);
+        API.off(API.CHAT, chatKey);
+        API.off(API.SCORE_UPDATE, skipTest);
+        API.off(API.ADVANCE, getYTData);
+        API.off(API.ADVANCE, autoWootDoer);
+        API.off(API.CHAT, historyKey);
+        API.off(API.CHAT, rankForChat);
     }
 
 
