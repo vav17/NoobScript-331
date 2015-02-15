@@ -12,7 +12,7 @@ $(document).ready(function(){
   		$("#copysong").fadeTo('slow',0);
 		});
 
-		//Interface
+		//Interfac!@#$wwwwe
 
 	});
 });
