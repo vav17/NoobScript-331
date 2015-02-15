@@ -334,28 +334,44 @@ var noobScript = function() {
 
     NSTogglers = {
         toggleCopySong: function(){
+            if(NSLSS.CopySong === true){
+                $("#IFCopysong").animate({backgroundColor:"red"},1000);
+                //set chatcolors to false here ;-; no clue how to do this xD
+            }else{
+               $("#IFCopysong").animate({backgroundColor:"green"},1000);
+            };
             $("#copysong").toggle("explode");
             NSsaveSettings();
         },
         toggleCounters: function(){
+            if(NSLSS.Counters === true){
+                $("#IFCounters").animate({backgroundColor:"red"},1000);
+                //set chatcolors to false here ;-; no clue how to do this xD
+            }else{
+               $("#IFCounters").animate({backgroundColor:"green"},1000);
+            };
             $("#Stat").toggle("explode");
             NSsaveSettings();
         },
         toggleChatColors: function(){
             if(NSLSS.ChatColors === true){
+                $("#IFChatcolors").animate({backgroundColor:"red"},1000);
                 $('#cssstaffcolors').remove();
                 //set chatcolors to false here ;-; no clue how to do this xD
             }else{
-               $('head').append('<link id="cssstaffcolors" rel="stylesheet"type="text/css"href="https://dl.dropboxusercontent.com/s/usedz76mi8km5rq/Origem%20Colors.css">');
+                $('head').append('<link id="cssstaffcolors" rel="stylesheet"type="text/css"href="https://dl.dropboxusercontent.com/s/usedz76mi8km5rq/Origem%20Colors.css">');
+                $("#IFChatcolors").animate({backgroundColor:"green"},1000);
             };
             NSsaveSettings();
         },
         toggleStudyMode: function(){
            if(NSLSS.StudyMode === true){
                 $("#studymode").remove();
+                $("#IFStudymode").animate({backgroundColor:"red"},1000);
                 //set studymode to false here ;-; no clue how to do this xD
             }else{
-               $("#app").append('<img id="studymode" width="100%" src="http://m.memegen.com/qluj1y.jpg">');
+                $("#app").append('<img id="studymode" width="100%" src="http://m.memegen.com/qluj1y.jpg">');
+                $("#IFStudymode").animate({backgroundColor:"green"},1000);
             };
             $(".app-right").toggle();
             $("#playback").toggle();
@@ -368,5 +384,3 @@ var noobScript = function() {
         }
     }
 }
-
- 
