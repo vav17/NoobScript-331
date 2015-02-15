@@ -129,6 +129,8 @@ var noobScript = function() {
             localStorage.setItem("lolicounter",0)
         } else if (data == "/" + CMDS[18]) {
             $("#Stat").toggle("explode");
+        } else if (data == "/" + CMDS[19]) {
+            RAINBOWZ("");
         }
     }
 
@@ -321,6 +323,16 @@ var noobScript = function() {
             });
 
     }
+
+    function RAINBOWZ(data,interval,type){
+        var hue = 'rgb(' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ')';
+        if(rainbowvar === true){
+            $(data).animate({type:hue},interval);
+            RAINBOWZ(data, interval, type);
+        };
+    };
+
+
     API.on(API.CHAT, rankForChat);
     function rankForChat(data){
     var names = document.getElementsByClassName("un clickable")
@@ -336,5 +348,21 @@ var noobScript = function() {
         }
     }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
+
 //https://rawgit.com/vav17/NoobScript-331/master/NoobScript.js
