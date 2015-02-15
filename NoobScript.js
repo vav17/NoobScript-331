@@ -1,4 +1,4 @@
-//© 2015 - 2015 donvoo & SnakedMusique - All Rights Reserved.
+//NoobScript by donvoo & SnakedMusique is licensed under a Creative Commons Attribution-NoDerivatives 4.0 International License.
 function startScript() {
     if (typeof API !== "object" || !API.enabled) {
         setTimeout(startScript, 200);
@@ -423,4 +423,4 @@ var noobScript = function() {
         }
     }
 }
-//© 2015 - 2015 donvoo & SnakedMusique - All Rights Reserved.
+//NoobScript by donvoo & SnakedMusique is licensed under a Creative Commons Attribution-NoDerivatives 4.0 International License.
