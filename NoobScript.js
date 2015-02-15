@@ -340,30 +340,33 @@ var noobScript = function() {
     NSTogglers = {
         toggleCopySong: function(){
             if(NSLSS.CopySong === true){
-                $("#IFCopysong").animate({backgroundColor:"red"},1000);
                 NSLSS.CopySong = false;
+                $("#IFCopysong").animate({backgroundColor:"red"},1000);
             }else{
-               $("#IFCopysong").animate({backgroundColor:"green"},1000);
+                NSLSS.CopySong = true;
+                $("#IFCopysong").animate({backgroundColor:"green"},1000);
             };
             $("#copysong").toggle("explode");
             NSsaveSettings();
         },
         toggleCounters: function(){
             if(NSLSS.Counters === true){
-                $("#IFCounters").animate({backgroundColor:"red"},1000);
                 NSLSS.Counters = false;
+                $("#IFCounters").animate({backgroundColor:"red"},1000);
             }else{
-               $("#IFCounters").animate({backgroundColor:"green"},1000);
+                NSLSS.Counters = true;
+                $("#IFCounters").animate({backgroundColor:"green"},1000);
             };
             $("#Stat").toggle("explode");
             NSsaveSettings();
         },
         toggleChatColors: function(){
             if(NSLSS.ChatColors === true){
+                NSLSS.ChatColors = false;
                 $("#IFChatcolors").animate({backgroundColor:"red"},1000);
                 $('#cssstaffcolors').remove();
-                NSLSS.ChatColors = false;
             }else{
+                NSLSS.ChatColors = true;
                 $('head').append('<link id="cssstaffcolors" rel="stylesheet"type="text/css"href="https://dl.dropboxusercontent.com/s/usedz76mi8km5rq/Origem%20Colors.css">');
                 $("#IFChatcolors").animate({backgroundColor:"green"},1000);
             };
@@ -371,10 +374,11 @@ var noobScript = function() {
         },
         toggleStudyMode: function(){
            if(NSLSS.StudyMode === true){
+                NSLSS.StudyMode = false;
                 $("#studymode").remove();
                 $("#IFStudymode").animate({backgroundColor:"red"},1000);
-                NSLSS.StudyMode = false
             }else{
+                NSLSS.StudyMode = true;
                 $("#app").append('<img id="studymode" width="100%" src="http://m.memegen.com/qluj1y.jpg">');
                 $("#IFStudymode").animate({backgroundColor:"green"},1000);
             };
