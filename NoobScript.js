@@ -344,10 +344,11 @@ var noobScript = function() {
         toggleChatColors: function(){
             if(NSLSS.ChatColors === true){
                 $('#cssstaffcolors').remove();
+                //set chatcolors to false here ;-; no clue how to do this xD
             }else{
                $('head').append('<link id="cssstaffcolors" rel="stylesheet"type="text/css"href="https://dl.dropboxusercontent.com/s/usedz76mi8km5rq/Origem%20Colors.css">');
             };
             NSsaveSettings();
-            }   
+        }   
     }
 }
