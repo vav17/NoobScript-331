@@ -38,7 +38,7 @@ var noobScript = function() {
     CSS = ["#Stat", "#copysong", ".main", "#Intro", "#autoWoot", "#foot"]
     autoWootSet = 0;
     skipTestVar = 1;
-    loadSettings();
+    NSloadSettings();
 
     
     API.on(API.CHAT_COMMAND, commands);
@@ -314,7 +314,7 @@ var noobScript = function() {
         API.off(API.CHAT, rankForChat);
     }
 
-    function loadSettings(){
+    function NSloadSettings(){
     NSsettings = {
         CopySong: true,
         Counter: true,
@@ -328,26 +328,26 @@ var noobScript = function() {
         NSLSS = JSON.parse(localStorage.getItem("NSSET")); 
     }
 
-    function saveSettings(){
+    function NSsaveSettings(){
     localStorage.setItem("NSSET", JSON.stringify(NSLSS))
     }
 
     togglers = {
         toggleCopySong: function(){
             $("#copysong").toggle("explode");
-            saveSettings();
+            NSsaveSettings();
         },
         toggleCounters: function(){
             $("#Stat").toggle("explode");
-            saveSettings();
+            NSsaveSettings();
         },
         toggleChatColors: function(){
-            if(NSLSS.ChatColors === false){
+            if(NSLSS.ChatColors === true){
                 $('#cssstaffcolors').remove();
             }else{
                $('head').append('<link id="cssstaffcolors" rel="stylesheet"type="text/css"href="https://dl.dropboxusercontent.com/s/usedz76mi8km5rq/Origem%20Colors.css">');
             };
-            saveSettings();
+            NSsaveSettings();
             }   
     }
 }
