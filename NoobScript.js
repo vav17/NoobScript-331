@@ -32,12 +32,15 @@ var noobScript = function() {
             autoWootSet = 0;
         }
     })*/
+    
     CT = ["BOW TO US"];
     EmoteList = ["twerk", "SNM", "SnakedMusique", "CarltonDance", "Fireworks", "Headbang", "HighShere", "rspin", "jenny", "totoro", "amaze", "amazegif", "kawaii", "spamgif", "banned", "stitchbra", "stitchglasses", "rainbowllama", "dorito", "DNN", "dotaaxerage", "dotachicken", "dotahorse", "dotaaxecry", "nat", "crikawaii", "pug", "noice", "cute", "loli", "suchfan", "squid", "hi", "lick", "pets", "chickendance", "pingu", "flipstable", "lennygif", "firelenny", "miku", "nyannyan", "lolirekt", "NSLogo", "NO"];
     CSS = ["#Stat", "#copysong", ".main", "#Intro", "#autoWoot", "#foot"]
     autoWootSet = 0;
     skipTestVar = 1;
+    loadSettings();
 
+    
     API.on(API.CHAT_COMMAND, commands);
     function commands(data) {
         this.data = data;
@@ -299,7 +302,8 @@ var noobScript = function() {
                 names[i].innerHTML = names[i].innerHTML+' [NS Loli]'
             }
         }
-    }
+    }  
+
     function APITurnOff(){
         API.off(API.CHAT_COMMAND, commands);
         API.off(API.CHAT, chatKey);
@@ -310,27 +314,21 @@ var noobScript = function() {
         API.off(API.CHAT, rankForChat);
     }
 
-    togglers = {
-        toggleCopySong: function(){
-            $("#copysong").toggle("explode");
-            //save the settings here
-        },
-        toggleCounters: function(){
-            $("#Stat").toggle("explode");
-            //save the settings here
-        },
-        toggleChatColors: function(){
-            if(/*the localstorage is true*/){
-                $('#cssstaffcolors').remove();
-            }else{
-                $('head').append('<link id="cssstaffcolors" rel="stylesheet"type="text/css"href="https://dl.dropboxusercontent.com/s/usedz76mi8km5rq/Origem%20Colors.css">');
-            };
-            //save settings here
-        }
+    function loadSettings(){
+    NSsettings = {
+        CopySong: true,
+        Counter: true,
+        ChatColors: true
     };
+    if (localStorage.NSSET){
+        console.log("Settings Loaded!")
+    } else {
+        localStorage.setItem("NSSET", JSON.stringify(NSsettings))
+        }
+        var NSLSS = JSON.parse(localStorage.getItem("NSSET")); 
+    }
 
-
-
-
-};
-//https://rawgit.com/vav17/NoobScript-331/master/NoobScript.js
+    function saveSettings(){
+    localStorage.setItem("NSSET", JSON.stringify(NSsettings))
+    }
+}
