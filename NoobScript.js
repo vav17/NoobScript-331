@@ -90,8 +90,8 @@ var noobScript = function() {
             case "/hidecounter":
                 $("#Stat").toggle("explode");
             break;
-        }
-    }
+        };
+    };
     $('head').append($('<audio id="DONVOO" src="http://puu.sh/6CVzc.wav" />'));
     $('head').append($('<audio id="KAMI" src="http://k007.kiwi6.com/hotlink/j4qk58007e/smobyp.mp3" />'));
     $('head').append($('<audio id="SUGOI" src="http://vav17.com/wp-content/uploads/SUGOI.wav" />'));
@@ -332,7 +332,7 @@ var noobScript = function() {
     localStorage.setItem("NSSET", JSON.stringify(NSLSS))
     }
 
-    togglers = {
+    NSTogglers = {
         toggleCopySong: function(){
             $("#copysong").toggle("explode");
             NSsaveSettings();
