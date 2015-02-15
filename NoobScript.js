@@ -312,24 +312,22 @@ var noobScript = function() {
 
     togglers = {
         toggleCopySong: function(){
-            if(/*the localstorage is true*/){
                 $("#copysong").toggle("explode");
-            }
-            //save the settings here
+                //save the settings here
             },
         toggleCounters: function(){
-            if(/*the localstorage is true*/){
                 $("#Stat").toggle("explode");
-            }
-        },
+                //save the settings here
+            },
         toggleChatColors: function(){
             if(/*the localstorage is true*/){
-                $('head').append('<link id="cssstaffcolors" rel="stylesheet"type="text/css"href="https://dl.dropboxusercontent.com/s/usedz76mi8km5rq/Origem%20Colors.css">');
-            }else{
                 $('#cssstaffcolors').remove();
+            }else{
+                $('head').append('<link id="cssstaffcolors" rel="stylesheet"type="text/css"href="https://dl.dropboxusercontent.com/s/usedz76mi8km5rq/Origem%20Colors.css">');
             }
         }
     };
+
 
 
 
