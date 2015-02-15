@@ -320,15 +320,34 @@ var noobScript = function() {
         Counter: true,
         ChatColors: true
     };
-    if (localStorage.NSSET){
+    if (localStorage.getItem("NSSET")){
         console.log("Settings Loaded!")
     } else {
         localStorage.setItem("NSSET", JSON.stringify(NSsettings))
         }
-        var NSLSS = JSON.parse(localStorage.getItem("NSSET")); 
+        NSLSS = JSON.parse(localStorage.getItem("NSSET")); 
     }
 
     function saveSettings(){
-    localStorage.setItem("NSSET", JSON.stringify(NSsettings))
+    localStorage.setItem("NSSET", JSON.stringify(NSLSS))
+    }
+
+    togglers = {
+        toggleCopySong: function(){
+            $("#copysong").toggle("explode");
+            saveSettings();
+        },
+        toggleCounters: function(){
+            $("#Stat").toggle("explode");
+            saveSettings();
+        },
+        toggleChatColors: function(){
+            if(NSLSS.ChatColors === false){
+                $('#cssstaffcolors').remove();
+            }else{
+               $('head').append('<link id="cssstaffcolors" rel="stylesheet"type="text/css"href="https://dl.dropboxusercontent.com/s/usedz76mi8km5rq/Origem%20Colors.css">');
+            };
+            saveSettings();
+            }   
     }
 }
