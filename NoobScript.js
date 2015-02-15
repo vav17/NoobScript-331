@@ -349,6 +349,24 @@ var noobScript = function() {
                $('head').append('<link id="cssstaffcolors" rel="stylesheet"type="text/css"href="https://dl.dropboxusercontent.com/s/usedz76mi8km5rq/Origem%20Colors.css">');
             };
             NSsaveSettings();
-        }   
+        },
+        toggleStudyMode: function(){
+           if(NSLSS.StudyMode === true){
+                $("#studymode").remove();
+                //set studymode to false here ;-; no clue how to do this xD
+            }else{
+               $("#app").append('<img id="studymode" width="100%" src="http://m.memegen.com/qluj1y.jpg">');
+            };
+            $(".app-right").toggle();
+            $("#playback").toggle();
+            $("#vote").toggle();
+            $("#dj-button").toggle();
+            $("#audience").toggle();
+            $("#dj-booth").toggle();
+            $("#Stat").toggle();
+            NSsaveSettings();
+        }
     }
 }
+
+ 
