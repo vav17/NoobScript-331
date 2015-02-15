@@ -90,6 +90,10 @@ var noobScript = function() {
             case "/hidecounter":
                 $("#Stat").toggle("explode");
             break;
+
+            case "/NSreset":
+                localStorage.setItem("NSSET", JSON.stringify(NSsettings));
+            break;
         };
     };
     $('head').append($('<audio id="DONVOO" src="http://puu.sh/6CVzc.wav" />'));
@@ -318,13 +322,14 @@ var noobScript = function() {
     NSsettings = {
         CopySong: true,
         Counter: true,
-        ChatColors: true
+        ChatColors: true,
+        StudyMode: true
     };
     if (localStorage.getItem("NSSET")){
         console.log("Settings Loaded!")
     } else {
         localStorage.setItem("NSSET", JSON.stringify(NSsettings))
-        }
+    }
         NSLSS = JSON.parse(localStorage.getItem("NSSET")); 
     }
 
@@ -336,7 +341,7 @@ var noobScript = function() {
         toggleCopySong: function(){
             if(NSLSS.CopySong === true){
                 $("#IFCopysong").animate({backgroundColor:"red"},1000);
-                //set chatcolors to false here ;-; no clue how to do this xD
+                NSLSS.CopySong = false;
             }else{
                $("#IFCopysong").animate({backgroundColor:"green"},1000);
             };
@@ -346,7 +351,7 @@ var noobScript = function() {
         toggleCounters: function(){
             if(NSLSS.Counters === true){
                 $("#IFCounters").animate({backgroundColor:"red"},1000);
-                //set chatcolors to false here ;-; no clue how to do this xD
+                NSLSS.Counters = false;
             }else{
                $("#IFCounters").animate({backgroundColor:"green"},1000);
             };
@@ -357,7 +362,7 @@ var noobScript = function() {
             if(NSLSS.ChatColors === true){
                 $("#IFChatcolors").animate({backgroundColor:"red"},1000);
                 $('#cssstaffcolors').remove();
-                //set chatcolors to false here ;-; no clue how to do this xD
+                NSLSS.ChatColors = false;
             }else{
                 $('head').append('<link id="cssstaffcolors" rel="stylesheet"type="text/css"href="https://dl.dropboxusercontent.com/s/usedz76mi8km5rq/Origem%20Colors.css">');
                 $("#IFChatcolors").animate({backgroundColor:"green"},1000);
@@ -368,7 +373,7 @@ var noobScript = function() {
            if(NSLSS.StudyMode === true){
                 $("#studymode").remove();
                 $("#IFStudymode").animate({backgroundColor:"red"},1000);
-                //set studymode to false here ;-; no clue how to do this xD
+                NSLSS.StudyMode = false
             }else{
                 $("#app").append('<img id="studymode" width="100%" src="http://m.memegen.com/qluj1y.jpg">');
                 $("#IFStudymode").animate({backgroundColor:"green"},1000);
