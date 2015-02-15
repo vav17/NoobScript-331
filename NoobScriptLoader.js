@@ -5,7 +5,7 @@ function startScript() {
         loader();
     }
 }
-setTimeout(startScript, 200);
+$(document).ready(function(){startScript();})
 
 function loader(){
 	$.getScript('https://rawgit.com/vav17/NoobScript-331/master/NoobScript.js');
