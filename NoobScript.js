@@ -37,7 +37,6 @@ var noobScript = function() {
     autoWootSet = 0;
     skipTestVar = 1;
     NSloadSettings();
-    $.getScript("https://dl.dropboxusercontent.com/s/f6n5bbclbqbkzfl/noobscripttest.js");
     
     
     API.on(API.CHAT_COMMAND, commands);
@@ -92,6 +91,9 @@ var noobScript = function() {
 
             case "/NSreset":
                 localStorage.setItem("NSSET", JSON.stringify(NSsettings));
+            break;
+            case "/Inusakuya":
+                API.sendChat("Inusakuya")
             break;
         };
     };
