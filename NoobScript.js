@@ -121,10 +121,6 @@ var noobScript = function() {
         if (/Yolo/i.test(keyData.message) && API.getUser().id === 3774105) {
             $("#DONVOO")[0].play();
         }
-        if (/EC/i.test(keyData.message) && API.getUser().id === 3816188) {
-            
-            $("#DONVOO")[0].play();
-        }
         if (keyData.message.slice(0,API.getUser().username.length+1) === "@"+API.getUser().username) {
             if (localStorage.nameSaid){
                 localStorage.nameSaid = parseInt(localStorage.nameSaid) + 1
