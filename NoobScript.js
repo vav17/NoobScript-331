@@ -311,6 +311,7 @@ var noobScript = function() {
         ChatColors: true,
         StudyMode: false,
         AutoWoot: false,
+        HideVideo: false,
     };
     if (localStorage.getItem("NSSET")){
         console.log("Settings Loaded!")
@@ -384,12 +385,24 @@ var noobScript = function() {
             if(NSLSS.AutoWoot === true){
                 NSLSS.AutoWoot = false;
                 autoWootSet = false;
-                //$("#IFAutoWoot").animate({backgroundColor:"red"},1000);
+                $("#IFAutoWoot").animate({backgroundColor:"red"},1000);
             }else{
                 NSLSS.AutoWoot = true;
                 autoWootSet = true;
                 $('#woot').click();
-                //$("#IFAutoWoot").animate({backgroundColor:"green"},1000);
+                $("#IFAutoWoot").animate({backgroundColor:"green"},1000);
+            }
+            NSsaveSettings();
+        },
+        toggleHideVideo: function(){
+            if(NSLSS.HideVideo === true){
+                NSLSS.HideVideo = false;
+                $("#playback").slideDown();
+                $("#IFHideVideo").animate({backgroundColor:"red"},1000);
+            } else{
+                NSLSS.HideVideo = true;
+                $("#playback").slideUp();
+                $("#IFHideVideo").animate({backgroundColor:"green"},1000);
             }
             NSsaveSettings();
         },
@@ -398,16 +411,10 @@ var noobScript = function() {
             $("#IFChatcolors").animate({backgroundColor:"green"},1000);
             $("#IFCounters").animate({backgroundColor:"green"},1000);
             $("#IFCopysong").animate({backgroundColor:"green"},1000);
+            $("#IFAutoWoot").animate({backgroundColor:"red"},1000);
+            $("#IFHideVideo").animate({backgroundColor:"red"},1000);
             if (NSLSS.StudyMode === true){
-                $("#app").append('<img id="studymode" width="100%" src="http://m.memegen.com/qluj1y.jpg">');
-                $("#IFStudymode").animate({backgroundColor:"red"},1000);
-                $(".app-right").toggle();
-                $("#playback").toggle();
-                $("#vote").toggle();
-                $("#dj-button").toggle();
-                $("#audience").toggle();
-                $("#dj-booth").toggle();
-                $("#Stat").toggle();
+                NSLSS.StudyMode = false;
             }
             if (NSLSS.ChatColors === false){
                 $("#IFChatcolors").animate({backgroundColor:"red"},1000);
@@ -424,7 +431,11 @@ var noobScript = function() {
             if (NSLSS.AutoWoot === true){
                 autoWootSet = true;
                 $('#woot').click();
-                //$("#IFAutoWoot").animate({backgroundColor:"green"},1000);
+                $("#IFAutoWoot").animate({backgroundColor:"green"},1000);
+            }
+            if (NSLSS.HideVideo === true){
+                $("#playback").slideUp();
+                $("#IFHideVideo").animate({backgroundColor:"green"},1000);
             }
         }
     }
