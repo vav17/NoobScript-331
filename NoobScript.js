@@ -19,17 +19,6 @@ var noobScript = function() {
     $('<div id="Stat"></div>').appendTo("#app")
     document.getElementById('Stat').innerHTML = "<p>Messages Sent: </p>"+localStorage.getItem("msgSent") +"<p>Characters:</p>" +localStorage.getItem("msglength") + "<p>Name Mentioned:</p>" + localStorage.getItem("nameSaid") + "<p>Loli Counter: </p>" + localStorage.getItem("lolicounter")
     $('#copysong').click(function(){copySong();})
-    /*$('#autoWoot').click(function autoWootChecker() {
-        if (autoWootSet === 0){
-            $('<div class="main">AutoWoot: On</div>').appendTo("#chat-messages")
-            $('#woot').click();
-            autoWootSet = 1;
-        }
-        else if (autoWootSet === 1){
-            $('<div class="main">AutoWoot: Off</div>').appendTo("#chat-messages")
-            autoWootSet = 0;
-        }
-    })*/
     
     CT = ["BOW TO US"];
     EmoteList = ["twerk", "SNM", "SnakedMusique", "CarltonDance", "Fireworks", "Headbang", "HighShere", "rspin", "jenny", "totoro", "amaze", "amazegif", "kawaii", "spamgif", "banned", "stitchbra", "stitchglasses", "rainbowllama", "dorito", "DNN", "dotaaxerage", "dotachicken", "dotahorse", "dotaaxecry", "nat", "crikawaii", "pug", "noice", "cute", "loli", "suchfan", "squid", "hi", "lick", "pets", "chickendance", "pingu", "flipstable", "lennygif", "firelenny", "miku", "nyannyan", "lolirekt", "NSLogo", "NO"];
@@ -244,7 +233,7 @@ var noobScript = function() {
     API.on(API.ADVANCE, autoWootDoer);
     function autoWootDoer(AWdata){
         skipTestVar = 1
-        if (autoWootSet === 1){
+        if (autoWootSet === true){
             setTimeout(function(){$('#woot').click();},2000)
         }
     }
@@ -320,7 +309,8 @@ var noobScript = function() {
         CopySong: true,
         Counter: true,
         ChatColors: true,
-        StudyMode: false
+        StudyMode: false,
+        AutoWoot: false,
     };
     if (localStorage.getItem("NSSET")){
         console.log("Settings Loaded!")
@@ -390,6 +380,19 @@ var noobScript = function() {
             $("#Stat").toggle();
             NSsaveSettings();
         },
+        toggleAutoWoot: function(){
+            if(NSLSS.AutoWoot === true){
+                NSLSS.AutoWoot = false;
+                autoWootSet = false;
+                //$("#IFAutoWoot").animate({backgroundColor:"red"},1000);
+            }else{
+                NSLSS.AutoWoot = true;
+                autoWootSet = true;
+                $('#woot').click();
+                //$("#IFAutoWoot").animate({backgroundColor:"green"},1000);
+            }
+            NSsaveSettings();
+        },
         LoadInToggle: function(){
             $("#IFStudymode").animate({backgroundColor:"red"},1000);
             $("#IFChatcolors").animate({backgroundColor:"green"},1000);
@@ -417,6 +420,11 @@ var noobScript = function() {
             if (NSLSS.CopySong === false){
                 $("#copysong").remove();
                 $("#IFCounters").animate({backgroundColor:"red"},1000);
+            }
+            if (NSLSS.AutoWoot === true){
+                autoWootSet = true;
+                $('#woot').click();
+                //$("#IFAutoWoot").animate({backgroundColor:"green"},1000);
             }
         }
     }
