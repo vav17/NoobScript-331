@@ -83,8 +83,8 @@ var noobScript = function() {
                 localStorage.setItem("NSSET", JSON.stringify(NSsettings));
             break;
             
-            case "/Inusakuya":
-                API.sendChat("Inusakuya")
+            case "/NoobScript":
+                API.sendChat("NoobScript: https://github.com/vav17/NoobScript-331/blob/master/README.md")
             break;
         };
     };
