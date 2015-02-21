@@ -10,5 +10,9 @@ If you don't Some commands and or functions might not work
 
 
 <h1 style="font-size=50px">Installation:</h1>
+<ol>
+<li>
 <p>First off, make a random bookmark, like Google!</p>
 <img src="http://i.imgur.com/TJH6how.png"/>
+</li>
+</ol>
