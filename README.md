@@ -9,4 +9,4 @@ If you don't Some commands and or functions might not work
 
 
 
-<h1 style="font-size=30px; font-family: Impact; text-align: center">installation</h1>
+<h1 style="font-size=50px">Installation</h1>
