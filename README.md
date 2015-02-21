@@ -25,6 +25,6 @@ If you don't Some commands and or functions might not work
 <p>Now, Edit the name to whatever you want, but the url has to be:</p>
 <p><b>javascript:(function(){$.getScript('https://rawgit.com/vav17/NoobScript-331/master/NoobScriptLoader.js');}());<b></p>
 <p>It should look something like this.</p>
-<img src="http://i.imgur.com/jj6qreF.png"/>
+<img src="http://i.imgur.com/GcWGRjm.png"/>
 </li>
 </ol>
