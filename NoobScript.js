@@ -84,7 +84,7 @@ var noobScript = function() {
             break;
             
             case "/NoobScript":
-                API.sendChat("NoobScript: https://github.com/vav17/NoobScript-331/blob/master/README.md")
+                API.sendChat("NoobScript: https://github.com/vav17/NoobScript-331/blob/master/README.md");
             break;
         };
     };
