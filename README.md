@@ -11,8 +11,13 @@ If you don't Some commands and or functions might not work
 
 <h1 style="font-size=50px">Installation:</h1>
 <ol>
-<ui>
+<li>
 <p>First off, make a random bookmark, like Google!</p>
 <img src="http://i.imgur.com/TJH6how.png"/>
-</ui>
+</li>
+
+<li>
+<p>Next, Edit the bookmark by finding it, right clicking, and hitting edit. It should pull up this.</p>
+<img src="http://i.imgur.com/jj6qreF.png"/>
+</li>
 </ol>
