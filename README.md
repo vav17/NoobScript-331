@@ -33,4 +33,9 @@ If you don't Some commands and or functions might not work
 <p>Now located where you saved it and click it while in the plug.dj room!</p>
 <img src="http://i.imgur.com/vF1IvNE.jpg"/>
 </li>
+
+<li>
+<p>It should now show some of these things!</p>
+<img src="http://i.imgur.com/w6dfZR3.jpg"/>
+</li>
 </ol>
