@@ -13,7 +13,6 @@ If you don't Some commands and or functions might not work
 
 <p>Drag and drop this into your bookmarks bar:</p>
 <blockquote>
-<input class="textbox" type="text" value="javascript:(function(){$.getScript('https://rawgit.com/vav17/NoobScript-331/master/NoobScriptLoader.js');}());">
 <p><a href="javascript:(function(){$.getScript('https://rawgit.com/vav17/NoobScript-331/master/NoobScriptLoader.js');}());">NoobScript-331</a></p>
 
 </blockquote>
