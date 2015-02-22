@@ -81,6 +81,7 @@ var noobScript = function() {
 
             case "/NSreset":
                 localStorage.setItem("NSSET", JSON.stringify(NSsettings));
+                NSloadSettings();
             break;
             
             case "/NoobScript":
@@ -306,6 +307,15 @@ var noobScript = function() {
         API.off(API.CHAT, rankForChat);
     }
 
+    function autoJoin(){
+        if (autoJoinSet === true){
+            API.djJoin()
+            if (API.getWaitListPosition() === -1 && API.getDJ().username !== API.getUser().username){
+                API.djJoin()
+            }
+        }
+    }
+
     function NSloadSettings(){
     NSsettings = {
         CopySong: true,
@@ -314,6 +324,7 @@ var noobScript = function() {
         StudyMode: false,
         AutoWoot: false,
         HideVideo: false,
+        AutoJoin: false,
     };
     if (localStorage.getItem("NSSET")){
         console.log("Settings Loaded!")
@@ -409,6 +420,21 @@ var noobScript = function() {
             }
             NSsaveSettings();
         },
+        toggleAutoJoin: function(){
+            if(NSLSS.AutoJoin === true){
+                NSLSS.AutoJoin = false;
+                autoJoinSet = false;
+                $("#IFAutoJoin").css('background-color', 'red');
+            } else{
+                API.djJoin()
+                NSLSS.AutoJoin = true;
+                NSsaveSettings();
+                autoJoinSet = true;
+                setInterval(function(){autoJoin();},1000);
+                $("#IFAutoJoin").css('background-color', 'green');
+            }
+            NSsaveSettings();
+        },
         LoadInToggle: function(){
             $("#IFStudymode").css('background-color', 'red');
             $("#IFChatcolors").css('background-color', 'green');
@@ -439,6 +465,13 @@ var noobScript = function() {
             if (NSLSS.HideVideo === true){
                 $("#playback").fadeTo('slow',0);
                 $("#IFHideVideo").css('background-color', 'green');
+            }
+            if (NSLSS.AutoJoin === true){
+                API.djJoin()
+                autoJoinSet = true;
+                NSsaveSettings();
+                setInterval(function(){autoJoin();},1000);
+                $("#IFAutoJoin").css('background-color', 'green');
             }
         }
     }
