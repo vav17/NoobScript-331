@@ -12,7 +12,9 @@ If you don't Some commands and or functions might not work
 <h1 style="font-size=50px">Installation:</h1>
 <ol>
 <p>Drag and drop this into your bookmarks bar.</p>
+<blockquote>
 <p><a href="javascript:(function(){$.getScript('https://rawgit.com/vav17/NoobScript-331/master/NoobScriptLoader.js');}());">NoobScript-331</a></p>
+</blockquote>
 </ol>
 
 <ol>
