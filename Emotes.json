@@ -224,6 +224,11 @@
             "height": "50px",
             "url": "http://i.imgur.com/SbOwYm3.jpg",
             "width": "40px"
+        },
+        "taco": {
+            "height": "50px",
+            "url": "http://i.imgur.com/xbgHZQ7.gif",
+            "width": "50px"
         }
     }
 }
