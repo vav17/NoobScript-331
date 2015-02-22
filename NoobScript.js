@@ -399,11 +399,11 @@ var noobScript = function() {
         toggleHideVideo: function(){
             if(NSLSS.HideVideo === true){
                 NSLSS.HideVideo = false;
-                $("#playback").slideDown();
+                $("#playback").fadeTo('slow',1);
                 $("#IFHideVideo").animate({backgroundColor:"red"},1000);
             } else{
                 NSLSS.HideVideo = true;
-                $("#playback").slideUp();
+                $("#playback").fadeTo('slow',0);
                 $("#IFHideVideo").animate({backgroundColor:"green"},1000);
             }
             NSsaveSettings();
@@ -436,7 +436,7 @@ var noobScript = function() {
                 $("#IFAutoWoot").animate({backgroundColor:"green"},1000);
             }
             if (NSLSS.HideVideo === true){
-                $("#playback").slideUp();
+                $("#playback").fadeTo('slow',0);
                 $("#IFHideVideo").animate({backgroundColor:"green"},1000);
             }
         }
