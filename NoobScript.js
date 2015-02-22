@@ -332,11 +332,11 @@ var noobScript = function() {
         toggleCopySong: function(){
             if(NSLSS.CopySong === true){
                 NSLSS.CopySong = false;
-                $("#IFCopysong").animate({backgroundColor:"red"},1000);
+                $("#IFCopysong").css('background-color', 'red');
                 $("#copysong").remove();
             }else{
                 NSLSS.CopySong = true;
-                $("#IFCopysong").animate({backgroundColor:"green"},1000);
+                $("#IFCopysong").css('background-color', 'green');
                 $('#vote').append('<img id="copysong" src="http://i.imgur.com/ThOy4K5.png">');
             };
             NSsaveSettings();
@@ -344,10 +344,10 @@ var noobScript = function() {
         toggleCounters: function(){
             if(NSLSS.Counter === true){
                 NSLSS.Counter = false;
-                $("#IFCounters").animate({backgroundColor:"red"},1000);
+                $("#IFCounters").css('background-color', 'red');
             }else{
                 NSLSS.Counter = true;
-                $("#IFCounters").animate({backgroundColor:"green"},1000);
+                $("#IFCounters").css('background-color', 'green');
             };
             $("#Stat").toggle("explode");
             NSsaveSettings();
@@ -355,12 +355,12 @@ var noobScript = function() {
         toggleChatColors: function(){
             if(NSLSS.ChatColors === true){
                 NSLSS.ChatColors = false;
-                $("#IFChatcolors").animate({backgroundColor:"red"},1000);
+                $("#IFChatcolors").css('background-color', 'red');
                 $('#cssstaffcolors').remove();
             }else{
                 NSLSS.ChatColors = true;
                 $('head').append('<link id="cssstaffcolors" rel="stylesheet"type="text/css"href="https://dl.dropboxusercontent.com/s/usedz76mi8km5rq/Origem%20Colors.css">');
-                $("#IFChatcolors").animate({backgroundColor:"green"},1000);
+                $("#IFChatcolors").css('background-color', 'green');
             };
             NSsaveSettings();
         },
@@ -368,11 +368,11 @@ var noobScript = function() {
            if(NSLSS.StudyMode === true){
                 NSLSS.StudyMode = false;
                 $("#studymode").remove();
-                $("#IFStudymode").animate({backgroundColor:"red"},1000);
+                $("#IFStudymode").css('background-color', 'red');
             }else{
                 NSLSS.StudyMode = true;
                 $("#app").append('<img id="studymode" width="100%" src="http://m.memegen.com/qluj1y.jpg">');
-                $("#IFStudymode").animate({backgroundColor:"green"},1000);
+                $("#IFStudymode").css('background-color', 'green');
             };
             $(".app-right").toggle();
             $("#playback").toggle();
@@ -387,12 +387,12 @@ var noobScript = function() {
             if(NSLSS.AutoWoot === true){
                 NSLSS.AutoWoot = false;
                 autoWootSet = false;
-                $("#IFAutoWoot").animate({backgroundColor:"red"},1000);
+                $("#IFAutoWoot").css('background-color', 'red');
             }else{
                 NSLSS.AutoWoot = true;
                 autoWootSet = true;
                 $('#woot').click();
-                $("#IFAutoWoot").animate({backgroundColor:"green"},1000);
+                $("#IFAutoWoot").css('background-color', 'green');
             }
             NSsaveSettings();
         },
@@ -400,44 +400,44 @@ var noobScript = function() {
             if(NSLSS.HideVideo === true){
                 NSLSS.HideVideo = false;
                 $("#playback").fadeTo('slow',1);
-                $("#IFHideVideo").animate({backgroundColor:"red"},1000);
+                $("#IFHideVideo").css('background-color', 'red');
             } else{
                 NSLSS.HideVideo = true;
                 $("#playback").fadeTo('slow',0);
-                $("#IFHideVideo").animate({backgroundColor:"green"},1000);
+                $("#IFHideVideo").css('background-color', 'green');
             }
             NSsaveSettings();
         },
         LoadInToggle: function(){
-            $("#IFStudymode").animate({backgroundColor:"red"},1000);
-            $("#IFChatcolors").animate({backgroundColor:"green"},1000);
-            $("#IFCounters").animate({backgroundColor:"green"},1000);
-            $("#IFCopysong").animate({backgroundColor:"green"},1000);
-            $("#IFAutoWoot").animate({backgroundColor:"red"},1000);
-            $("#IFHideVideo").animate({backgroundColor:"red"},1000);
+            $("#IFStudymode").css('background-color', 'red');
+            $("#IFChatcolors").css('background-color', 'green');
+            $("#IFCounters").css('background-color', 'green');
+            $("#IFCopysong").css('background-color', 'green');
+            $("#IFAutoWoot").css('background-color', 'red');
+            $("#IFHideVideo").css('background-color', 'red');
             if (NSLSS.StudyMode === true){
                 NSLSS.StudyMode = false;
             }
             if (NSLSS.ChatColors === false){
-                $("#IFChatcolors").animate({backgroundColor:"red"},1000);
+                $("#IFChatcolors").css('background-color', 'red');
                 $('#cssstaffcolors').remove();
             }
             if (NSLSS.Counter === false){
                 $("#Stat").toggle("explode");
-                $("#IFCounters").animate({backgroundColor:"red"},1000);
+                $("#IFCounters").css('background-color', 'red');
             }
             if (NSLSS.CopySong === false){
                 $("#copysong").remove();
-                $("#IFCounters").animate({backgroundColor:"red"},1000);
+                $("#IFCounters").css('background-color', 'red');
             }
             if (NSLSS.AutoWoot === true){
                 autoWootSet = true;
                 $('#woot').click();
-                $("#IFAutoWoot").animate({backgroundColor:"green"},1000);
+                $("#IFAutoWoot").css('background-color', 'green');
             }
             if (NSLSS.HideVideo === true){
                 $("#playback").fadeTo('slow',0);
-                $("#IFHideVideo").animate({backgroundColor:"green"},1000);
+                $("#IFHideVideo").css('background-color', 'green');
             }
         }
     }
