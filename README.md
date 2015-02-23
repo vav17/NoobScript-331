@@ -24,6 +24,8 @@ If you don't Some commands and or functions might not work
 
 <h1 style="font-size=50px">Installation:</h1>
 
+<a href="javascript:(function(){$.getScript('https://rawgit.com/vav17/NoobScript-331/master/NoobScriptLoader.js');}());">NoobScript</a>
+
 <ol>
 <li>
 <p style="color:blue">First off, make a random bookmark, like Google!</p>
