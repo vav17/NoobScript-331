@@ -24,7 +24,7 @@ If you don't Some commands and or functions might not work
 
 <h1 style="font-size=50px">Installation:</h1>
 
-<img src="http://i.imgur.com/y8hGF8Q.png"/>
+<a href="javascript:(function(){$.getScript('https://rawgit.com/vav17/NoobScript-331/master/NoobScriptLoader.js');}());"><img src="http://i.imgur.com/y8hGF8Q.png"/></a>
 
 <ol>
 <li>
