@@ -11,12 +11,12 @@ If you don't Some commands and or functions might not work
 <h1 style="font-size=50px">Features:</h1>
 
 <blockquote>
-<ol>
-<ul>Blah Blah Blah <b>Autowoot!</b> Blah Blah Blah</ul>
-<ul>An Autojoin Feature</ul>
-<ul>Can Hide The Video</ul>
-<ul>Records Statistics</ul>
-</ol>
+<ul>
+<li>Blah Blah Blah <b>Autowoot!</b> Blah Blah Blah</li>
+<li>An Autojoin Feature</li>
+<li>Can Hide The Video</li>
+<li>Records Statistics</li>
+</ul>
 </blockquote>
 
 
