@@ -9,12 +9,13 @@ If you don't Some commands and or functions might not work
 
 
 <h1 style="font-size=50px">Features:</h1>
-<ol>
-<blockquote>
-<li>Autowoot!</li>
 
-</blockquote>
+<blockquote>
+<ol>
+<li>Autowoot!</li>
 </ol>
+</blockquote>
+
 
 
 <h1 style="font-size=50px">Installation:</h1>
