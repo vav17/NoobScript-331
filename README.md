@@ -12,7 +12,8 @@ If you don't Some commands and or functions might not work
 
 <blockquote>
 <ol>
-<li>Autowoot!</li>
+<li>An Autowoot Feature</li>
+<li>Also An Autojoin Feature!</li>
 </ol>
 </blockquote>
 
