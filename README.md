@@ -9,16 +9,15 @@ If you don't Some commands and or functions might not work
 
 
 <h1 style="font-size=50px">Features:</h1>
-
 <blockquote>
-<ul>
-<li>Blah Blah Blah <b>Autowoot!</b> Blah Blah Blah</li>
-<li>An Autojoin Feature</li>
-<li>Can Hide The Video</li>
-<li>Records Statistics</li>
-<li>Chat Colors</li>
-<li><em><b>A PENGUIN LOGO</b></em></li>
-</ul>
+  <ul>
+    <li>Blah Blah Blah <b>Autowoot!</b> Blah Blah Blah</li>
+    <li>An Autojoin Feature</li>
+    <li>Can Hide The Video</li>
+    <li>Records Statistics</li>
+    <li>Chat Colors</li>
+    <li><em><b>A PENGUIN LOGO</b></em></li>
+  </ul>
 </blockquote>
 
 
