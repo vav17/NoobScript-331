@@ -12,8 +12,10 @@ If you don't Some commands and or functions might not work
 
 <blockquote>
 <ol>
-<li>An Autowoot Feature</li>
-<li>Also An Autojoin Feature!</li>
+<ul>Blah Blah Blah <b>Autowoot!</b> Blah Blah Blah</ul>
+<ul>An Autojoin Feature</ul>
+<ul>Can Hide The Video</ul>
+<ul>Records Statistics</ul>
 </ol>
 </blockquote>
 
