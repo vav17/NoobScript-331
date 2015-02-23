@@ -313,7 +313,7 @@ var noobScript = function() {
             if (API.getWaitListPosition() === -1 && API.getDJ().username !== API.getUser().username){
                 API.djJoin()
                 if (API.getTimeRemaining < 7){
-                    setInterval(function(){autoJoin();},250)
+                    setInterval(function(){autoJoin();},500)
                 }
             }
         }
