@@ -27,6 +27,8 @@ var noobScript = function() {
     CSS = ["#Stat", "#copysong", ".main", "#Intro", "#autoWoot", "#foot", "#InterfaceToggle", "#Interface", "#IFAutoWoot", "#IFChatcolors", "#IFCounters", "#IFCopysong", "#IFHideVideo", "#IFStudymode"];
     autoWootSet = 0;
     skipTestVar = 1;
+    GrabsSet = false;
+    MehsSet = false;
     NSloadSettings();
     $.getScript("https://dl.dropboxusercontent.com/s/n487n24dnhdr40m/Interface.js");
     
@@ -307,6 +309,7 @@ var noobScript = function() {
         API.off(API.ADVANCE, autoWootDoer);
         API.off(API.CHAT, historyKey);
         API.off(API.CHAT, rankForChat);
+        API.off(API.GRAB_UPDATE, scoreUpdate);
     }
 
     function autoJoin(){
@@ -314,6 +317,13 @@ var noobScript = function() {
             if (API.getWaitListPosition() === -1 && API.getDJ().id != API.getUser().id && obj.length < 50){
                 API.djJoin()
             }
+        }
+    }
+
+    API.on(API.GRAB_UPDATE, scoreUpdate)
+    function scoreUpdate(data){
+        if(GrabsSet === true){
+            API.chatLog(data.user.username + " Grabbed The Song!")
         }
     }
 
@@ -326,6 +336,8 @@ var noobScript = function() {
         AutoWoot: false,
         HideVideo: false,
         AutoJoin: false,
+        Grabs: false,
+        Mehs: false,
     };
     if (localStorage.getItem("NSSET")){
         console.log("Settings Loaded!")
@@ -436,6 +448,30 @@ var noobScript = function() {
             }
             NSsaveSettings();
         },
+        toggleGrabs: function(){
+            if(NSLSS.Grabs === true){
+                NSLSS.Grabs = false;
+                GrabsSet = false;
+                $("#IFGrabs").css('background-color', 'red');
+            } else{
+                NSLSS.Grabs = true;
+                GrabsSet = true;
+                $("#IFGrabs").css('background-color', 'green');
+            }
+            NSsaveSettings();
+        },
+        toggleMehs: function(){
+            if(NSLSS.Mehs === true){
+                NSLSS.Mehs = false;
+                MehsSet = false;
+                $("#IFMehs").css('background-color', 'red');
+            } else{
+                NSLSS.Mehs = true;
+                MehsSet = true;
+                $("#IFMehs").css('background-color', 'green');
+            }
+            NSsaveSettings();
+        },
         LoadInToggle: function(){
             $("#IFStudymode").css('background-color', 'red');
             $("#IFChatcolors").css('background-color', 'green');
@@ -473,6 +509,14 @@ var noobScript = function() {
                 NSsaveSettings();
                 setInterval(function(){autoJoin();},1000);
                 $("#IFAutoJoin").css('background-color', 'green');
+            }
+            if (NSLSS.Grabs === true){
+                GrabsSet = true;
+                $("#IFGrabs").css('background-color', 'green');
+            }
+            if (NSLSS.Mehs === true){
+                MehsSet = true;
+                $("#IFMehs").css('background-color', 'green');
             }
         }
     }
