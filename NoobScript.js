@@ -311,12 +311,8 @@ var noobScript = function() {
 
     function autoJoin(){
         if (autoJoinSet === true){
-            API.djJoin()
-            if (API.getWaitListPosition() === -1 && API.getDJ().username !== API.getUser().username){
+            if (API.getWaitListPosition() === -1 && API.getDJ().id != API.getUser().id && obj.length < 50){
                 API.djJoin()
-                if (API.getTimeRemaining < 5){
-                    setInterval(function(){autoJoin();},800)
-                }
             }
         }
     }
