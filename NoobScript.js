@@ -458,7 +458,7 @@ var noobScript = function() {
             }
             if (NSLSS.CopySong === false){
                 $("#copysong").remove();
-                $("#IFCounters").css('background-color', 'red');
+                $("#IFCopysong").css('background-color', 'red');
             }
             if (NSLSS.AutoWoot === true){
                 autoWootSet = true;
