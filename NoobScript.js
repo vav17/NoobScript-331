@@ -323,7 +323,7 @@ var noobScript = function() {
     API.on(API.GRAB_UPDATE, scoreUpdate)
     function scoreUpdate(data){
         if(GrabsSet === true){
-            API.chatLog(data.user.username + " Grabbed The Song!")
+            API.chatLog(data.user.username + " Grabbed The Song!",true)
         }
     }
 
