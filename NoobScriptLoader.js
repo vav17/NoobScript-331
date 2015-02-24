@@ -1,11 +1,10 @@
 function startScript() {
     if (typeof API !== "object" || !API.enabled) {
-        setTimeout(startScript, 200);
+        $(document).ready(startScript());
     } else {
         loader();
     }
 }
-//$(document).ready(startScript())
 setTimeout(startScript, 200);
 
 function loader(){
