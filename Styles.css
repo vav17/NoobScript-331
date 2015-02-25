@@ -53,3 +53,7 @@
   -webkit-background-clip: text;
   background-clip: text;
 }
+#chitoge {
+  position: relative;
+  right: -205px;
+}
