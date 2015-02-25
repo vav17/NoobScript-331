@@ -301,7 +301,7 @@ var noobScript = function() {
                 names[i].innerHTML = names[i].innerHTML+' [NS Loli]'
             }
             //Pleb Rank
-            if (names[i].innerHTML === 'ECPinoy'){
+            if (names[i].innerHTML === 'ECPinoy' || names[i].innerHTML === 'Ivychan' || names[i].innerHTML === 'Sakai'){
                 names[i].innerHTML = names[i].innerHTML+' [NS Pleb]'
             }
         }
