@@ -56,10 +56,10 @@
 #chitoge {
   position: relative;
   right: -205px;
-  z-index: 50;
+  z-index: 100;
 }
 #ond {
   position: relative;
   right: 40px;
-  z-index: 50;
+  z-index: 100;
 }
