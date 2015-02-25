@@ -297,8 +297,12 @@ var noobScript = function() {
                 names[i].innerHTML = names[i].innerHTML+' [NS DEV]'
             }
             //Loli Rank
-            if (names[i].innerHTML === 'DaisytjuhhPB' || names[i].innerHTML === 'Nee-chan' || names[i].innerHTML === 'Slyric_' || names[i].innerHTML === 'Kaboom0'){
+            if (names[i].innerHTML === 'Slyric_' || names[i].innerHTML === 'Kaboom0'){
                 names[i].innerHTML = names[i].innerHTML+' [NS Loli]'
+            }
+            //Pleb Rank
+            if (names[i].innerHTML === 'ECPinoy'){
+                names[i].innerHTML = names[i].innerHTML+' [NS Pleb]'
             }
         }
     }  
