@@ -245,6 +245,21 @@ var noobScript = function() {
         if (autoWootSet === true){
             setTimeout(function(){$('#woot').click();},2000)
         }
+        NisePos = 0;
+        if (NisePos === 0){
+            setTimeout(function(){
+            $('#chitoge').animate({right: "5px"}, 3000, 'linear')
+            $('#ond').animate({right: "-160px"}, 3000, 'linear')
+            NisePos = 1;
+            },1000)
+        }
+        if (NisePos === 1){
+            setTimeout(function(){
+            $('#chitoge').animate({right: "-205px"}, 3000, 'linear')
+            $('#ond').animate({right: "40px"}, 3000, 'linear')
+            NisePos = 0;
+            },1000)
+        }
     }
 
     function addEmote(data){
