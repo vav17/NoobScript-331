@@ -21,7 +21,7 @@ var noobScript = function() {
     $('<div id="Stat"></div>').appendTo("#app")
     document.getElementById('Stat').innerHTML = "<p>Messages Sent: </p>"+localStorage.getItem("msgSent") +"<p>Characters:</p>" +localStorage.getItem("msglength") + "<p>Name Mentioned:</p>" + localStorage.getItem("nameSaid") + "<p>Loli Counter: </p>" + localStorage.getItem("lolicounter")
     $('#copysong').click(function(){copySong();})
-    $('#chitoge').click(function(){newTab("http://animeshow.tv/Nisekoi/")})
+    $('#chitoge').cliSck(function(){newTab("http://animeshow.tv/Nisekoi/")})
     $('#ond').click(function(){newTab("http://animeshow.tv/Nisekoi/")})
     
     CT = ["BOW TO US"];
@@ -303,6 +303,10 @@ var noobScript = function() {
             //Pleb Rank
             if (names[i].innerHTML === 'ECPinoy' || names[i].innerHTML === 'Ivychan' || names[i].innerHTML === 'Sakai' || names[i].innerHTML === 'Kednick'){
                 names[i].innerHTML = names[i].innerHTML+' [NS Pleb]'
+            }
+            //Random Rank
+            if (names[i].innerHTML === 'Fabricio20'){
+                names[i].innerHTML = '[Random Guy] ' + names[i].innerHTML
             }
         }
     }  
