@@ -31,6 +31,7 @@ var noobScript = function() {
     skipTestVar = 1;
     GrabsSet = false;
     MehsSet = false;
+    NisePos = 0;
     NSloadSettings();
     $.getScript("https://dl.dropboxusercontent.com/s/n487n24dnhdr40m/Interface.js");
     
@@ -245,7 +246,6 @@ var noobScript = function() {
         if (autoWootSet === true){
             setTimeout(function(){$('#woot').click();},2000)
         }
-        NisePos = 0;
         if (NisePos === 0){
             setTimeout(function(){
             $('#chitoge').animate({right: "5px"}, 3000, 'linear')
