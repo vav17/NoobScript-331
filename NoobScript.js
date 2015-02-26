@@ -191,6 +191,30 @@ var noobScript = function() {
         var title = API.getMedia().title;
         window.prompt("Song Information:", author + " - " + title + " // " + "https://www.youtube.com/watch?v=" + cid);
     };
+    
+    API.on(API.VOTE_UPDATE, mehTracer);
+    function mehTracer(obj) {
+	    if(NSLSS.Mehs == true) {
+	        var UID = guid(obj.user.username);
+	        var vote = obj.vote;
+	        if(vote == -1) {
+		        vote = "meh";
+		        API.chatLog(obj.user.username + " Mehd the song!", true);
+	        }
+	    }
+    }
+    
+    //GUID ( Get User ID From Name [XX] )
+    function guid(XX) {
+	    var XX = XX.trim();
+	    var users = API.getUsers();
+	    for(var i = 0; i < users.length; i++) {
+		    if(users[i].XX == XX) {
+			        return users[i].id;
+		        }
+	        }
+	    return null; // Returns null if not found
+    }   
 
     API.on(API.SCORE_UPDATE, skipTest);
     function skipTest(score){
