@@ -192,19 +192,19 @@ var noobScript = function() {
         window.prompt("Song Information:", author + " - " + title + " // " + "https://www.youtube.com/watch?v=" + cid);
     };
     
+    //Meh Tracker
     API.on(API.VOTE_UPDATE, mehTracer);
     function mehTracer(obj) {
 	    if(NSLSS.Mehs == true) {
-	        var UID = guid(obj.user.username);
 	        var vote = obj.vote;
 	        if(vote == -1) {
-		        vote = "meh";
-		        API.chatLog(obj.user.username + " Mehd the song!", true);
+		     vote = "meh";
+		     API.chatLog(obj.user.username + " Mehd the song!", true);
 	        }
 	    }
     }
     
-    //GUID ( Get User ID From Name [XX] )
+    //GUID ( Get User ID From Name [XX] ) ~~ Not Used for now
     function guid(XX) {
 	    var XX = XX.trim();
 	    var users = API.getUsers();
