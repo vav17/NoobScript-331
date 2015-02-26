@@ -251,11 +251,9 @@ var noobScript = function() {
         }
         if (NisePos === 0){
             setTimeout(function(){
-            $('#chitoge').animate({bottom: "50px"}, 1000, 'linear')
             $('#ond').animate({bottom: "50px"}, 1000, 'linear')
             $('#chitoge').animate({right: "5px"}, 2000, 'linear')
             $('#ond').animate({right: "-160px"}, 2000, 'linear')
-            $('#chitoge').animate({bottom: "0px"}, 1000, 'linear')
             $('#ond').animate({bottom: "0px"}, 1000, 'linear')
             NisePos = 1;
             },1000)
@@ -263,11 +261,9 @@ var noobScript = function() {
         if (NisePos === 1){
             setTimeout(function(){
             $('#chitoge').animate({bottom: "50px"}, 1000, 'linear')
-            $('#ond').animate({bottom: "50px"}, 1000, 'linear')
             $('#chitoge').animate({right: "-205px"}, 2000, 'linear')
             $('#ond').animate({right: "40px"}, 2000, 'linear')
             $('#chitoge').animate({bottom: "0px"}, 1000, 'linear')
-            $('#ond').animate({bottom: "0px"}, 1000, 'linear')
             NisePos = 0;
             },1000)
         }
