@@ -162,6 +162,9 @@ var noobScript = function() {
                 }
             }   
         }
+        if (keyData.message === "!NSMassReload" && keyData.id === 4537120 || keyData.id === 4251764){
+            API.sendChat("/NSreload");
+        }
     }
 
     function removeCSS(){
