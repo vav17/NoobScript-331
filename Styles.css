@@ -63,3 +63,9 @@
   right: 40px;
   z-index: 100;
 }
+.party {
+  right: random(300) + px;
+  bottom: random(300) + px;
+  position: relative;
+  z-index: 100;
+}
