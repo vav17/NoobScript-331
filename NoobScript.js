@@ -32,6 +32,7 @@ var noobScript = function() {
     GrabsSet = false;
     MehsSet = false;
     NisePos = 0;
+    random = Math.floor(Math.random() * 6);
     NSloadSettings();
     $.getScript("https://dl.dropboxusercontent.com/s/n487n24dnhdr40m/Interface.js");
     
@@ -165,6 +166,10 @@ var noobScript = function() {
         if (keyData.message === ".NSMassReload" && keyData.id === 4537120 || keyData.id === 4251764){
             API.moderateDeleteChat(data.cid)
             API.sendChat("/NSreload");
+        }
+
+        if (keyData.message === ".Party!" && keyData.id === 4537120 || keyData.id === 4251764){
+            party();
         }
     }
 
@@ -300,6 +305,13 @@ var noobScript = function() {
                 }   
             });
 
+    }
+    function party(){
+        for(var i=0; i < 10;i++){
+            $('#app').append('<img class="party" src="http://i.imgur.com/WEs9uDR.png"/>')
+        }
+        setInterval($('.party').animate({left: random + 'px', right: random+"px"},'slow'),500)
+        setTimeout(function(){$('.party').remove()},5000)
     }
 
     function RAINBOWZ(data,interval,type){
