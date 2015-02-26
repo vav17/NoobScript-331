@@ -40,7 +40,18 @@ var noobScript = function() {
         this.data = data;
         switch(data){
             case "/cmds":
-                API.chatLog("Command List Comming Soon",true);
+                //TODO: Break Lines
+                API.chatLog("Command List:");
+                API.chatLog("/credits | Display credits");
+                API.chatLog("/NSkill | Kills script");
+                API.chatLog("/NSreload | Restarts script");
+                API.chatLog("/copysong | Displays song info & link");
+                API.chatLog("/stats | Display your stats");
+                API.chatLog("/NSaddemote | Adds emote to the emote list");
+                API.chatLog("/resetstats | Resets your stats");
+                API.chatLog("/hidecounter | Hides the stats bar");
+                API.chatLog("/NSreset | Reset NS settings to default values");
+                API.chatLog("/NoobScript | Sends link to script webpage");
             break;
             
             case "/credits":
