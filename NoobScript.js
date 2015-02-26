@@ -21,7 +21,7 @@ var noobScript = function() {
     $('<div id="Stat"></div>').appendTo("#app")
     document.getElementById('Stat').innerHTML = "<p>Messages Sent: </p>"+localStorage.getItem("msgSent") +"<p>Characters:</p>" +localStorage.getItem("msglength") + "<p>Name Mentioned:</p>" + localStorage.getItem("nameSaid") + "<p>Loli Counter: </p>" + localStorage.getItem("lolicounter")
     $('#copysong').click(function(){copySong();})
-    $('#chitoge').cliSck(function(){newTab("http://animeshow.tv/Nisekoi/")})
+    $('#chitoge').click(function(){newTab("http://animeshow.tv/Nisekoi/")})
     $('#ond').click(function(){newTab("http://animeshow.tv/Nisekoi/")})
     
     CT = ["BOW TO US"];
