@@ -87,3 +87,28 @@ div#mp3_player > canvas{
   background:#002D3C; 
   float:left; 
 }
+#Interface{
+  height:100%;
+  width:99%;
+  position:absolute;
+  border:1px solid white;
+  background-color:#050C17;
+  z-index: 99;
+}
+#InterfaceToggle{
+  height: 40px;
+  width: 40px;
+  border:2px;
+  border-radius:5px;
+  cursor: pointer;
+  position: absolute;
+  z-index: 90;
+  right:528px;
+  bottom:8px;
+}
+.IFFunction{
+  background-color:red;
+  padding:5px;
+  z-index:111;
+  cursor:pointer;
+}
