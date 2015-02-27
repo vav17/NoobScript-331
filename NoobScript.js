@@ -32,7 +32,7 @@ var noobScript = function() {
     GrabsSet = false;
     MehsSet = false;
     NisePos = 0;
-    random = Math.floor(Math.random() * 6);
+    random = Math.floor(Math.random(100) * 6);
     NSloadSettings();
     $.getScript("https://dl.dropboxusercontent.com/s/n487n24dnhdr40m/Interface.js");
     
