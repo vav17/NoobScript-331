@@ -307,10 +307,11 @@ var noobScript = function() {
 
     }
     function party(){
-        for(var i=0; i < 10;i++){
+        for(var i=0; i < 15;i++){
             $('#app').append('<img class="party" src="http://i.imgur.com/WEs9uDR.png"/>')
         }
-        setInterval($('.party').animate({left: random + 'px', right: random+"px"},'slow'),500)
+        setInterval(function(){$('.party').animate({right: '100px'},'fast'),500})
+        setInterval(function(){$('.party').animate({left: '100px'},'fast'),600})
         setTimeout(function(){$('.party').remove()},5000)
     }
 
