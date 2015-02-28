@@ -17,7 +17,7 @@ var noobScript = function() {
     setTimeout(function(){API.sendChat("/emotes https://rawgit.com/vav17/NoobScript-331/master/Emotes.json");},1000)
     $('<link rel="stylesheet" href="https://rawgit.com/vav17/NoobScript-331/master/Styles.css" type="text/css">').appendTo("head")
     $('<script src="https://rawgit.com/vav17/NoobScript-331/master/JQuery.js"></script>').appendTo("head")
-    $('<div id="Intro"><span class="rainbow">Running NoobScript V2.7!</span></div>').appendTo("#chat-messages")
+    NSCL('icon icon-NS','red', '<span class="rainbow" style="position: relative;right: -43px; bottom: -5px">Running NoobScript-331!</span>')
     $('<div id="Stat"></div>').appendTo("#app")
     document.getElementById('Stat').innerHTML = "<p>Messages Sent: </p>"+localStorage.getItem("msgSent") +"<p>Characters:</p>" +localStorage.getItem("msglength") + "<p>Name Mentioned:</p>" + localStorage.getItem("nameSaid") + "<p>Loli Counter: </p>" + localStorage.getItem("lolicounter")
     $('#copysong').click(function(){copySong();})
@@ -198,6 +198,11 @@ var noobScript = function() {
         window.prompt("Song Information:", author + " - " + title + " // " + "https://www.youtube.com/watch?v=" + cid);
     };
 
+    API.on(API.CHAT, lastMessageSent)
+    function lastMessageSent(LMData){
+
+    }
+
     API.on(API.SCORE_UPDATE, skipTest);
     function skipTest(score){
         staff = API.getStaff();
@@ -298,6 +303,37 @@ var noobScript = function() {
         }
     }
 
+    function NSCL(icon, color, message) {
+                var date = new Date(),
+                    hour = date.getHours(),
+                    min = date.getMinutes(),
+                    pm = 'am',
+                    mostrar = true,
+                    format = $('#chat-timestamp-button').children(0).attr('class');
+                    
+                if ( format.indexOf('12') != -1){                   
+                    if ( hour >= 12 ){
+                        hour -= 12;
+                        pm = 'pm';
+                    }
+                    if ( hour == 0 )
+                        hour = 12;
+                }
+                if ( format.indexOf('24') != -1)
+                    pm = '';
+
+                if ( format.indexOf('off') != -1)
+                    mostrar = false;
+
+                if ( min < 10 )
+                    min = '0' + min;
+                $('#chat-messages').append('<div class="update" style="border-left: solid 3px ' + color + '">' + 
+                                            ( icon ? '<i class="' + icon + '" style="top: 0px; left: -1px"></i>' : '' ) +
+                                            (mostrar ? '<div class="timestamp" style="display: block;"></div>' : '') +
+                                            '<span class="text" style="color: ' + color + '">' + message + '</span></div>');
+                $('#chat-messages').scrollTop($('#chat-messages').prop("scrollHeight"));
+    }
+
     API.on(API.CHAT, historyKey);
     function historyKey(historyData){
             document.addEventListener('keydown', function (evt) {
@@ -363,6 +399,7 @@ var noobScript = function() {
         API.off(API.CHAT, historyKey);
         API.off(API.CHAT, rankForChat);
         API.off(API.GRAB_UPDATE, scoreUpdate);
+        API.off(API.CHAT, lastMessageSent)
     }
 
     function autoJoin(){
