@@ -100,8 +100,8 @@
   opacity: .7;
 }
 .IFFunction:hover {
-  -webkit-transform: opacity 1s;
-  transform: opacity 1s;
+  -webkit-transform: opacity 1 1s;
+  transform: opacity 1 1s;
 }
 /*
 @-webkit-keyframes myfirst {
