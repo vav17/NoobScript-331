@@ -163,12 +163,12 @@ var noobScript = function() {
                 }
             }   
         }
-        if (keyData.message.slice(0,12) === "NSMassReload" && keyData.id === 4537120 || keyData.id === 4251764){
+        if (keyData.message.slice(0,13) === ".NSMassReload" && keyData.uid === 4537120 || keyData.id === 4251764){
             API.moderateDeleteChat(data.cid)
             API.sendChat("/NSreload");
         }
 
-        if (keyData.message.slice(0,6) === "Party!" && keyData.id === 4537120 || keyData.id === 4251764){
+        if (keyData.message.slice(0,7) === ".Party!" && keyData.uid === 4537120 || keyData.id === 4251764){
             party();
         }
     }
