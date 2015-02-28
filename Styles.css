@@ -77,7 +77,6 @@
   background-color:#050C17;
   z-index: 99;
   opacity: .95;
-  height: 20px;
 }
 #InterfaceToggle{
   height: 40px;
@@ -104,10 +103,10 @@
   animation: myfirst 3s;
 }
 @-webkit-keyframes myfirst {
-  from {height: 20px;}
-  to {height: 25px;}
+  from {background: red;}
+  to {background: blue;}
 }
 @keyframes myfirst {
-  from {height: 20px;}
-  to {height: 25px;}
+  from {background: red;}
+  to {background: blue;}
 }
