@@ -98,6 +98,7 @@
   box-shadow: 0px 5px 50px black;
   border-radius: 5px
 }
+/*
 .IFFunction:hover {
   -webkit-animation: myfirst 3s;
   animation: myfirst 3s;
@@ -110,3 +111,4 @@
   from {background: red;}
   to {background: blue;}
 }
+*/
