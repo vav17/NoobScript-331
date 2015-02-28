@@ -99,6 +99,8 @@
   border-radius: 5px;
   opacity: .8;
   -webkit-transition: opacity 1s linear;
+  -o-transition: opacity 1s linear;
+  -moz-transition: opacity 1s linear;
   transition: opacity 1s linear;
 }
 .IFFunction:hover {
