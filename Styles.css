@@ -106,4 +106,9 @@
 .IFFunction:hover {
   opacity: .8;
 }
+.NSUpdate{
+  position: relative;
+  right: -43px;
+  bottom: -5px;
+}
 
