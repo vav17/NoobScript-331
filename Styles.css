@@ -76,6 +76,7 @@
   border:1px solid white;
   background-color:#050C17;
   z-index: 99;
+  opacity: .95;
 }
 #InterfaceToggle{
   height: 40px;
@@ -93,4 +94,17 @@
   padding:5px;
   z-index:111;
   cursor:pointer;
+  margin: 0px 3px 1px 3px;
+}
+.IFFunction:hover {
+  -webkit-animation: myfirst 3s;
+  animation: myfirst 3s;
+}
+@-webkit-keyframes myfirst {
+  from {background: red;}
+  to {background: blue;}
+}
+@keyframes myfirst {
+  from {background: red;}
+  to {background: blue;}
 }
