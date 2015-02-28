@@ -106,13 +106,4 @@
 .IFFunction:hover {
   opacity: 1;
 }
-/*
-@-webkit-keyframes myfirst {
-  from {opacity: .7;}
-  to {opacity: 1;}
-}
-@keyframes myfirst {
-  from {opacity: .7;}
-  to {opacity: 1;}
-}
-*/
+
