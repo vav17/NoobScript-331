@@ -110,6 +110,8 @@
   position: relative;
   right: -43px;
   bottom: -5px;
-  text-align: center;
+}
+.text{
+  float: right;
 }
 
