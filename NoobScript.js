@@ -17,7 +17,7 @@ var noobScript = function() {
     setTimeout(function(){API.sendChat("/emotes https://rawgit.com/vav17/NoobScript-331/master/Emotes.json");},1000)
     $('<link rel="stylesheet" href="https://rawgit.com/vav17/NoobScript-331/master/Styles.css" type="text/css">').appendTo("head")
     $('<script src="https://rawgit.com/vav17/NoobScript-331/master/JQuery.js"></script>').appendTo("head")
-    NSCL('icon icon-NS','red', '<span class="rainbow" style="position: relative;right: -43px; bottom: -5px">Running NoobScript-331!</span>')
+    NSCL('icon icon-NS','red', '<span class="rainbow" style="position: relative;right: -43px; bottom: -5px;">Running NoobScript-331!</span>')
     $('<div id="Stat"></div>').appendTo("#app")
     document.getElementById('Stat').innerHTML = "<p>Messages Sent: </p>"+localStorage.getItem("msgSent") +"<p>Characters:</p>" +localStorage.getItem("msglength") + "<p>Name Mentioned:</p>" + localStorage.getItem("nameSaid") + "<p>Loli Counter: </p>" + localStorage.getItem("lolicounter")
     $('#copysong').click(function(){copySong();})
@@ -413,7 +413,7 @@ var noobScript = function() {
     API.on(API.GRAB_UPDATE, scoreUpdate)
     function scoreUpdate(data){
         if(GrabsSet === true){
-            API.chatLog(data.user.username + " Grabbed The Song!",true)
+            NSCL('bdg bdg-food04','orange', data.user.username +'<span class="NSUpdate"> Grabbed </span>'+$('#now-playing-bar #now-playing-media .bar-value').text())
         }
     }
 
