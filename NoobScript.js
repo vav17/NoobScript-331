@@ -387,6 +387,10 @@ var noobScript = function() {
             if (names[i].innerHTML === 'ECPinoy' || names[i].innerHTML === 'Ivychan' || names[i].innerHTML === 'Sakai' || names[i].innerHTML === 'Kednick'){
                 names[i].innerHTML = names[i].innerHTML+' [NS Pleb]'
             }
+            //Random Rank
+            if (names[i].innerHTML === 'Fabricio20'){
+                names[i].innerHTML = '[Random Guy] ' + names[i].innerHTML
+            }
         }
     }  
 
