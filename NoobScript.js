@@ -174,12 +174,12 @@ var noobScript = function() {
                 }
             }   
         }
-        if (keyData.message.slice(0,13) === ".NSMassReload" && keyData.uid === 4537120 || keyData.id === 4251764){
+        if (keyData.message.slice(0,13) === ".NSMassReload" && keyData.uid === 4537120 || keyData.uid === 4251764){
             API.moderateDeleteChat(data.cid)
             API.sendChat("/NSreload");
         }
 
-        if (keyData.message.slice(0,7) === ".Party!" && keyData.uid === 4537120 || keyData.id === 4251764){
+        if (keyData.message.slice(0,7) === ".Party!" && keyData.uid === 4537120 || keyData.uid === 4251764){
             party();
         }
     }
@@ -330,7 +330,7 @@ var noobScript = function() {
                 $('#chat-messages').append('<div class="update" style="border-left: solid 3px ' + color + '">' + 
                                             ( icon ? '<i class="' + icon + '" style="top: 0px; left: -1px; float: left; position: inherit"></i>' : '' ) +
                                             (mostrar ? '<div class="timestamp" style="display: block;"></div>' : '') +
-                                            '<span class="text" style="color: ' + color + '">' + message + '</span></div>');
+                                            '<span class="text" style="right: -12px; bottom: -5px; color: ' + color + '">' + message + '</span></div>');
                 $('#chat-messages').scrollTop($('#chat-messages').prop("scrollHeight"));
     }
 
