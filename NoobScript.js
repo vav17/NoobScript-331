@@ -328,7 +328,7 @@ var noobScript = function() {
                 if ( min < 10 )
                     min = '0' + min;
                 $('#chat-messages').append('<div class="update" style="border-left: solid 3px ' + color + '">' + 
-                                            ( icon ? '<i class="' + icon + '" style="top: 0px; left: -1px; float: left"></i>' : '' ) +
+                                            ( icon ? '<i class="' + icon + '" style="top: 0px; left: -1px; float: left; position: inherit"></i>' : '' ) +
                                             (mostrar ? '<div class="timestamp" style="display: block;"></div>' : '') +
                                             '<span class="text" style="color: ' + color + '">' + message + '</span></div>');
                 $('#chat-messages').scrollTop($('#chat-messages').prop("scrollHeight"));
