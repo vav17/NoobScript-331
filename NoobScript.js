@@ -361,7 +361,7 @@ var noobScript = function() {
         setInterval(function(){$('.party').animate({right: '100px'},'fast'),500})
         setInterval(function(){$('.party').animate({left: '100px'},'fast'),600})
         setTimeout(function(){$('.party').remove()},5000)
-    }
+    };
 
     function RAINBOWZ(data,interval,type){
         var hue = 'rgb(' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ')';
@@ -370,7 +370,6 @@ var noobScript = function() {
             RAINBOWZ(data, interval, type);
         };
     };
-
 
     API.on(API.CHAT, rankForChat);
     function rankForChat(data){

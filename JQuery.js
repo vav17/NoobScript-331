@@ -7,6 +7,11 @@ $(document).ready(function(){
 		$('head').append('<link id="cssstaffcolors" rel="stylesheet"type="text/css"href="https://dl.dropboxusercontent.com/s/usedz76mi8km5rq/Origem%20Colors.css">');
 		$("#Stat").draggable();
 
-
+        if (document.getElementById("playlist-meta").style.top === "-530px"){
+            $("#InterfaceToggle").toggle()
+        }
+        else{
+            $("#InterfaceToggle").toggle()
+        }
 		//Interface
 });
