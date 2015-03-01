@@ -585,6 +585,7 @@ var noobScript = function() {
             $("#IFChatCommandBox").css('background-color', 'red');
             $("#IFMehs").css('background-color', 'red');
             $("#IFGrabs").css('background-color', 'red');
+            $("#IFChatCommandBox").css('background-color', 'red');
             if (NSLSS.StudyMode === true){
                 NSLSS.StudyMode = false;
             }
