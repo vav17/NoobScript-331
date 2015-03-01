@@ -567,9 +567,11 @@ var noobScript = function() {
             if(NSLSS.ChatCommandBox === true){
                 NSLSS.ChatCommandBox = false;
                 $("#IFChatCommandBox").css('background-color', 'red');
+                $('#IFChatCommandBox').remove()
             }
             else {
                 NSLSS.ChatCommandBox = true;
+                $("#IFChatCommandBox").css('background-color', 'green');
                 $("#IFChatCommandBox").css('background-color', 'green');
             }
         },
