@@ -38,7 +38,6 @@ var noobScript = function() {
     NSloadSettings();
     $.getScript("https://dl.dropboxusercontent.com/s/n487n24dnhdr40m/Interface.js");
     
-    
     API.on(API.CHAT_COMMAND, commands);
     function commands(data) {
         this.data = data;
@@ -575,6 +574,7 @@ var noobScript = function() {
                 $("#InterfaceCCB").slideDown()
                 $("#IFChatCommandBox").css('background-color', 'green');
             }
+            NSsaveSettings();
         },
         LoadInToggle: function(){
             $("#IFStudymode").css('background-color', 'red');
