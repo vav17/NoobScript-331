@@ -113,12 +113,15 @@
   bottom: -5px;
 }
 .CCB {
-  margin: 3px;
+  margin: 6px;
   position: relative;
   font-family: Lucida Console;
   border: 1px solid white;
   cursor: pointer;
-  z-index: 100px
+  z-index: 100;
+  text-align: center;
+  font-size: 10px;
+  display: inline;
 }
 
 
