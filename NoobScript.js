@@ -566,12 +566,12 @@ var noobScript = function() {
         toggleChatCommandBox: function(){
             if(NSLSS.ChatCommandBox === true){
                 NSLSS.ChatCommandBox = false;
-                $("#InterfaceCCB").slideToggle()
+                $("#InterfaceCCB").slideUp()
                 $("#IFChatCommandBox").css('background-color', 'red');
             }
             else {
                 NSLSS.ChatCommandBox = true;
-                $("#InterfaceCCB").slideToggle()
+                $("#InterfaceCCB").slideDown()
                 $("#IFChatCommandBox").css('background-color', 'green');
             }
         },
