@@ -43,7 +43,22 @@ var noobScript = function() {
         this.data = data;
         switch(data){
             case "/cmds":
-                API.chatLog("Command List Comming Soon",true);
+            case "/NScmds":
+            case "/NScommands":
+            case "/commands":
+                //TODO: Break Lines
+                //TODO: Add Portuguese Translation
+                API.chatLog("Command List:");
+                API.chatLog("/credits | Display credits");
+                API.chatLog("/copysong | Displays song info & link");
+                API.chatLog("/resetstats | Resets your stats");
+                API.chatLog("/stats | Display your stats");
+                API.chatLog("/hidecounter | Hides the stats bar");
+                API.chatLog("/NSkill | Kills script");
+                API.chatLog("/NSreload | Restarts script");
+                API.chatLog("/NSaddemote | Adds emote to the emote list");
+                API.chatLog("/NSreset | Reset NS settings to default values");
+                API.chatLog("/NoobScript | Sends link to NoobScript webpage");
             break;
             
             case "/credits":
@@ -198,6 +213,30 @@ var noobScript = function() {
         var title = API.getMedia().title;
         window.prompt("Song Information:", author + " - " + title + " // " + "https://www.youtube.com/watch?v=" + cid);
     };
+    
+    //Meh Tracker
+    API.on(API.VOTE_UPDATE, mehTracer);
+    function mehTracer(obj) {
+	    if(NSLSS.Mehs == true) {
+	        var vote = obj.vote;
+	        if(vote == -1) {
+		     vote = "meh";
+		     API.chatLog(obj.user.username + " Mehd the song!", true);
+	        }
+	    }
+    }
+    
+    //GUID ( Get User ID From Name [XX] ) ~~ Not Used for now
+    function guid(XX) {
+	    var XX = XX.trim();
+	    var users = API.getUsers();
+	    for(var i = 0; i < users.length; i++) {
+		    if(users[i].XX == XX) {
+			        return users[i].id;
+		        }
+	        }
+	    return null; // Returns null if not found
+    }   
 
     API.on(API.CHAT, lastMessageSent)
     function lastMessageSent(LMData){
