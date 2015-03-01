@@ -19,6 +19,7 @@ var noobScript = function() {
     $('<script src="https://rawgit.com/vav17/NoobScript-331/master/JQuery.js"></script>').appendTo("head")
     NSCL('icon icon-NS','red', '<span class="rainbow" style="position: relative;right: -43px; bottom: -5px;">Running NoobScript-331!</span>')
     $('<div id="Stat"></div>').appendTo("#app")
+    $('#vote').append('<img id="copysong" src="http://i.imgur.com/ThOy4K5.png">');
     document.getElementById('Stat').innerHTML = "<p>Messages Sent: </p>"+localStorage.getItem("msgSent") +"<p>Characters:</p>" +localStorage.getItem("msglength") + "<p>Name Mentioned:</p>" + localStorage.getItem("nameSaid") + "<p>Loli Counter: </p>" + localStorage.getItem("lolicounter")
     $('#copysong').click(function(){copySong();})
     $('#chitoge').click(function(){newTab("http://animeshow.tv/Nisekoi/")})
