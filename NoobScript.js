@@ -70,7 +70,7 @@ var noobScript = function() {
             break;
             
             case "/stats":
-                NSCL('icon icon-NS','white', "<span class="rainbow" style="position: relative;right: -43px; bottom: -5px;">Your Status</span><br/><br/><span>Times Your Name Has Been Mentioned: "+ localStorage.getItem("nameSaid")+ "<br/><br/>Message You Have Sent: " + localStorage.getItem("msgSent") + "<br/><br/>Characters Sent:" + localStorage.getItem("msglength") + "<br/><br/></span>");
+                NSCL('icon icon-NS','white', "<span class='rainbow' style='position: relative;right: -43px; bottom: -5px;'>Your Status</span><br/><br/><span>Times Your Name Has Been Mentioned: "+ localStorage.getItem("nameSaid")+ "<br/><br/>Message You Have Sent: " + localStorage.getItem("msgSent") + "<br/><br/>Characters Sent:" + localStorage.getItem("msglength") + "<br/><br/></span>");
             break;
 
             case "/NSaddemote":
