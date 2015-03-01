@@ -27,7 +27,7 @@ var noobScript = function() {
     
     CT = ["BOW TO US"];
     EmoteList = ["twerk", "SNM", "SnakedMusique", "CarltonDance", "Fireworks", "Headbang", "HighShere", "rspin", "jenny", "totoro", "amaze", "amazegif", "kawaii", "spamgif", "banned", "stitchbra", "stitchglasses", "rainbowllama", "dorito", "DNN", "dotaaxerage", "dotachicken", "dotahorse", "dotaaxecry", "nat", "crikawaii", "pug", "noice", "cute", "loli", "suchfan", "squid", "hi", "lick", "pets", "chickendance", "pingu", "flipstable", "lennygif", "firelenny", "miku", "nyannyan", "lolirekt", "NSLogo", "NO"];
-    CSS = ["#Stat", "#copysong", ".main", "#Intro", "#autoWoot", "#foot", "#InterfaceToggle", "#Interface", "#IFAutoWoot", "#IFChatcolors", "#IFCounters", "#IFCopysong", "#IFHideVideo", "#IFStudymode", "#IFMehs", "#IFGrabs", "#chitoge", "#ond", "IFChatCommandBox"];
+    CSS = ["#Stat", "#copysong", ".main", "#Intro", "#autoWoot", "#foot", "#InterfaceToggle", "#Interface", "#IFAutoWoot", "#IFChatcolors", "#IFCounters", "#IFCopysong", "#IFHideVideo", "#IFStudymode", "#IFMehs", "#IFGrabs", "#chitoge", "#ond", "IFChatCommandBox", "#InterfaceCCB"];
     autoWootSet = 0;
     skipTestVar = 1;
     GrabsSet = false;
@@ -566,12 +566,12 @@ var noobScript = function() {
         toggleChatCommandBox: function(){
             if(NSLSS.ChatCommandBox === true){
                 NSLSS.ChatCommandBox = false;
+                $("#InterfaceCCB").slideToggle()
                 $("#IFChatCommandBox").css('background-color', 'red');
-                $('#IFChatCommandBox').remove()
             }
             else {
                 NSLSS.ChatCommandBox = true;
-                $("#IFChatCommandBox").css('background-color', 'green');
+                $("#InterfaceCCB").slideToggle()
                 $("#IFChatCommandBox").css('background-color', 'green');
             }
         },
@@ -626,7 +626,7 @@ var noobScript = function() {
             }
             if (NSLSS.ChatCommandBox === true){
                 $("#IFChatCommandBox").css('background-color', 'green');
-                $("#footer-user").append('<div id="InterfaceCCB"></div>');
+                $("#InterfaceCCB").slideToggle()
             }
         }
     }
