@@ -75,7 +75,7 @@
   position: relative;
   z-index: 100;
 }
-#Interface{
+#Interface , #InterfaceCCB{
   height:100%;
   width:99%;
   position:absolute;

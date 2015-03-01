@@ -27,7 +27,7 @@ var noobScript = function() {
     
     CT = ["BOW TO US"];
     EmoteList = ["twerk", "SNM", "SnakedMusique", "CarltonDance", "Fireworks", "Headbang", "HighShere", "rspin", "jenny", "totoro", "amaze", "amazegif", "kawaii", "spamgif", "banned", "stitchbra", "stitchglasses", "rainbowllama", "dorito", "DNN", "dotaaxerage", "dotachicken", "dotahorse", "dotaaxecry", "nat", "crikawaii", "pug", "noice", "cute", "loli", "suchfan", "squid", "hi", "lick", "pets", "chickendance", "pingu", "flipstable", "lennygif", "firelenny", "miku", "nyannyan", "lolirekt", "NSLogo", "NO"];
-    CSS = ["#Stat", "#copysong", ".main", "#Intro", "#autoWoot", "#foot", "#InterfaceToggle", "#Interface", "#IFAutoWoot", "#IFChatcolors", "#IFCounters", "#IFCopysong", "#IFHideVideo", "#IFStudymode", "#IFMehs", "#IFGrabs", "#chitoge", "#ond"];
+    CSS = ["#Stat", "#copysong", ".main", "#Intro", "#autoWoot", "#foot", "#InterfaceToggle", "#Interface", "#IFAutoWoot", "#IFChatcolors", "#IFCounters", "#IFCopysong", "#IFHideVideo", "#IFStudymode", "#IFMehs", "#IFGrabs", "#chitoge", "#ond", "IFChatCommandBox"];
     autoWootSet = 0;
     skipTestVar = 1;
     GrabsSet = false;
@@ -428,6 +428,7 @@ var noobScript = function() {
         AutoJoin: false,
         Grabs: false,
         Mehs: false,
+        ChatCommandBox: false,
     };
     if (localStorage.getItem("NSSET")){
         console.log("Settings Loaded!")
@@ -562,6 +563,16 @@ var noobScript = function() {
             }
             NSsaveSettings();
         },
+        toggleChatCommandBox: function(){
+            if(NSLSS.ChatCommandBox === true){
+                NSLSS.ChatCommandBox = false;
+                $("#IFChatCommandBox").css('background-color', 'red');
+            }
+            else {
+                NSLSS.ChatCommandBox = true;
+                $("#IFChatCommandBox").css('background-color', 'green');
+            }
+        },
         LoadInToggle: function(){
             $("#IFStudymode").css('background-color', 'red');
             $("#IFChatcolors").css('background-color', 'green');
@@ -569,6 +580,9 @@ var noobScript = function() {
             $("#IFCopysong").css('background-color', 'green');
             $("#IFAutoWoot").css('background-color', 'red');
             $("#IFHideVideo").css('background-color', 'red');
+            $("#IFChatCommandBox").css('background-color', 'red');
+            $("#IFMehs").css('background-color', 'red');
+            $("#IFGrabs").css('background-color', 'red');
             if (NSLSS.StudyMode === true){
                 NSLSS.StudyMode = false;
             }
@@ -607,6 +621,10 @@ var noobScript = function() {
             if (NSLSS.Mehs === true){
                 MehsSet = true;
                 $("#IFMehs").css('background-color', 'green');
+            }
+            if (NSLSS.ChatCommandBox === true){
+                $("#IFChatCommandBox").css('background-color', 'green');
+                $("#footer-user").append('<div id="InterfaceCCB"></div>');
             }
         }
     }
