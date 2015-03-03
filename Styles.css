@@ -84,7 +84,7 @@
   z-index: 99;
   opacity: .95;
 }
-#InterfaceToggle, #SecondChatToggle{
+#InterfaceToggle{
   height: 40px;
   width: 40px;
   border:2px;
@@ -145,4 +145,6 @@
   opacity: 1;
   bottom: -48px;
 }
-
+#SecondChatToggle{
+  cursor: pointer;
+}
