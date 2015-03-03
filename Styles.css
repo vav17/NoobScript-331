@@ -75,7 +75,7 @@
   position: relative;
   z-index: 100;
 }
-#Interface , #InterfaceCCB{
+#Interface , #InterfaceCCB , #SecondChat{
   height:100%;
   width:99%;
   position:absolute;
