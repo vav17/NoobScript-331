@@ -175,8 +175,7 @@ var noobScript = function() {
                 }
             }   
         }
-        if (keyData.message.slice(0,13) === ".NSMassReload" && keyData.uid === 4537120 || keyData.uid === 4251764){
-            API.moderateDeleteChat(data.cid)
+        if (keyData.message.slice(0,13) === ".NSMassReloda" && keyData.uid === 4537120 || keyData.uid === 4251764){
             API.sendChat("/NSreload");
         }
 
