@@ -135,5 +135,14 @@
 #InterfaceCCB:hover{
   opacity: .95;
 }
-
+#SecondChat{
+  height:100%;
+  width:99%;
+  position:absolute;
+  border:1px solid white;
+  background-color:#050C17;
+  z-index: 98;
+  opacity: 1;
+  bottom: -48px;
+}
 
