@@ -400,11 +400,17 @@ var noobScript = function() {
         API.off(API.CHAT, rankForChat);
         API.off(API.GRAB_UPDATE, scoreUpdate);
         API.off(API.CHAT, lastMessageSent)
+        API.off(API.WAIT_LIST_UPDATE,AutoJoinWaitlist)
+    }
+
+    API.on(API.WAIT_LIST_UPDATE,AutoJoinWaitlist)
+    function AutoJoinWaitlist(){
+        autoJoin()
     }
 
     function autoJoin(){
         if (autoJoinSet === true){
-            if (API.getWaitListPosition() === -1 && API.getDJ().id != API.getUser().id && obj.length < 50){
+            if (API.getWaitListPosition() === -1 && API.getDJ().id != API.getUser().id){
                 API.djJoin()
             }
         }
