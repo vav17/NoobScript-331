@@ -405,7 +405,7 @@ var noobScript = function() {
 
     API.on(API.WAIT_LIST_UPDATE,AutoJoinWaitlist)
     function AutoJoinWaitlist(){
-        autoJoin()
+        setTimeout(function(){autoJoin()},1000)
     }
 
     function autoJoin(){
