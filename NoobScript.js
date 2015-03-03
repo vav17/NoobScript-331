@@ -380,11 +380,11 @@ var noobScript = function() {
                 names[i].innerHTML = names[i].innerHTML+' [NS DEV]'
             }
             //Loli Rank
-            if (names[i].innerHTML === 'Slyric_' || names[i].innerHTML === 'Kaboom0' || names[i].innerHTML === 'H A R R Y'){
+            if (names[i].innerHTML === 'Slyric_' || names[i].innerHTML === 'Kaboom0' || names[i].innerHTML === 'H A R R Y' || names[i].innerHTML === 'melongrip'){
                 names[i].innerHTML = names[i].innerHTML+' [NS Loli]'
             }
             //Pleb Rank
-            if (names[i].innerHTML === 'ECPinoy' || names[i].innerHTML === 'Ivychan' || names[i].innerHTML === 'Sakai' || names[i].innerHTML === 'Kednick'){
+            if (names[i].innerHTML === 'ECPinoy' || names[i].innerHTML === 'Ivychan' || names[i].innerHTML === 'Kednick'){
                 names[i].innerHTML = names[i].innerHTML+' [NS Pleb]'
             }
         }
