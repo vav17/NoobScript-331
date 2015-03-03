@@ -287,6 +287,12 @@
             "url": "http://i.imgur.com/JtSwkmQ.png",
             "width": "50px",
             "image_id":47
+        },
+        "hai": {
+            "height": "60px",
+            "url": "http://i.imgur.com/ZGcOvzH.png",
+            "width": "60px",
+            "image_id":48
         }
     }
 }
