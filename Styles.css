@@ -75,7 +75,7 @@
   position: relative;
   z-index: 100;
 }
-#Interface , #InterfaceCCB {
+#Interface{
   height:100%;
   width:99%;
   position:absolute;
@@ -83,6 +83,7 @@
   background-color:#050C17;
   z-index: 99;
   opacity: .95;
+  text-align: center;
 }
 #InterfaceToggle{
   height: 40px;
