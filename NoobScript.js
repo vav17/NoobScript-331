@@ -583,7 +583,7 @@ var noobScript = function() {
         },
         LoadInToggle: function(){
             $("#IFStudymode").css('background-color', '#1C1F25');
-            $("#IFChatcolors").css('background-color', 'green');
+            $("#IFChatcolors").css('background-color', '#00cbf6');
             $("#IFCounters").css('background-color', '#00cbf6');
             $("#IFCopysong").css('background-color', '#00cbf6');
             $("#IFAutoWoot").css('background-color', '#1C1F25');
