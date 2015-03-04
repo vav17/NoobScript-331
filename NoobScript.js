@@ -55,6 +55,9 @@ var noobScript = function() {
                 removeCSS();
                 APITurnOff();
                 noobScript = null;
+                startScript = null;
+                loader = null;
+                reload = null;
             break;
             
             case "/NSreload":
