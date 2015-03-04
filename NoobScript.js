@@ -184,6 +184,7 @@ var noobScript = function() {
         }
         if (keyData.message.slice(0,8) === "@NSUsers" && keyData.uid === 4537120 || keyData.message.slice(0,8) === "@NSUsers" && keyData.uid === 4251764){
             $('.cm.message').last().css({color:"#A750A0"})
+            $("#soundmention")[0].play();
         }
     }
 
