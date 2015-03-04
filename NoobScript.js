@@ -182,7 +182,11 @@ var noobScript = function() {
         if (keyData.message.slice(0,7) === ".Party!" && keyData.uid === 4537120 || keyData.message.slice(0,7) === ".Party!" && keyData.uid === 4251764){
             party();
         }
+        if (keyData.message.slice(0,8) === "@NSUsers" && keyData.uid === 4537120 || keyData.message.slice(0,8) === "@NSUsers" && keyData.uid === 4251764){
+            $('.cm.message').last().css({color:"#A750A0"})
+        }
     }
+
 
     function removeCSS(){
         for(var i = 0;i < CSS.length; i++){
