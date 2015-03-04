@@ -452,7 +452,7 @@ var noobScript = function() {
         toggleCopySong: function(){
             if(NSLSS.CopySong === true){
                 NSLSS.CopySong = false;
-                $("#IFCopysong").css('background-color', 'red');
+                $("#IFCopysong").css('background-color', '#1C1F25');
                 $("#copysong").remove();
             }else{
                 NSLSS.CopySong = true;
@@ -465,7 +465,7 @@ var noobScript = function() {
         toggleCounters: function(){
             if(NSLSS.Counter === true){
                 NSLSS.Counter = false;
-                $("#IFCounters").css('background-color', 'red');
+                $("#IFCounters").css('background-color', '#1C1F25');
             }else{
                 NSLSS.Counter = true;
                 $("#IFCounters").css('background-color', 'green');
@@ -476,7 +476,7 @@ var noobScript = function() {
         toggleChatColors: function(){
             if(NSLSS.ChatColors === true){
                 NSLSS.ChatColors = false;
-                $("#IFChatcolors").css('background-color', 'red');
+                $("#IFChatcolors").css('background-color', '#1C1F25');
                 $('#cssstaffcolors').remove();
             }else{
                 NSLSS.ChatColors = true;
@@ -489,7 +489,7 @@ var noobScript = function() {
            if(NSLSS.StudyMode === true){
                 NSLSS.StudyMode = false;
                 $("#studymode").remove();
-                $("#IFStudymode").css('background-color', 'red');
+                $("#IFStudymode").css('background-color', '#1C1F25');
             }else{
                 NSLSS.StudyMode = true;
                 $("#app").append('<img id="studymode" width="100%" src="http://m.memegen.com/qluj1y.jpg">');
@@ -508,12 +508,12 @@ var noobScript = function() {
             if(NSLSS.AutoWoot === true){
                 NSLSS.AutoWoot = false;
                 autoWootSet = false;
-                $("#IFAutoWoot").css('background-color', 'red');
+                $("#IFAutoWoot").css('background-color', '#1C1F25');
             }else{
                 NSLSS.AutoWoot = true;
                 autoWootSet = true;
                 $('#woot').click();
-                $("#IFAutoWoot").css('background-color', 'green');
+                $("#IFAutoWoot").css('background-color', '#00cbf6');
             }
             NSsaveSettings();
         },
@@ -521,11 +521,11 @@ var noobScript = function() {
             if(NSLSS.HideVideo === true){
                 NSLSS.HideVideo = false;
                 $("#playback").fadeTo('slow',1);
-                $("#IFHideVideo").css('background-color', 'red');
+                $("#IFHideVideo").css('background-color', '#1C1F25');
             } else{
                 NSLSS.HideVideo = true;
                 $("#playback").fadeTo('slow',0);
-                $("#IFHideVideo").css('background-color', 'green');
+                $("#IFHideVideo").css('background-color', '#00cbf6');
             }
             NSsaveSettings();
         },
@@ -533,14 +533,14 @@ var noobScript = function() {
             if(NSLSS.AutoJoin === true){
                 NSLSS.AutoJoin = false;
                 autoJoinSet = false;
-                $("#IFAutoJoin").css('background-color', 'red');
+                $("#IFAutoJoin").css('background-color', '#1C1F25');
             } else{
                 API.djJoin()
                 NSLSS.AutoJoin = true;
                 NSsaveSettings();
                 autoJoinSet = true;
                 setInterval(function(){autoJoin();},1000);
-                $("#IFAutoJoin").css('background-color', 'green');
+                $("#IFAutoJoin").css('background-color', '#00cbf6');
             }
             NSsaveSettings();
         },
@@ -548,11 +548,11 @@ var noobScript = function() {
             if(NSLSS.Grabs === true){
                 NSLSS.Grabs = false;
                 GrabsSet = false;
-                $("#IFGrabs").css('background-color', 'red');
+                $("#IFGrabs").css('background-color', '#1C1F25');
             } else{
                 NSLSS.Grabs = true;
                 GrabsSet = true;
-                $("#IFGrabs").css('background-color', 'green');
+                $("#IFGrabs").css('background-color', '#00cbf6');
             }
             NSsaveSettings();
         },
@@ -560,11 +560,11 @@ var noobScript = function() {
             if(NSLSS.Mehs === true){
                 NSLSS.Mehs = false;
                 MehsSet = false;
-                $("#IFMehs").css('background-color', 'red');
+                $("#IFMehs").css('background-color', '#1C1F25');
             } else{
                 NSLSS.Mehs = true;
                 MehsSet = true;
-                $("#IFMehs").css('background-color', 'green');
+                $("#IFMehs").css('background-color', '#00cbf6');
             }
             NSsaveSettings();
         },
@@ -572,67 +572,67 @@ var noobScript = function() {
             if(NSLSS.ChatCommandBox === true){
                 NSLSS.ChatCommandBox = false;
                 $("#InterfaceCCB").slideUp()
-                $("#IFChatCommandBox").css('background-color', 'red');
+                $("#IFChatCommandBox").css('background-color', '#1C1F25');
             }
             else {
                 NSLSS.ChatCommandBox = true;
                 $("#InterfaceCCB").slideDown()
-                $("#IFChatCommandBox").css('background-color', 'green');
+                $("#IFChatCommandBox").css('background-color', '#00cbf6');
             }
             NSsaveSettings();
         },
         LoadInToggle: function(){
-            $("#IFStudymode").css('background-color', 'red');
+            $("#IFStudymode").css('background-color', '#1C1F25');
             $("#IFChatcolors").css('background-color', 'green');
-            $("#IFCounters").css('background-color', 'green');
-            $("#IFCopysong").css('background-color', 'green');
-            $("#IFAutoWoot").css('background-color', 'red');
-            $("#IFHideVideo").css('background-color', 'red');
-            $("#IFChatCommandBox").css('background-color', 'red');
-            $("#IFMehs").css('background-color', 'red');
-            $("#IFGrabs").css('background-color', 'red');
-            $("#IFChatCommandBox").css('background-color', 'red');
+            $("#IFCounters").css('background-color', '#00cbf6');
+            $("#IFCopysong").css('background-color', '#00cbf6');
+            $("#IFAutoWoot").css('background-color', '#1C1F25');
+            $("#IFHideVideo").css('background-color', '#1C1F25');
+            $("#IFChatCommandBox").css('background-color', '#1C1F25');
+            $("#IFMehs").css('background-color', '#1C1F25');
+            $("#IFGrabs").css('background-color', '#1C1F25');
+            $("#IFChatCommandBox").css('background-color', '#1C1F25');
             if (NSLSS.StudyMode === true){
                 NSLSS.StudyMode = false;
             }
             if (NSLSS.ChatColors === false){
-                $("#IFChatcolors").css('background-color', 'red');
+                $("#IFChatcolors").css('background-color', '#1C1F25');
                 $('#cssstaffcolors').remove();
             }
             if (NSLSS.Counter === false){
                 $("#Stat").toggle("explode");
-                $("#IFCounters").css('background-color', 'red');
+                $("#IFCounters").css('background-color', '#1C1F25');
             }
             if (NSLSS.CopySong === false){
                 $("#copysong").remove();
-                $("#IFCopysong").css('background-color', 'red');
+                $("#IFCopysong").css('background-color', '#1C1F25');
             }
             if (NSLSS.AutoWoot === true){
                 autoWootSet = true;
                 $('#woot').click();
-                $("#IFAutoWoot").css('background-color', 'green');
+                $("#IFAutoWoot").css('background-color', '#00cbf6');
             }
             if (NSLSS.HideVideo === true){
                 $("#playback").fadeTo('slow',0);
-                $("#IFHideVideo").css('background-color', 'green');
+                $("#IFHideVideo").css('background-color', '#00cbf6');
             }
             if (NSLSS.AutoJoin === true){
                 API.djJoin()
                 autoJoinSet = true;
                 NSsaveSettings();
                 setInterval(function(){autoJoin();},1000);
-                $("#IFAutoJoin").css('background-color', 'green');
+                $("#IFAutoJoin").css('background-color', '#00cbf6');
             }
             if (NSLSS.Grabs === true){
                 GrabsSet = true;
-                $("#IFGrabs").css('background-color', 'green');
+                $("#IFGrabs").css('background-color', '#00cbf6');
             }
             if (NSLSS.Mehs === true){
                 MehsSet = true;
-                $("#IFMehs").css('background-color', 'green');
+                $("#IFMehs").css('background-color', '#00cbf6');
             }
             if (NSLSS.ChatCommandBox === true){
-                $("#IFChatCommandBox").css('background-color', 'green');
+                $("#IFChatCommandBox").css('background-color', '#00cbf6');
                 $("#InterfaceCCB").slideToggle()
             }
         }
