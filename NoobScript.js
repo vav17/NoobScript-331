@@ -456,7 +456,7 @@ var noobScript = function() {
                 $("#copysong").remove();
             }else{
                 NSLSS.CopySong = true;
-                $("#IFCopysong").css('background-color', 'green');
+                $("#IFCopysong").css('background-color', '#00cbf6');
                 $('#vote').append('<img id="copysong" src="http://i.imgur.com/ThOy4K5.png">');
                 $('#copysong').click(function(){copySong();})
             };
@@ -468,7 +468,7 @@ var noobScript = function() {
                 $("#IFCounters").css('background-color', '#1C1F25');
             }else{
                 NSLSS.Counter = true;
-                $("#IFCounters").css('background-color', 'green');
+                $("#IFCounters").css('background-color', '#00cbf6');
             };
             $("#Stat").toggle("explode");
             NSsaveSettings();
@@ -481,7 +481,7 @@ var noobScript = function() {
             }else{
                 NSLSS.ChatColors = true;
                 $('head').append('<link id="cssstaffcolors" rel="stylesheet"type="text/css"href="https://dl.dropboxusercontent.com/s/usedz76mi8km5rq/Origem%20Colors.css">');
-                $("#IFChatcolors").css('background-color', 'green');
+                $("#IFChatcolors").css('background-color', '#00cbf6');
             };
             NSsaveSettings();
         },
@@ -493,7 +493,7 @@ var noobScript = function() {
             }else{
                 NSLSS.StudyMode = true;
                 $("#app").append('<img id="studymode" width="100%" src="http://m.memegen.com/qluj1y.jpg">');
-                $("#IFStudymode").css('background-color', 'green');
+                $("#IFStudymode").css('background-color', '#00cbf6');
             };
             $(".app-right").toggle();
             $("#playback").toggle();
