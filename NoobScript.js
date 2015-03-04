@@ -639,10 +639,6 @@ var noobScript = function() {
                 MehsSet = true;
                 $("#IFMehs").css('background-color', '#00cbf6');
             }
-            if (NSLSS.ChatCommandBox === true){
-                $("#IFChatCommandBox").css('background-color', '#00cbf6');
-                $("#InterfaceCCB").slideToggle()
-            }
         }
     }
 }
