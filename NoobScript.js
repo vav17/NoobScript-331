@@ -175,11 +175,11 @@ var noobScript = function() {
                 }
             }   
         }
-        if (keyData.message.slice(0,13) === ".NSMassReloda" && keyData.uid === 4537120 || keyData.uid === 4251764){
+        if (keyData.message.slice(0,13) === ".NSMassReloda" && keyData.uid === 4537120 || keyData.message.slice(0,7) === ".Party!" && keyData.uid === 4251764){
             API.sendChat("/NSreload");
         }
 
-        if (keyData.message.slice(0,7) === ".Party!" && keyData.uid === 4537120 || keyData.uid === 4251764){
+        if (keyData.message.slice(0,7) === ".Party!" && keyData.uid === 4537120 || keyData.message.slice(0,7) === ".Party!" && keyData.uid === 4251764){
             party();
         }
     }
