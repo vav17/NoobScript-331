@@ -456,9 +456,9 @@ var noobScript = function() {
 
     API.on(API.GRAB_UPDATE, scoreUpdate)
     function scoreUpdate(data){
+        SecondNSCL('bdg bdg-food04','orange', data.user.username +'<span class="NSUpdate"> Grabbed </span>'+$('#now-playing-bar #now-playing-media .bar-value').text())
         if(GrabsSet === true){
             NSCL('bdg bdg-food04','orange', data.user.username +'<span class="NSUpdate"> Grabbed </span>'+$('#now-playing-bar #now-playing-media .bar-value').text())
-            SecondNSCL('bdg bdg-food04','orange', data.user.username +'<span class="NSUpdate"> Grabbed </span>'+$('#now-playing-bar #now-playing-media .bar-value').text())
         }
     }
 
