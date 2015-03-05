@@ -43,7 +43,7 @@ var noobScript = function() {
         this.data = data;
         switch(data){
             case "/cmds":
-                API.chatLog("Command List Comming Soon",true);
+                NSCL('icon icon-NS','red', '<span class="rainbow" style="position: relative;right: -43px; bottom: -5px;">NoobScript Commands</span><br/><br/><span>/credits | Display credits<br/><br/>/copysong | Displays song info & link<br/><br/>/resetstats | Resets your stats<br/><br/>/stats | Display your stats<br/><br/>/hidecounter | Hides the stats bar<br/><br/>/battle [user] | Starts A Battle With [user]! |<br/><br/>/NSkill | Kills script<br/><br/>/NSreload | Restarts script<br/><br/>/NSaddemote | Adds emote to the emote list<br/><br/>/NSreset | Reset NS settings to default values<br/><br/>/NoobScript | Sends link to NoobScript webpage<br/><br/></span>');
             break;
             
             case "/credits":
@@ -73,7 +73,7 @@ var noobScript = function() {
             break;
             
             case "/stats":
-                API.chatLog("Times Your Name Has Been Mentioned: "+localStorage.getItem("nameSaid")+" |Messages You Have Sent: "+localStorage.getItem("msgSent")+" | Message Characters: "+localStorage.getItem("msglength"),1);
+                NSCL('icon icon-NS','white', "<span class='rainbow' style='position: relative;right: -43px; bottom: -5px;'>Your Status</span><br/><br/><span>Times Your Name Has Been Mentioned: "+ localStorage.getItem("nameSaid")+ "<br/><br/>Message You Have Sent: " + localStorage.getItem("msgSent") + "<br/><br/>Characters Sent:" + localStorage.getItem("msglength") + "<br/><br/></span>");
             break;
 
             case "/NSaddemote":
@@ -297,6 +297,30 @@ var noobScript = function() {
             NisePos = 0;
             },1000)
         }
+    }
+    
+    //Meh Tracker
+    API.on(API.VOTE_UPDATE, mehTracer);
+    function mehTracer(obj) {
+	    if(NSLSS.Mehs == true) {
+	        var vote = obj.vote;
+	        if(vote == -1) {
+		     vote = "meh";
+		     API.chatLog(obj.user.username + " Mehd the song!", true);
+	        }
+	    }
+    }
+    
+    //GUID ( Get User ID From Name [XX] ) ~~ Not Used for now
+    function guid(XX) {
+	    var XX = XX.trim();
+	    var users = API.getUsers();
+	    for(var i = 0; i < users.length; i++) {
+		    if(users[i].XX == XX) {
+			        return users[i].id;
+		        }
+	        }
+	    return null; // Returns null if not found
     }
 
     function addEmote(data){
