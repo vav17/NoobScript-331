@@ -387,11 +387,7 @@ var noobScript = function() {
                 names[i].innerHTML = names[i].innerHTML+' [NS DEV]'
             }
             //Loli Rank
-<<<<<<< HEAD
-            if (names[i].innerHTML === 'DaisytjuhhPB' || names[i].innerHTML === 'Nee-chan' || names[i].innerHTML === 'Monkey D Kami' || names[i].innerHTML === 'SushiNatilie' || names[i].innerHTML === 'Sil3ntN1ght'){
-=======
-            if (names[i].innerHTML === 'Slyric_' || names[i].innerHTML === 'Kaboom0' || names[i].innerHTML === 'H A R R Y' || names[i].innerHTML === 'melongrip'){
->>>>>>> origin/master
+            if (names[i].innerHTML === 'DaisytjuhhPB' || names[i].innerHTML === 'Nee-chan' || names[i].innerHTML === 'Monkey D Kami' || names[i].innerHTML === 'SushiNatilie' || names[i].innerHTML === 'Sil3ntN1ght' || names[i].innerHTML === 'Slyric_' || names[i].innerHTML === 'Kaboom0' || names[i].innerHTML === 'H A R R Y' || names[i].innerHTML === 'melongrip'){
                 names[i].innerHTML = names[i].innerHTML+' [NS Loli]'
             }
             //Pleb Rank
