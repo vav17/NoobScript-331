@@ -336,9 +336,9 @@ var noobScript = function() {
                 if ( min < 10 )
                     min = '0' + min;
                 $('#chat-messages').append('<div class="update" style="border-left: solid 3px ' + color + '">' + 
-                                            ( icon ? '<i class="' + icon + '" style="top: 0px; left: -1px; float: left; position: fixed"></i>' : '' ) +
+                                            ( icon ? '<i class="' + icon + '" style="top: 0px; left: -1px; float: left; position: initial"></i>' : '' ) +
                                             (mostrar ? '<div class="timestamp" style="display: block;"></div>' : '') +
-                                            '<span class="text" style="right: -12px; bottom: -2px; color: ' + color + '">' + message + '</span><br></div>');
+                                            '<span class="text" style="position: relative; right: -12px; bottom: -2px; color: ' + color + '">' + message + '</span><br></div>');
                 $('#chat-messages').scrollTop($('#chat-messages').prop("scrollHeight"));
     }
 
@@ -367,9 +367,9 @@ var noobScript = function() {
                 if ( min < 10 )
                     min = '0' + min;
                 $('#SecondChat').append('<div class="update" style="border: solid 1px ' + color + '">' + 
-                                            ( icon ? '<i class="' + icon + '" style="top: 0px; left: -1px; float: left; position: fixed"></i>' : '' ) +
+                                            ( icon ? '<i class="' + icon + '" style="top: 0px; left: -1px; float: left; position: initial"></i>' : '' ) +
                                             (mostrar ? '<div class="timestamp" style="display: block;"></div>' : '') +
-                                            '<span class="text" style="right: -12px; bottom: -2px; color: ' + color + '">' + message + '</span><br></div>');
+                                            '<span class="text" style="position: relative; right: -12px; bottom: -2px; color: ' + color + '">' + message + '</span><br></div>');
                 $('#SecondChat').scrollTop($('#SecondChat').prop("scrollHeight"));
     }
 
