@@ -137,14 +137,14 @@
   opacity: .95;
 }
 #SecondChat{
-  height:30pc;
+  height:91%;
   width:99%;
   position:relative;
   border:1px solid white;
   background-color:#050C17;
   z-index: 98;
   opacity: .97;
-  bottom: -48px;
+  bottom: -46px;
 }
 #SecondChatToggle{
   cursor: pointer;
