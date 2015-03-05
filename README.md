@@ -17,6 +17,7 @@ If you don't Some commands and or functions might not work
     <li>Can Hide The Video</li>
     <li>Records Statistics</li>
     <li>Chat Colors</li>
+    <li><em>A FLIPPING INTERFACE *Woah*</em</li>
     <li><em><b>A PENGUIN LOGO</b></em></li>
   </ul>
 </blockquote>
