@@ -342,37 +342,6 @@ var noobScript = function() {
                 $('#chat-messages').scrollTop($('#chat-messages').prop("scrollHeight"));
     }
 
-    function SecondNSCL(icon, color, message) {
-                var date = new Date(),
-                    hour = date.getHours(),
-                    min = date.getMinutes(),
-                    pm = 'am',
-                    mostrar = true,
-                    format = $('#chat-timestamp-button').children(0).attr('class');
-                    
-                if ( format.indexOf('12') != -1){                   
-                    if ( hour >= 12 ){
-                        hour -= 12;
-                        pm = 'pm';
-                    }
-                    if ( hour == 0 )
-                        hour = 12;
-                }
-                if ( format.indexOf('24') != -1)
-                    pm = '';
-
-                if ( format.indexOf('off') != -1)
-                    mostrar = false;
-
-                if ( min < 10 )
-                    min = '0' + min;
-                $('#SecondChat').append('<div class="update" style="border-left: solid 3px ' + color + '">' + 
-                                            ( icon ? '<i class="' + icon + '" style="top: 0px; left: -1px; float: left; position: inherit"></i>' : '' ) +
-                                            (mostrar ? '<div class="timestamp" style="display: block;"></div>' : '') +
-                                            '<span class="text SCS" style="right: -12px; bottom: -2px; color: ' + color + '">' + message + '</span></div>');
-                $('#SecondChat').scrollTop($('#SecondChat').prop("scrollHeight"));
-    }
-
     API.on(API.CHAT, historyKey);
     function historyKey(historyData){
             document.addEventListener('keydown', function (evt) {
