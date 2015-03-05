@@ -145,7 +145,8 @@
   z-index: 98;
   opacity: .97;
   bottom: -46px;
-  overflow: scroll;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 #SecondChatToggle{
   cursor: pointer;
