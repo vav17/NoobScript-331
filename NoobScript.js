@@ -342,6 +342,37 @@ var noobScript = function() {
                 $('#chat-messages').scrollTop($('#chat-messages').prop("scrollHeight"));
     }
 
+    function SecondNSCL(icon, color, message) {
+                var date = new Date(),
+                    hour = date.getHours(),
+                    min = date.getMinutes(),
+                    pm = 'am',
+                    mostrar = true,
+                    format = $('#chat-timestamp-button').children(0).attr('class');
+                    
+                if ( format.indexOf('12') != -1){                   
+                    if ( hour >= 12 ){
+                        hour -= 12;
+                        pm = 'pm';
+                    }
+                    if ( hour == 0 )
+                        hour = 12;
+                }
+                if ( format.indexOf('24') != -1)
+                    pm = '';
+
+                if ( format.indexOf('off') != -1)
+                    mostrar = false;
+
+                if ( min < 10 )
+                    min = '0' + min;
+                $('#SecondChat').append('<div class="update" style="border-left: solid 3px ' + color + '">' + 
+                                            ( icon ? '<i class="' + icon + '" style="top: 0px; left: -1px; float: left; position: absolute"></i>' : '' ) +
+                                            (mostrar ? '<div class="timestamp" style="display: block;"></div>' : '') +
+                                            '<span class="text" style="right: -12px; bottom: -2px; color: ' + color + '">' + message + '</span><br></div>');
+                $('#SecondChat').scrollTop($('#SecondChat').prop("scrollHeight"));
+    }
+
     API.on(API.CHAT, historyKey);
     function historyKey(historyData){
             document.addEventListener('keydown', function (evt) {
@@ -427,6 +458,7 @@ var noobScript = function() {
     function scoreUpdate(data){
         if(GrabsSet === true){
             NSCL('bdg bdg-food04','orange', data.user.username +'<span class="NSUpdate"> Grabbed </span>'+$('#now-playing-bar #now-playing-media .bar-value').text())
+            SecondNSCL('bdg bdg-food04','orange', data.user.username +'<span class="NSUpdate"> Grabbed </span>'+$('#now-playing-bar #now-playing-media .bar-value').text())
         }
     }
 
