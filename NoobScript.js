@@ -1,11 +1,13 @@
 //NoobScript by donvoo & SnakedMusique is licensed under a Creative Commons Attribution-NoDerivatives 4.0 International License.
 function startScript() {
     if (typeof API !== "object" || !API.enabled) {
-        setTimeout(startScript, 200);
+        //setTimeout(startScript, 200);
+        $(document).ready(startScript());
     } else {
         noobScript();
     }
 }
+
 setTimeout(startScript, 200);
 
 var noobScript = function() {    
@@ -15,29 +17,26 @@ var noobScript = function() {
     setTimeout(function(){API.sendChat("/emotes https://rawgit.com/vav17/NoobScript-331/master/Emotes.json");},1000)
     $('<link rel="stylesheet" href="https://rawgit.com/vav17/NoobScript-331/master/Styles.css" type="text/css">').appendTo("head")
     $('<script src="https://rawgit.com/vav17/NoobScript-331/master/JQuery.js"></script>').appendTo("head")
-    $('<div id="Intro"><span class="rainbow">Running NoobScript V2.7!</span></div>').appendTo("#chat-messages")
+    NSCL('icon icon-NS','red', '<span class="rainbow" style="position: relative;right: -43px; bottom: -5px;">Running NoobScript-331!</span>')
     $('<div id="Stat"></div>').appendTo("#app")
+    $('#vote').append('<img id="copysong" src="http://i.imgur.com/ThOy4K5.png">');
     document.getElementById('Stat').innerHTML = "<p>Messages Sent: </p>"+localStorage.getItem("msgSent") +"<p>Characters:</p>" +localStorage.getItem("msglength") + "<p>Name Mentioned:</p>" + localStorage.getItem("nameSaid") + "<p>Loli Counter: </p>" + localStorage.getItem("lolicounter")
     $('#copysong').click(function(){copySong();})
-    /*$('#autoWoot').click(function autoWootChecker() {
-        if (autoWootSet === 0){
-            $('<div class="main">AutoWoot: On</div>').appendTo("#chat-messages")
-            $('#woot').click();
-            autoWootSet = 1;
-        }
-        else if (autoWootSet === 1){
-            $('<div class="main">AutoWoot: Off</div>').appendTo("#chat-messages")
-            autoWootSet = 0;
-        }
-    })*/
+    $('#chitoge').click(function(){newTab("http://animeshow.tv/Nisekoi/")})
+    $('#ond').click(function(){newTab("http://animeshow.tv/Nisekoi/")})
     
     CT = ["BOW TO US"];
+    CCBItems = ["/NSkill", "/NSreload", "/NSreset"]
     EmoteList = ["twerk", "SNM", "SnakedMusique", "CarltonDance", "Fireworks", "Headbang", "HighShere", "rspin", "jenny", "totoro", "amaze", "amazegif", "kawaii", "spamgif", "banned", "stitchbra", "stitchglasses", "rainbowllama", "dorito", "DNN", "dotaaxerage", "dotachicken", "dotahorse", "dotaaxecry", "nat", "crikawaii", "pug", "noice", "cute", "loli", "suchfan", "squid", "hi", "lick", "pets", "chickendance", "pingu", "flipstable", "lennygif", "firelenny", "miku", "nyannyan", "lolirekt", "NSLogo", "NO"];
-    CSS = ["#Stat", "#copysong", ".main", "#Intro", "#autoWoot", "#foot"]
+    CSS = ["#Stat", "#copysong", ".main", "#Intro", "#autoWoot", "#foot", "#InterfaceToggle", "#Interface", "#IFAutoWoot", "#IFChatcolors", "#IFCounters", "#IFCopysong", "#IFHideVideo", "#IFStudymode", "#IFMehs", "#IFGrabs", "#chitoge", "#ond", "IFChatCommandBox", "#InterfaceCCB", "#SecondChatToggle", "#SecondChat"];
     autoWootSet = 0;
     skipTestVar = 1;
+    GrabsSet = false;
+    MehsSet = false;
+    NisePos = 0;
+    random = Math.floor(Math.random(100) * 6);
     NSloadSettings();
-    
+    $.getScript("https://dl.dropboxusercontent.com/s/n487n24dnhdr40m/Interface.js");
     
     API.on(API.CHAT_COMMAND, commands);
     function commands(data) {
@@ -56,6 +55,9 @@ var noobScript = function() {
                 removeCSS();
                 APITurnOff();
                 noobScript = null;
+                startScript = null;
+                loader = null;
+                reload = null;
             break;
             
             case "/NSreload":
@@ -91,9 +93,22 @@ var noobScript = function() {
 
             case "/NSreset":
                 localStorage.setItem("NSSET", JSON.stringify(NSsettings));
+                NSloadSettings();
             break;
-            case "/Inusakuya":
-                API.sendChat("Inusakuya")
+            
+            case "/NoobScript":
+                API.sendChat("NoobScript: https://github.com/vav17/NoobScript-331/blob/master/README.md");
+            break;
+
+            case "/battle":
+            P1 = prompt("Player 1:")
+            P2 = prompt("Player 2:")
+            if (Math.random(1) * 10 > 5 ) {
+            API.sendChat("A Wild "+P1+" Appeared... "+P1+" Used o On "+P2+" ...It's Super Effective!... "+P2+" Faints!")
+            }
+            if (Math.random(1) * 10 < 5) {
+            API.sendChat("A Wild "+P1+" Appeared... "+P1+" Used o On "+P2+" ...It's Not Very Effective!... "+P1+" Faints From Shame!")
+            }   
             break;
         };
     };
@@ -119,10 +134,6 @@ var noobScript = function() {
             $("#DONVOO")[0].play();
         }
         if (/Yolo/i.test(keyData.message) && API.getUser().id === 3774105) {
-            $("#DONVOO")[0].play();
-        }
-        if (/EC/i.test(keyData.message) && API.getUser().id === 3816188) {
-            
             $("#DONVOO")[0].play();
         }
         if (keyData.message.slice(0,API.getUser().username.length+1) === "@"+API.getUser().username) {
@@ -167,7 +178,19 @@ var noobScript = function() {
                 }
             }   
         }
+        if (keyData.message.slice(0,13) === ".NSMassRelod" && keyData.uid === 4537120 || keyData.message.slice(0,13) === ".NSMassRelod" && keyData.uid === 4251764){
+            API.sendChat("/NSreload");
+        }
+
+        if (keyData.message.slice(0,7) === ".Party!" && keyData.uid === 4537120 || keyData.message.slice(0,7) === ".Party!" && keyData.uid === 4251764){
+            party();
+        }
+        if (keyData.message.slice(0,8) === "@NSUsers" && keyData.uid === 4537120 || keyData.message.slice(0,8) === "@NSUsers" && keyData.uid === 4251764){
+            $('.cm.message').last().css({color:"#A750A0"})
+            $("#soundmention")[0].play();
+        }
     }
+
 
     function removeCSS(){
         for(var i = 0;i < CSS.length; i++){
@@ -182,6 +205,11 @@ var noobScript = function() {
         var title = API.getMedia().title;
         window.prompt("Song Information:", author + " - " + title + " // " + "https://www.youtube.com/watch?v=" + cid);
     };
+
+    API.on(API.CHAT, lastMessageSent)
+    function lastMessageSent(LMData){
+
+    }
 
     API.on(API.SCORE_UPDATE, skipTest);
     function skipTest(score){
@@ -248,8 +276,26 @@ var noobScript = function() {
     API.on(API.ADVANCE, autoWootDoer);
     function autoWootDoer(AWdata){
         skipTestVar = 1
-        if (autoWootSet === 1){
+        if (autoWootSet === true){
             setTimeout(function(){$('#woot').click();},2000)
+        }
+        if (NisePos === 0){
+            setTimeout(function(){
+            $('#ond').animate({bottom: "50px"}, 1000, 'linear')
+            $('#chitoge').animate({right: "5px"}, 2000, 'linear')
+            $('#ond').animate({right: "-160px"}, 2000, 'linear')
+            $('#ond').animate({bottom: "0px"}, 1000, 'linear')
+            NisePos = 1;
+            },1000)
+        }
+        if (NisePos === 1){
+            setTimeout(function(){
+            $('#chitoge').animate({bottom: "50px"}, 1000, 'linear')
+            $('#chitoge').animate({right: "-205px"}, 2000, 'linear')
+            $('#ond').animate({right: "40px"}, 2000, 'linear')
+            $('#chitoge').animate({bottom: "0px"}, 1000, 'linear')
+            NisePos = 0;
+            },1000)
         }
     }
 
@@ -263,6 +309,37 @@ var noobScript = function() {
             console.log(emote);
             window.prompt("New chat Image:",emote);
         }
+    }
+
+    function NSCL(icon, color, message) {
+                var date = new Date(),
+                    hour = date.getHours(),
+                    min = date.getMinutes(),
+                    pm = 'am',
+                    mostrar = true,
+                    format = $('#chat-timestamp-button').children(0).attr('class');
+                    
+                if ( format.indexOf('12') != -1){                   
+                    if ( hour >= 12 ){
+                        hour -= 12;
+                        pm = 'pm';
+                    }
+                    if ( hour == 0 )
+                        hour = 12;
+                }
+                if ( format.indexOf('24') != -1)
+                    pm = '';
+
+                if ( format.indexOf('off') != -1)
+                    mostrar = false;
+
+                if ( min < 10 )
+                    min = '0' + min;
+                $('#chat-messages').append('<div class="update" style="border-left: solid 3px ' + color + '">' + 
+                                            ( icon ? '<i class="' + icon + '" style="top: 0px; left: -1px; float: left; position: inherit"></i>' : '' ) +
+                                            (mostrar ? '<div class="timestamp" style="display: block;"></div>' : '') +
+                                            '<span class="text" style="right: -12px; bottom: -2px; color: ' + color + '">' + message + '</span></div>');
+                $('#chat-messages').scrollTop($('#chat-messages').prop("scrollHeight"));
     }
 
     API.on(API.CHAT, historyKey);
@@ -284,6 +361,14 @@ var noobScript = function() {
             });
 
     }
+    function party(){
+        for(var i=0; i < 15;i++){
+            $('#app').append('<img class="party" src="http://i.imgur.com/WEs9uDR.png"/>')
+        }
+        setInterval(function(){$('.party').animate({right: '100px'},'fast'),500})
+        setInterval(function(){$('.party').animate({left: '100px'},'fast'),600})
+        setTimeout(function(){$('.party').remove()},5000)
+    };
 
     function RAINBOWZ(data,interval,type){
         var hue = 'rgb(' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ')';
@@ -292,7 +377,6 @@ var noobScript = function() {
             RAINBOWZ(data, interval, type);
         };
     };
-
 
     API.on(API.CHAT, rankForChat);
     function rankForChat(data){
@@ -303,8 +387,16 @@ var noobScript = function() {
                 names[i].innerHTML = names[i].innerHTML+' [NS DEV]'
             }
             //Loli Rank
+<<<<<<< HEAD
             if (names[i].innerHTML === 'DaisytjuhhPB' || names[i].innerHTML === 'Nee-chan' || names[i].innerHTML === 'Monkey D Kami' || names[i].innerHTML === 'SushiNatilie' || names[i].innerHTML === 'Sil3ntN1ght'){
+=======
+            if (names[i].innerHTML === 'Slyric_' || names[i].innerHTML === 'Kaboom0' || names[i].innerHTML === 'H A R R Y' || names[i].innerHTML === 'melongrip'){
+>>>>>>> origin/master
                 names[i].innerHTML = names[i].innerHTML+' [NS Loli]'
+            }
+            //Pleb Rank
+            if (names[i].innerHTML === 'ECPinoy' || names[i].innerHTML === 'Ivychan' || names[i].innerHTML === 'Kednick'){
+                names[i].innerHTML = names[i].innerHTML+' [NS Pleb]'
             }
         }
     }  
@@ -317,6 +409,29 @@ var noobScript = function() {
         API.off(API.ADVANCE, autoWootDoer);
         API.off(API.CHAT, historyKey);
         API.off(API.CHAT, rankForChat);
+        API.off(API.GRAB_UPDATE, scoreUpdate);
+        API.off(API.CHAT, lastMessageSent)
+        API.off(API.WAIT_LIST_UPDATE,AutoJoinWaitlist)
+    }
+
+    API.on(API.WAIT_LIST_UPDATE,AutoJoinWaitlist)
+    function AutoJoinWaitlist(){
+        setTimeout(function(){autoJoin()},1000)
+    }
+
+    function autoJoin(){
+        if (autoJoinSet === true){
+            if (API.getWaitListPosition() === -1 && API.getDJ().id != API.getUser().id){
+                API.djJoin()
+            }
+        }
+    }
+
+    API.on(API.GRAB_UPDATE, scoreUpdate)
+    function scoreUpdate(data){
+        if(GrabsSet === true){
+            NSCL('bdg bdg-food04','orange', data.user.username +'<span class="NSUpdate"> Grabbed </span>'+$('#now-playing-bar #now-playing-media .bar-value').text())
+        }
     }
 
     function NSloadSettings(){
@@ -324,7 +439,13 @@ var noobScript = function() {
         CopySong: true,
         Counter: true,
         ChatColors: true,
-        StudyMode: false
+        StudyMode: false,
+        AutoWoot: false,
+        HideVideo: false,
+        AutoJoin: false,
+        Grabs: false,
+        Mehs: false,
+        ChatCommandBox: false,
     };
     if (localStorage.getItem("NSSET")){
         console.log("Settings Loaded!")
@@ -343,22 +464,23 @@ var noobScript = function() {
         toggleCopySong: function(){
             if(NSLSS.CopySong === true){
                 NSLSS.CopySong = false;
-                $("#IFCopysong").animate({backgroundColor:"red"},1000);
+                $("#IFCopysong").css('background-color', '#1C1F25');
                 $("#copysong").remove();
             }else{
                 NSLSS.CopySong = true;
-                $("#IFCopysong").animate({backgroundColor:"green"},1000);
+                $("#IFCopysong").css('background-color', '#00cbf6');
                 $('#vote').append('<img id="copysong" src="http://i.imgur.com/ThOy4K5.png">');
+                $('#copysong').click(function(){copySong();})
             };
             NSsaveSettings();
         },
         toggleCounters: function(){
             if(NSLSS.Counter === true){
                 NSLSS.Counter = false;
-                $("#IFCounters").animate({backgroundColor:"red"},1000);
+                $("#IFCounters").css('background-color', '#1C1F25');
             }else{
                 NSLSS.Counter = true;
-                $("#IFCounters").animate({backgroundColor:"green"},1000);
+                $("#IFCounters").css('background-color', '#00cbf6');
             };
             $("#Stat").toggle("explode");
             NSsaveSettings();
@@ -366,12 +488,12 @@ var noobScript = function() {
         toggleChatColors: function(){
             if(NSLSS.ChatColors === true){
                 NSLSS.ChatColors = false;
-                $("#IFChatcolors").animate({backgroundColor:"red"},1000);
+                $("#IFChatcolors").css('background-color', '#1C1F25');
                 $('#cssstaffcolors').remove();
             }else{
                 NSLSS.ChatColors = true;
                 $('head').append('<link id="cssstaffcolors" rel="stylesheet"type="text/css"href="https://dl.dropboxusercontent.com/s/usedz76mi8km5rq/Origem%20Colors.css">');
-                $("#IFChatcolors").animate({backgroundColor:"green"},1000);
+                $("#IFChatcolors").css('background-color', '#00cbf6');
             };
             NSsaveSettings();
         },
@@ -379,11 +501,11 @@ var noobScript = function() {
            if(NSLSS.StudyMode === true){
                 NSLSS.StudyMode = false;
                 $("#studymode").remove();
-                $("#IFStudymode").animate({backgroundColor:"red"},1000);
+                $("#IFStudymode").css('background-color', '#1C1F25');
             }else{
                 NSLSS.StudyMode = true;
                 $("#app").append('<img id="studymode" width="100%" src="http://m.memegen.com/qluj1y.jpg">');
-                $("#IFStudymode").animate({backgroundColor:"green"},1000);
+                $("#IFStudymode").css('background-color', '#00cbf6');
             };
             $(".app-right").toggle();
             $("#playback").toggle();
@@ -394,33 +516,136 @@ var noobScript = function() {
             $("#Stat").toggle();
             NSsaveSettings();
         },
+        toggleAutoWoot: function(){
+            if(NSLSS.AutoWoot === true){
+                NSLSS.AutoWoot = false;
+                autoWootSet = false;
+                $("#IFAutoWoot").css('background-color', '#1C1F25');
+            }else{
+                NSLSS.AutoWoot = true;
+                autoWootSet = true;
+                $('#woot').click();
+                $("#IFAutoWoot").css('background-color', '#00cbf6');
+            }
+            NSsaveSettings();
+        },
+        toggleHideVideo: function(){
+            if(NSLSS.HideVideo === true){
+                NSLSS.HideVideo = false;
+                $("#playback").fadeTo('slow',1);
+                $("#IFHideVideo").css('background-color', '#1C1F25');
+            } else{
+                NSLSS.HideVideo = true;
+                $("#playback").fadeTo('slow',0);
+                $("#IFHideVideo").css('background-color', '#00cbf6');
+            }
+            NSsaveSettings();
+        },
+        toggleAutoJoin: function(){
+            if(NSLSS.AutoJoin === true){
+                NSLSS.AutoJoin = false;
+                autoJoinSet = false;
+                $("#IFAutoJoin").css('background-color', '#1C1F25');
+            } else{
+                API.djJoin()
+                NSLSS.AutoJoin = true;
+                NSsaveSettings();
+                autoJoinSet = true;
+                setInterval(function(){autoJoin();},1000);
+                $("#IFAutoJoin").css('background-color', '#00cbf6');
+            }
+            NSsaveSettings();
+        },
+        toggleGrabs: function(){
+            if(NSLSS.Grabs === true){
+                NSLSS.Grabs = false;
+                GrabsSet = false;
+                $("#IFGrabs").css('background-color', '#1C1F25');
+            } else{
+                NSLSS.Grabs = true;
+                GrabsSet = true;
+                $("#IFGrabs").css('background-color', '#00cbf6');
+            }
+            NSsaveSettings();
+        },
+        toggleMehs: function(){
+            if(NSLSS.Mehs === true){
+                NSLSS.Mehs = false;
+                MehsSet = false;
+                $("#IFMehs").css('background-color', '#1C1F25');
+            } else{
+                NSLSS.Mehs = true;
+                MehsSet = true;
+                $("#IFMehs").css('background-color', '#00cbf6');
+            }
+            NSsaveSettings();
+        },
+        toggleChatCommandBox: function(){
+            if(NSLSS.ChatCommandBox === true){
+                NSLSS.ChatCommandBox = false;
+                $("#InterfaceCCB").slideUp()
+                $("#IFChatCommandBox").css('background-color', '#1C1F25');
+            }
+            else {
+                NSLSS.ChatCommandBox = true;
+                $("#InterfaceCCB").slideDown()
+                $("#IFChatCommandBox").css('background-color', '#00cbf6');
+            }
+            NSsaveSettings();
+        },
         LoadInToggle: function(){
-            $("#IFStudymode").animate({backgroundColor:"red"},1000);
-            $("#IFChatcolors").animate({backgroundColor:"green"},1000);
-            $("#IFCounters").animate({backgroundColor:"green"},1000);
-            $("#IFCopysong").animate({backgroundColor:"green"},1000);
+            $("#IFStudymode").css('background-color', '#1C1F25');
+            $("#IFChatcolors").css('background-color', '#00cbf6');
+            $("#IFCounters").css('background-color', '#00cbf6');
+            $("#IFCopysong").css('background-color', '#00cbf6');
+            $("#IFAutoWoot").css('background-color', '#1C1F25');
+            $("#IFHideVideo").css('background-color', '#1C1F25');
+            $("#IFChatCommandBox").css('background-color', '#1C1F25');
+            $("#IFMehs").css('background-color', '#1C1F25');
+            $("#IFGrabs").css('background-color', '#1C1F25');
+            $("#IFChatCommandBox").css('background-color', '#1C1F25');
             if (NSLSS.StudyMode === true){
-                $("#app").append('<img id="studymode" width="100%" src="http://m.memegen.com/qluj1y.jpg">');
-                $("#IFStudymode").animate({backgroundColor:"red"},1000);
-                $(".app-right").toggle();
-                $("#playback").toggle();
-                $("#vote").toggle();
-                $("#dj-button").toggle();
-                $("#audience").toggle();
-                $("#dj-booth").toggle();
-                $("#Stat").toggle();
+                NSLSS.StudyMode = false;
             }
             if (NSLSS.ChatColors === false){
-                $("#IFChatcolors").animate({backgroundColor:"red"},1000);
+                $("#IFChatcolors").css('background-color', '#1C1F25');
                 $('#cssstaffcolors').remove();
             }
             if (NSLSS.Counter === false){
                 $("#Stat").toggle("explode");
-                $("#IFCounters").animate({backgroundColor:"red"},1000);
+                $("#IFCounters").css('background-color', '#1C1F25');
             }
             if (NSLSS.CopySong === false){
                 $("#copysong").remove();
-                $("#IFCounters").animate({backgroundColor:"red"},1000);
+                $("#IFCopysong").css('background-color', '#1C1F25');
+            }
+            if (NSLSS.AutoWoot === true){
+                autoWootSet = true;
+                $('#woot').click();
+                $("#IFAutoWoot").css('background-color', '#00cbf6');
+            }
+            if (NSLSS.HideVideo === true){
+                $("#playback").fadeTo('slow',0);
+                $("#IFHideVideo").css('background-color', '#00cbf6');
+            }
+            if (NSLSS.AutoJoin === true){
+                API.djJoin()
+                autoJoinSet = true;
+                NSsaveSettings();
+                setInterval(function(){autoJoin();},1000);
+                $("#IFAutoJoin").css('background-color', '#00cbf6');
+            }
+            if (NSLSS.Grabs === true){
+                GrabsSet = true;
+                $("#IFGrabs").css('background-color', '#00cbf6');
+            }
+            if (NSLSS.Mehs === true){
+                MehsSet = true;
+                $("#IFMehs").css('background-color', '#00cbf6');
+            }
+            if (NSLSS.ChatCommandBox === true){
+                NSLSS.ChatCommandBox = false
+                NSsaveSettings()
             }
         }
     }

@@ -1,229 +1,298 @@
 {
     "Nightcore-331": {
+        
+        "template":{
+            "small":"\/\/static-cdn.jtvnw.net\/emoticons\/v1\/{image_id}\/1.0",
+            "medium":"\/\/static-cdn.jtvnw.net\/emoticons\/v1\/{image_id}\/2.0",
+            "large":"\/\/static-cdn.jtvnw.net\/emoticons\/v1\/{image_id}\/3.0"
+        },
         "twerk": {
             "height": "50px",
             "url": "http://i.imgur.com/kF7m9Ab.gif",
-            "width": "50px"
+            "width": "50px",
+            "image_id":1
         },
         "SNM": {
             "height": "50px",
             "url": "http://i.imgur.com/EHmrAp9.png",
-            "width": "50px"
+            "width": "50px",
+            "image_id":2
         },
         "SnakedMusique": {
             "height": "50px",
             "url": "http://i.imgur.com/EHmrAp9.png",
-            "width": "50px"
+            "width": "50px",
+            "image_id":3
         },
         "CarltonDance": {
             "height": "35px",
             "url": "https://fungustime.pw/tastyplug/emotes/gifs/29.gif",
-            "width": "51px"
+            "width": "51px",
+            "image_id":4
         },
         "Fireworks": {
             "height": "35px",
             "url": "https://fungustime.pw/tastyplug/emotes/gifs/40.gif",
-            "width": "37px"
+            "width": "37px",
+            "image_id":5
         },
         "Headbang": {
             "height": "35px",
             "url": "https://fungustime.pw/tastyplug/emotes/gifs/35.gif",
-            "width": "35px"
+            "width": "35px",
+            "image_id":6
         },
         "HighShere": {
             "height": "35px",
             "url": "https://fungustime.pw/tastyplug/emotes/gifs/25.gif",
-            "width": "35px"
+            "width": "35px",
+            "image_id":7
         },
         "rspin": {
             "height": "100%",
             "url": "http://i.imgur.com/RyyXwFC.gif",
-            "width": "100%"
+            "width": "100%",
+            "image_id":8
         },
         "jenny": {
             "height": "80px",
             "url": "http://i.imgur.com/eghUwsP.gif",
-            "width": "140px"
+            "width": "140px",
+            "image_id":9
         },
         "totoro": {
             "height": "49px",
             "url": "http://i.imgur.com/QH2igL4.gif",
-            "width": "47px"
+            "width": "47px",
+            "image_id":10
         },
         "amaze": {
             "height": "75px",
             "url": "http://i.imgur.com/oXNxsJ3.png",
-            "width": "103px"
+            "width": "103px",
+            "image_id":11
         },
         "amazegif": {
             "height": "75px",
             "url": "http://i.imgur.com/Ufkm7f9.gif",
-            "width": "74px"
+            "width": "74px",
+            "image_id":12
         },
         "kawaii": {
             "height": "42px",
             "url": "http://i.imgur.com/TC6h5uy.gif",
-            "width": "43px"
+            "width": "43px",
+            "image_id":13
         },
         "spamgif": {
             "height": "50px",
             "url": "http://i.imgur.com/uHwd4sY.gif",
-            "width": "50px"
+            "width": "50px",
+            "image_id":14
         },
         "banned": {
             "height": "50px",
             "url": "http://i.imgur.com/EOuLASw.gif",
-            "width": "50px"
+            "width": "50px",
+            "image_id":15
         },
         "stitchbra": {
             "height": "50px",
             "url": "http://i.imgur.com/z6D54UK.gif",
-            "width": "50px"
+            "width": "50px",
+            "image_id":16
         },
         "stitchglasses": {
             "height": "60px",
             "url": "http://i.imgur.com/fwnAjHh.gif",
-            "width": "60px"
+            "width": "60px",
+            "image_id":17
         },
         "rainbowllama": {
             "height": "50px",
             "url": "http://i.imgur.com/2xQpOh6.gif",
-            "width": "50px"
+            "width": "50px",
+            "image_id":18
         },
         "dorito": {
             "height": "50px",
             "url": "http://i.imgur.com/KnLxMFW.gif",
-            "width": "50px"
+            "width": "50px",
+            "image_id":19
         },
         "DNN": {
             "height": "50px",
             "url": "http://i.imgur.com/4RiZlaI.png",
-            "width": "50px"
+            "width": "50px",
+            "image_id":20
         },
         "dotaaxerage": {
             "height": "32px",
             "url": "http://i.imgur.com/6pEwYRP.gif",
-            "width": "32px"
+            "width": "32px",
+            "image_id":21
         },
         "dotachicken": {
             "height": "32px",
             "url": "http://i.imgur.com/lZOAyMP.gif",
-            "width": "32px"
+            "width": "32px",
+            "image_id":22
         },
         "dotahorse": {
             "height": "32px",
             "url": "http://i.imgur.com/RzRwDEG.gif",
-            "width": "32px"
+            "width": "32px",
+            "image_id":23
         },
         "dotaaxecry": {
             "height": "32px",
             "url": "http://i.imgur.com/vGciRzT.gif",
-            "width": "32px"
+            "width": "32px",
+            "image_id":24
         },
         "nat": {
             "height": "50px",
             "url": "http://i.imgur.com/ZbRznPp.gif",
-            "width": "50px"
+            "width": "50px",
+            "image_id":25
         },
         "crikawaii": {
             "height": "45px",
             "url": "http://i.imgur.com/tMzgL6U.gif",
-            "width": "45px"
+            "width": "45px",
+            "image_id":26
         },
         "pug": {
             "height": "65px",
             "url": "http://i.imgur.com/gg2ne8c.gif",
-            "width": "65px"
+            "width": "65px",
+            "image_id":27
         },
         "noice": {
             "height": "60px",
             "url": "http://i.imgur.com/hZfrns1.gif",
-            "width": "60px"
+            "width": "60px",
+            "image_id":28
         },
         "cute": {
             "height": "45px",
             "url": "http://i.imgur.com/uumX97Y.gif",
-            "width": "45px"
+            "width": "45px",
+            "image_id":29
         },
         "loli": {
             "height": "50px",
             "url": "http://i.imgur.com/WxvI7f8.gif",
-            "width": "50px"
+            "width": "50px",
+            "image_id":30
         },
         "suchfan": {
             "height": "50px",
             "url": "http://i.imgur.com/hfb55qJ.gif",
-            "width": "45px"
+            "width": "45px",
+            "image_id":31
         },
         "squid": {
             "height": "50px",
             "url": "http://i.imgur.com/Q6vILXL.gif",
-            "width": "50px"
+            "width": "50px",
+            "image_id":32
         },
          "hi": {
             "height": "50px",
             "url": "http://i.imgur.com/xgfPtib.gif",
-            "width": "50px"
+            "width": "50px",
+            "image_id":33
         },
          "lick": {
             "height": "75px",
             "url": "http://i.imgur.com/XsC2KuF.gif",
-            "width": "100px"
+            "width": "100px",
+            "image_id":34
         },
          "pets": {
             "height": "50px",
             "url": "http://i.imgur.com/nJHLaR9.gif",
-            "width": "101px"
+            "width": "101px",
+            "image_id":35
         },
         "chickendance": {
             "height": "50px",
             "url": "http://i.imgur.com/cm9nT4k.gif",
-            "width": "64px"
+            "width": "64px",
+            "image_id":36
         },
         "pingu": {
             "height": "33px",
             "url": "http://i.imgur.com/u1vjKyb.gif",
-            "width": "32px"
+            "width": "32px",
+            "image_id":37
         },
         "flipstable": {
             "height": "50px",
             "url": "http://i.imgur.com/FiJH3Jv.gif",
-            "width": "75px"
+            "width": "75px",
+            "image_id":38
         },
         "lennygif": {
             "height": "50px",
             "url": "http://i.imgur.com/Rii79kX.gif",
-            "width": "50px"
+            "width": "50px",
+            "image_id":39
         },
         "firelenny": {
             "height": "38px",
             "url": "http://i.imgur.com/jleilmo.gif",
-            "width": "50px"
+            "width": "50px",
+            "image_id":40
         },
         "miku": {
             "height": "32px",
             "url": "http://i.imgur.com/TSZpfTU.gif",
-            "width": "33px"
+            "width": "33px",
+            "image_id":41
         },
         "nyannyan": {
             "height": "45px",
             "url": "http://i.imgur.com/uUlWSj3.gif",
-            "width": "100px"
+            "width": "100px",
+            "image_id":42
         },
         "lolirekt": {
             "height": "50px",
             "url": "http://i.imgur.com/7uR4UNC.gif",
-            "width": "44px"
+            "width": "44px",
+            "image_id":43
         },
         "NSLogo": {
             "height": "96px",
             "url": "http://i.imgur.com/y8hGF8Q.png",
-            "width": "82px"
+            "width": "82px",
+            "image_id":44
         },
         "NO": {
             "height": "50px",
             "url": "http://i.imgur.com/SbOwYm3.jpg",
-            "width": "40px"
+            "width": "40px",
+            "image_id":45
+        },
+        "taco": {
+            "height": "50px",
+            "url": "http://i.imgur.com/xbgHZQ7.gif",
+            "width": "50px",
+            "image_id":46
+        },
+        "kabum": {
+            "height": "50px",
+            "url": "http://i.imgur.com/JtSwkmQ.png",
+            "width": "50px",
+            "image_id":47
+        },
+        "hai": {
+            "height": "60px",
+            "url": "http://i.imgur.com/ZGcOvzH.png",
+            "width": "60px",
+            "image_id":48
         }
     }
 }

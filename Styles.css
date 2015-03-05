@@ -32,6 +32,12 @@
   position: absolute;
   border:2px;
   border-radius:5px;
+  opacity: 0;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
+}
+#copysong:hover{
+  opacity: 1;
 }
 #Stat {
   cursor: pointer;
@@ -52,4 +58,94 @@
   color:transparent;
   -webkit-background-clip: text;
   background-clip: text;
+}
+#chitoge {
+  position: relative;
+  right: -205px;
+  z-index: 100;
+}
+#ond {
+  position: relative;
+  right: 40px;
+  z-index: 100;
+}
+.party {
+  right: random(300) + px;
+  bottom: random(300) + px;
+  position: relative;
+  z-index: 100;
+}
+#Interface{
+  height:100%;
+  width:99%;
+  position:absolute;
+  border:1px solid white;
+  background-color:#050C17;
+  z-index: 99;
+  opacity: .95;
+  text-align: center;
+}
+#InterfaceToggle{
+  height: 40px;
+  width: 40px;
+  border:2px;
+  border-radius:5px;
+  cursor: pointer;
+  position: absolute;
+  z-index: 90;
+  right:528px;
+  bottom:8px;
+}
+.IFFunction{
+  background-color:#1C1F25;
+  padding: 5px;
+  z-index: 111;
+  cursor: pointer;
+  margin: 0px 3px 3px 3px;
+  box-shadow: 0px 5px 5px black;
+  border-radius: 5px;
+  opacity: 1;
+}
+.IFFunction:hover {
+  opacity: .9;
+}
+.NSUpdate{
+  right: -43px;
+  bottom: -5px;
+}
+.CCB {
+  margin: 6px;
+  position: relative;
+  font-family: Lucida Console;
+  border: 1px solid white;
+  cursor: pointer;
+  z-index: 100;
+  text-align: center;
+  font-size: 10px;
+  display: inline;
+}
+#InterfaceCCB{
+  height:100%;
+  width:99%;
+  position:absolute;
+  border:1px solid white;
+  background-color:#050C17;
+  z-index: 99;
+  opacity: .3;
+}
+#InterfaceCCB:hover{
+  opacity: .95;
+}
+#SecondChat{
+  height:30pc;
+  width:99%;
+  position:relative;
+  border:1px solid white;
+  background-color:#050C17;
+  z-index: 98;
+  opacity: .97;
+  bottom: -48px;
+}
+#SecondChatToggle{
+  cursor: pointer;
 }
