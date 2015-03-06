@@ -21,7 +21,7 @@
   text-align: center;
 }
 .main {
-  color: #FF6600;
+  color: #00cbf6;
   border: 0px solid #D3D3D3;
   font-size: 12pt;
   font-family: Lucida console;
@@ -93,7 +93,7 @@
   cursor: pointer;
   position: absolute;
   z-index: 90;
-  right:528px;
+  right:483px;
   bottom:8px;
 }
 .IFFunction{
@@ -137,14 +137,16 @@
   opacity: .95;
 }
 #SecondChat{
-  height:30pc;
+  height:91%;
   width:99%;
   position:relative;
   border:1px solid white;
   background-color:#050C17;
   z-index: 98;
   opacity: .97;
-  bottom: -48px;
+  bottom: -46px;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 #SecondChatToggle{
   cursor: pointer;

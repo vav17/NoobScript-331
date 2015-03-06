@@ -36,7 +36,7 @@ var noobScript = function() {
     NisePos = 0;
     random = Math.floor(Math.random(100) * 6);
     NSloadSettings();
-    $.getScript("https://dl.dropboxusercontent.com/s/n487n24dnhdr40m/Interface.js");
+    $.getScript("https://rawgit.com/vav17/NoobScript-331/master/Interface.js");
     
     API.on(API.CHAT_COMMAND, commands);
     function commands(data) {
@@ -110,8 +110,18 @@ var noobScript = function() {
             API.sendChat("A Wild "+P1+" Appeared... "+P1+" Used o On "+P2+" ...It's Not Very Effective!... "+P1+" Faints From Shame!");
             }   
             break;
+<<<<<<< HEAD
         }
     }
+=======
+
+            case "/bassdrop":
+                API.sendChat("Dropping Bass In 5 Seconds!!!")
+                setTimeout(function(){API.sendChat("Bass Dropped!!!");},5000)
+            break;
+        };
+    };
+>>>>>>> origin/master
     $('head').append($('<audio id="DONVOO" src="http://puu.sh/6CVzc.wav" />'));
     $('head').append($('<audio id="KAMI" src="http://k007.kiwi6.com/hotlink/j4qk58007e/smobyp.mp3" />'));
     $('head').append($('<audio id="SUGOI" src="http://vav17.com/wp-content/uploads/SUGOI.wav" />'));
@@ -335,11 +345,42 @@ var noobScript = function() {
 
                 if ( min < 10 )
                     min = '0' + min;
-                $('#chat-messages').append('<div class="update" style="border-left: solid 3px ' + color + '">' + 
-                                            ( icon ? '<i class="' + icon + '" style="top: 0px; left: -1px; float: left; position: inherit"></i>' : '' ) +
+                $('#chat-messages').append('<div class="update" style="height: 30px; border-left: solid 3px ' + color + '">' + 
+                                            ( icon ? '<i class="' + icon + '" style="top: 0px; left: -1px; float: left; position: relative"></i>' : '' ) +
                                             (mostrar ? '<div class="timestamp" style="display: block;"></div>' : '') +
-                                            '<span class="text" style="right: -12px; bottom: -2px; color: ' + color + '">' + message + '</span></div>');
+                                            '<span class="text" style="position: relative; right: -12px; bottom: -2px; color: ' + color + '">' + message + '</span><br></div>');
                 $('#chat-messages').scrollTop($('#chat-messages').prop("scrollHeight"));
+    }
+
+    function SecondNSCL(icon, color, message) {
+                var date = new Date(),
+                    hour = date.getHours(),
+                    min = date.getMinutes(),
+                    pm = 'am',
+                    mostrar = true,
+                    format = $('#chat-timestamp-button').children(0).attr('class');
+                    
+                if ( format.indexOf('12') != -1){                   
+                    if ( hour >= 12 ){
+                        hour -= 12;
+                        pm = 'pm';
+                    }
+                    if ( hour == 0 )
+                        hour = 12;
+                }
+                if ( format.indexOf('24') != -1)
+                    pm = '';
+
+                if ( format.indexOf('off') != -1)
+                    mostrar = false;
+
+                if ( min < 10 )
+                    min = '0' + min;
+                $('#SecondChat').append('<div class="update" style="height: 50px; border: solid 1px ' + color + '">' + 
+                                            ( icon ? '<i class="' + icon + '" style="top: 0px; left: -1px; float: left; position: relative"></i>' : '' ) +
+                                            (mostrar ? '<div class="timestamp" style="display: block;"></div>' : '') +
+                                            '<span class="text" style="position: relative; bottom: -2px; color: ' + color + '">' + message + '</span><br></div>');
+                $('#SecondChat').scrollTop($('#SecondChat').prop("scrollHeight"));
     }
 
     API.on(API.CHAT, historyKey);
@@ -425,6 +466,7 @@ var noobScript = function() {
 
     API.on(API.GRAB_UPDATE, scoreUpdate);
     function scoreUpdate(data){
+        SecondNSCL('bdg bdg-food04','orange', data.user.username +'<span class="NSUpdate"> Grabbed </span>'+$('#now-playing-bar #now-playing-media .bar-value').text())
         if(GrabsSet === true){
             NSCL('bdg bdg-food04','orange', data.user.username +'<span class="NSUpdate"> Grabbed </span>'+$('#now-playing-bar #now-playing-media .bar-value').text());
         }
