@@ -36,7 +36,7 @@ var noobScript = function() {
     NisePos = 0;
     random = Math.floor(Math.random(100) * 6);
     NSloadSettings();
-    $.getScript("https://dl.dropboxusercontent.com/s/n487n24dnhdr40m/Interface.js");
+    $.getScript("https://rawgit.com/vav17/NoobScript-331/master/Interface.js");
     
     API.on(API.CHAT_COMMAND, commands);
     function commands(data) {
