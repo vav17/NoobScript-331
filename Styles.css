@@ -153,7 +153,9 @@
 }
 #IFM{
   border: 3px solid white;
-  border-radius: 25px;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  border-bottom: 5px solid white;
 }
 #vote{
   width: 800px; 
