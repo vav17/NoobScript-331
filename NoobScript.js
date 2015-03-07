@@ -398,7 +398,7 @@ var noobScript = function() {
     }
     function party(){
         for(var i=0; i < 15;i++){
-            $('#app').append('<img class="party" src="http://i.imgur.com/WEs9uDR.png"/>');
+            $('#app').append('<img class="party" src="http://i.imgur.com/Dj7Azzm.gif"/>');
         }
         setInterval(function(){$('.party').animate({right: '100px'},'fast'),500;});
         setInterval(function(){$('.party').animate({left: '100px'},'fast'),600;});
