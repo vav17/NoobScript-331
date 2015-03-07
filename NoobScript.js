@@ -448,7 +448,7 @@ var noobScript = function() {
 
     API.on(API.WAIT_LIST_UPDATE,AutoJoinWaitlist);
     function AutoJoinWaitlist(){
-        setTimeout(function(){autoJoin();},1000);
+        setTimeout(function(){autoJoin();},800);
     }
 
     function autoJoin(){
@@ -469,7 +469,7 @@ var noobScript = function() {
 
     API.on(API.VOTE_UPDATE,scoreUpdateMeh);
     function scoreUpdateMeh(mehData){
-        if (mehData == -1){
+        if (mehData.vote == -1){
             SecondNSCL('icon icon-skip','red', mehData.user.username +'<span class="NSUpdate"> Used Meh! </span>');
             if (MehsSet === true){
                 NSCL('icon icon-skip','red', mehData.user.username +'<span class="NSUpdate"> Used Meh! </span>');
