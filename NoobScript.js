@@ -443,6 +443,7 @@ var noobScript = function() {
         API.off(API.GRAB_UPDATE, scoreUpdate);
         API.off(API.CHAT, lastMessageSent);
         API.off(API.WAIT_LIST_UPDATE,AutoJoinWaitlist);
+        API.off(API.VOTE_UPDATE,scoreUpdateMeh);
     }
 
     API.on(API.WAIT_LIST_UPDATE,AutoJoinWaitlist);
@@ -460,9 +461,19 @@ var noobScript = function() {
 
     API.on(API.GRAB_UPDATE, scoreUpdate);
     function scoreUpdate(data){
-        SecondNSCL('bdg bdg-food04','#FF00FF', data.user.username +'<span class="NSUpdate"> Grabbed </span>'+$('#now-playing-bar #now-playing-media .bar-value').text())
+        SecondNSCL('bdg bdg-food04','#FF00FF', data.user.username +'<span class="NSUpdate"> Grabbed </span>'+$('#now-playing-bar #now-playing-media .bar-value').text());
         if(GrabsSet === true){
-            NSCL('bdg bdg-food04','#FF00FF', data.user.username +'<span class="NSUpdate"> Grabbed </span>'+$('#now-playing-bar #now-playing-media .bar-value').text())
+            NSCL('bdg bdg-food04','#FF00FF', data.user.username +'<span class="NSUpdate"> Grabbed </span>'+$('#now-playing-bar #now-playing-media .bar-value').text());
+        }
+    }
+
+    API.on(API.VOTE_UPDATE,scoreUpdateMeh);
+    function scoreUpdateMeh(mehData){
+        if (mehData !== 1){
+            SecondNSCL('bdg bdg-food04','#FF00FF', mehData.user.username +'<span class="NSUpdate"> Used Meh! </span>');
+            if (MehsSet === true){
+                NSCL('bdg bdg-food04','#FF00FF', mehData.user.username +'<span class="NSUpdate"> Used Meh! </span>');
+            }
         }
     }
 
