@@ -469,7 +469,7 @@ var noobScript = function() {
 
     API.on(API.VOTE_UPDATE,scoreUpdateMeh);
     function scoreUpdateMeh(mehData){
-        if (mehData !== 1){
+        if (mehData == -1){
             SecondNSCL('icon icon-skip','red', mehData.user.username +'<span class="NSUpdate"> Used Meh! </span>');
             if (MehsSet === true){
                 NSCL('icon icon-skip','red', mehData.user.username +'<span class="NSUpdate"> Used Meh! </span>');
