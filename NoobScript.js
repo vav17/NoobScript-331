@@ -43,7 +43,7 @@ var noobScript = function() {
         this.data = data;
         switch(data){
             case "/cmds":
-                API.chatLog("Command List Comming Soon",true);
+                $('#chat-messages').append('<table><tr>Commands:<br>/cmds<br>/credits<br>/NSkill<br>/NSreload<br>/copysong</br>/stats<br>/NSaddemote<br>/resetstats<br>/NSreset<br>/NoobScript<br>/battle<br>/bassdrop</tr></table>');
             break;
             
             case "/credits":
