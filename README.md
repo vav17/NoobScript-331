@@ -48,7 +48,7 @@ If you don't Some commands and or functions might not work
 
 <li>
 <p>Now located where you saved it and click it while in the plug.dj room!</p>
-<img src="http://i.imgur.com/vF1IvNE.jpg"/>
+<img src="http://i.imgur.com/VK4VSLj.jpg"/>
 </li>
 
 <li>
