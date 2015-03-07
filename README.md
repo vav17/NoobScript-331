@@ -55,4 +55,9 @@ If you don't Some commands and or functions might not work
 <p>It should now show some of these things!</p>
 <img src="http://i.imgur.com/CWkTwsr.jpg"/>
 </li>
+
+<li>
+<p>To get to the interface, click this button!</p>
+<img src="http://i.imgur.com/SxA4pdz.png"/>
+</li>
 </ol>
