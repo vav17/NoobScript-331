@@ -12,11 +12,11 @@ $("#SecondChatToggle").hover(function(){
 });
 
 $("#SecondChatToggle").on("click", function() {
-    $("#SecondChat").slideToggle()
+    $("#SecondChat").slideToggle();
 });
 
 $(".app-right").append('<div id="SecondChat"></div>');
-$("#SecondChat").slideToggle()
+$("#SecondChat").slideToggle();
 
 //Main Interface
 $("#InterfaceToggle").hover(function(){
@@ -26,34 +26,34 @@ $("#InterfaceToggle").hover(function(){
 });
 
 $("#InterfaceToggle").on("click", function() {
-    $("#Interface").slideToggle()
+    $("#Interface").slideToggle();
     if (NSLSS.ChatCommandBox === true){
-    	$("#InterfaceCCB").slideToggle()
+    	$("#InterfaceCCB").slideToggle();
     }
 });
 
 $(".app-right").append('<div id="Interface"></div>');
-$("#Interface").slideToggle()
+$("#Interface").slideToggle();
 
 //For Hiding The Toggle
 
 $("#playlist-meta").on("click", function() {
     setTimeout(function(){
         if ($("#playlist-button .icon-playlist").attr('class') === "icon icon-playlist"){
-            $("#InterfaceToggle").show()
+            $("#InterfaceToggle").show();
         }
         if ($("#playlist-button .icon-arrow-down").attr('class') === "icon icon-arrow-down"){
-            $("#InterfaceToggle").hide()
+            $("#InterfaceToggle").hide();
         }
-},200)
-})
+},200);
+});
 
 //For ChatCommandBox
 $("#footer-user").append('<div id="InterfaceCCB"></div>');
-$('#InterfaceCCB').append('<div id="Kill" class="CCB" onclick="API.sendChat(CCBItems[0])">Kill Script</div>')
-$('#InterfaceCCB').append('<div id="Reload" class="CCB" onclick="API.sendChat(CCBItems[1])">Reload Script</div>')
-$('#InterfaceCCB').append('<div id="Reset" class="CCB" onclick="API.sendChat(CCBItems[2])">Reset Settings</div>')
-$("#InterfaceCCB").slideToggle()
+$('#InterfaceCCB').append('<div id="Kill" class="CCB" onclick="API.sendChat(CCBItems[0])">Kill Script</div>');
+$('#InterfaceCCB').append('<div id="Reload" class="CCB" onclick="API.sendChat(CCBItems[1])">Reload Script</div>');
+$('#InterfaceCCB').append('<div id="Reset" class="CCB" onclick="API.sendChat(CCBItems[2])">Reset Settings</div>');
+$("#InterfaceCCB").slideToggle();
 
 /*--------------functions for Interface------------------*/
 //Autojoin
