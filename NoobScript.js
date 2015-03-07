@@ -110,18 +110,12 @@ var noobScript = function() {
             API.sendChat("A Wild "+P1+" Appeared... "+P1+" Used o On "+P2+" ...It's Not Very Effective!... "+P1+" Faints From Shame!");
             }   
             break;
-<<<<<<< HEAD
+            case "/bassdrop":
+                API.sendChat("Dropping Bass In 5 Seconds!!!");
+                setTimeout(function(){API.sendChat("Bass Dropped!!!");},5000);
+            break;
         }
     }
-=======
-
-            case "/bassdrop":
-                API.sendChat("Dropping Bass In 5 Seconds!!!")
-                setTimeout(function(){API.sendChat("Bass Dropped!!!");},5000)
-            break;
-        };
-    };
->>>>>>> origin/master
     $('head').append($('<audio id="DONVOO" src="http://puu.sh/6CVzc.wav" />'));
     $('head').append($('<audio id="KAMI" src="http://k007.kiwi6.com/hotlink/j4qk58007e/smobyp.mp3" />'));
     $('head').append($('<audio id="SUGOI" src="http://vav17.com/wp-content/uploads/SUGOI.wav" />'));
