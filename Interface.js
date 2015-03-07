@@ -56,6 +56,8 @@ $('#InterfaceCCB').append('<div id="Reset" class="CCB" onclick="API.sendChat(CCB
 $("#InterfaceCCB").slideToggle();
 
 /*--------------functions for Interface------------------*/
+//Interface welcome
+$("#Interface").append('<div id="IFM">Interface Menu</div>');
 //Autojoin
 $("#Interface").append('<div class="IFFunction" id="IFAutoJoin">Autojoin</div>');
 $("#IFAutoJoin").on("click", NSTogglers.toggleAutoJoin);

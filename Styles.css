@@ -151,3 +151,10 @@
 #SecondChatToggle{
   cursor: pointer;
 }
+#IFM{
+  border: 3px solid white;
+  border-radius: 25px;
+}
+#vote{
+  width: 800px; 
+}
