@@ -75,10 +75,10 @@ $("#IFCopysong").on("click", NSTogglers.toggleCopySong);
 $("#Interface").append('<div class="IFFunction" id="IFHideVideo">Hide Video</div>');
 $("#IFHideVideo").on("click", NSTogglers.toggleHideVideo);
 //Who Grabs
-$("#Interface").append('<div class="IFFunction" id="IFGrabs">Grabs</div>');
+$("#Interface").append('<div class="IFFunction" id="IFGrabs">Show Grabs</div>');
 $("#IFGrabs").on("click", NSTogglers.toggleGrabs);
 //Who Mehs
-$("#Interface").append('<div class="IFFunction" id="IFMehs">Mehs (Work In Progress)</div>');
+$("#Interface").append('<div class="IFFunction" id="IFMehs">Show Mehs</div>');
 $("#IFMehs").on("click", NSTogglers.toggleMehs);
 //ChatCommandBox
 $("#Interface").append('<div class="IFFunction" id="IFChatCommandBox">Open Chat Command Box</div>');
