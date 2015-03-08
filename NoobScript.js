@@ -279,6 +279,7 @@ var noobScript = function() {
     }
     API.on(API.ADVANCE, autoWootDoer);
     function autoWootDoer(AWdata){
+        SecondNSCL('bdg bdg-food04','#FF00FF', '<span class="NSUpdate">Song Ended... Score: </span>'+AWdata.lastPlay.media.title+'<span class="NSUpdate"> : W: </span>'+AWdata.lastPlay.score.positive+'<span class="NSUpdate"> G: </span>'+AWdata.lastPlay.score.grabs+'<span class="NSUpdate"> M: </span>'+AWdata.lastPlay.score.negative);
         skipTestVar = 1;
         if (autoWootSet === true){
             setTimeout(function(){$('#woot').click();},2000);
