@@ -1,5 +1,11 @@
 {
     "nc331": {
+        
+        "template":{
+            "small":"\/\/static-cdn.jtvnw.net\/emoticons\/v1\/{image_id}\/1.0",
+            "medium":"\/\/static-cdn.jtvnw.net\/emoticons\/v1\/{image_id}\/2.0",
+            "large":"\/\/static-cdn.jtvnw.net\/emoticons\/v1\/{image_id}\/3.0"
+        },
         "twerk": {
             "height": "50px",
             "url": "http://i.imgur.com/kF7m9Ab.gif",
