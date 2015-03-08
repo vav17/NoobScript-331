@@ -32,7 +32,7 @@ $("#InterfaceToggle").on("click", function() {
     }
 });
 
-$(".app-right").append('<div id="Interface"></div>');
+$(".app-right").append('<div id="Interface" class="ChatMenu"></div>');
 $("#Interface").slideToggle();
 
 //For Hiding The Toggle
