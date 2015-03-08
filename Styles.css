@@ -161,5 +161,11 @@
   width: 800px; 
 }
 #ChatLog{
-  left:343px;
+  left: 343px;
+  text-align: left;
+  padding: 7px;
+  padding-top: 5px;
+  overflow: scroll;
+  height: 98%;
+  width:97%;
 }
