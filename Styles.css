@@ -172,3 +172,8 @@
   width:97%;
   border:0px;
 }
+.ChatLogMsg{
+  color:lightgrey;
+  border-bottom:1px solid white;
+  padding:3.5px;
+}
