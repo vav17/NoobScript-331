@@ -427,7 +427,7 @@ var noobScript = function() {
                 names[i].innerHTML = names[i].innerHTML+' [NS Loli]';
             }
             //Pleb Rank
-            if (names[i].innerHTML === 'ECPinoy' || names[i].innerHTML === 'Ivychan' || names[i].innerHTML === 'Kednick'){
+            if (names[i].innerHTML === 'ECPinoy' || names[i].innerHTML === 'Ivychan' || names[i].innerHTML === 'Kednick' || names[i].innerHTML === 'Tylerw3629'){
                 names[i].innerHTML = names[i].innerHTML+' [NS Pleb]';
             }
         }
