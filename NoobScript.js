@@ -37,19 +37,6 @@ var noobScript = function() {
     random = Math.floor(Math.random(100) * 6);
     NSloadSettings();
     $.getScript("https://rawgit.com/vav17/NoobScript-331/master/Interface.js");
-    NSEmotes = {};
-    $.ajax({
-            cache: false,
-            url: "https://rawgit.com/vav17/NoobScript-331/master/Emotes.json",
-            dataType: "json",
-            success: function(a){
-                for (var i in a) {
-                    for (var j in a[i]) {
-                        NSEmotes[j] = a[i][j];
-                    }
-                }
-            }
-    });
     
     API.on(API.CHAT_COMMAND, commands);
     function commands(data) {
@@ -214,26 +201,6 @@ var noobScript = function() {
             $(CSS[i]).remove();
             console.log("Removing: " + CSS[i]);
         }
-    }
-
-    API.on(API.CHAT,emoteChat);
-    function emoteChat(data){
-    reg = /:([^:]*):/igm;
-    messageClass = '.msg .cid-'+data.cid;
-    message = $(messageClass).html();
-    regmessage = reg.exec(message);
-    d = chat.scrollTop() > chat[0].scrollHeight - chat.height() - 28
-    //console.log(regmessage);
-        if (regmessage != null){
-            //console.log("BISH IM NOT NULL");
-            for (var i = 0; i < Object.keys(NSEmotes).length;i++){
-                if (Object.keys(NSEmotes)[i].match(regmessage)){
-                    //console.log('IT WOKRS');
-                }
-            }
-                $(messageClass).html(regmessage[1].replace(regmessage[1],'<div class="custom-emote" style="background-image:url(' + NSEmotes[regmessage[1]].url + ');width:' + NSEmotes[regmessage[1]].width + ';height:' + NSEmotes[regmessage[1]].height + ';"></div>'));
-                if (d) chat.scrollTop(chat[0].scrollHeight);
-            }
     }
 
     function copySong() {
