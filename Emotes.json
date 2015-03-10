@@ -293,6 +293,12 @@
             "url": "http://i.imgur.com/ZGcOvzH.png",
             "width": "60px",
             "image_id":48
+        },
+        "biteme": {
+            "height": "48px",
+            "url": "http://i.imgur.com/AFH2agq.png",
+            "width": "71px",
+            "image_id":49
         }
     }
 }
