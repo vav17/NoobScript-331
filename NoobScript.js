@@ -257,7 +257,7 @@ var noobScript = function() {
         staff = API.getStaff();
         currentPPL = API.getUsers().length;
         manPlusVote = 0;
-        var maxMeh = Math.floor((currentPPL - 100) * 0.1) -1;
+        var maxMeh = Math.floor((currentPPL - 100) * 0.1) +1;
         if(score.negative >= maxMeh){
             if(maxMeh > score.grabs){
                 if (skipTestVar === 1){
