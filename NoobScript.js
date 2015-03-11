@@ -34,6 +34,8 @@ var noobScript = function() {
     GrabsSet = false;
     MehsSet = false;
     NisePos = 0;
+    chat = $('#chat-messages');
+    d = chat.scrollTop() > chat[0].scrollHeight - chat.height() - 28;
     NSEmotes = {};
     random = Math.floor(Math.random(100) * 6);
     NSloadSettings();
@@ -65,8 +67,7 @@ var noobScript = function() {
                 }
             }
                 $(messageClass).html(regmessage[1].replace(regmessage[1],'<div class="custom-emote" style="background-image:url(' + NSEmotes[regmessage[1]].url + ');width:' + NSEmotes[regmessage[1]].width + ';height:' + NSEmotes[regmessage[1]].height + ';"></div>'));
-            
-            
+                if (d) chat.scrollTop(chat[0].scrollHeight); 
         }
     }
 
