@@ -134,20 +134,21 @@ var noobScript = function() {
             break;
 
             case "/battle":
-            P1 = prompt("Player 1:");
-            P2 = prompt("Player 2:");
-            if (Math.random(1) * 10 > 5 ) {
-            API.sendChat("A Wild "+P1+" Appeared... "+P1+" Used o On "+P2+" ...It's Super Effective!... "+P2+" Faints!");
+                P1 = prompt("Player 1:");
+                P2 = prompt("Player 2:");
+                if (Math.random(1) * 10 > 5 ) {
+                API.sendChat("A Wild "+P1+" Appeared... "+P1+" Used o On "+P2+" ...It's Super Effective!... "+P2+" Faints!");
             }
-            if (Math.random(1) * 10 < 5) {
-            API.sendChat("A Wild "+P1+" Appeared... "+P1+" Used o On "+P2+" ...It's Not Very Effective!... "+P1+" Faints From Shame!");
+                if (Math.random(1) * 10 < 5) {
+                API.sendChat("A Wild "+P1+" Appeared... "+P1+" Used o On "+P2+" ...It's Not Very Effective!... "+P1+" Faints From Shame!");
             }   
             break;
-            case "/bassdrop":
-                API.sendChat("Dropping Bass In 5 Seconds!!!");
-                setTimeout(function(){API.sendChat("Bass Dropped!!!");},5000);
-            break;
         }
+            if (this.data.slice(0,9) === '/bassdrop'){
+                number = this.data.slice(9,25);
+                API.sendChat("Dropping Bass In "+number+" Seconds!!!");
+                setTimeout(function(){API.sendChat("Bass Dropped!!!");},JSON.parse(number)*1000);
+            }
     }
     $('head').append($('<audio id="DONVOO" src="http://puu.sh/6CVzc.wav" />'));
     $('head').append($('<audio id="KAMI" src="http://k007.kiwi6.com/hotlink/j4qk58007e/smobyp.mp3" />'));
