@@ -80,9 +80,9 @@ var noobScript = function() {
             break;
             
             case "/credits":
-                $('#app').append('<div id="credits"></div>');
+                $('body').append('<div id="credits"></div>');
                 $('#credits').append('<div class="CTitle">NoobScript-331</div><div class="CSep"></div><div class="CBody">Made By</div><div class="CSep"></div><div class="CBody">SnakedMusique</div><div class="CSep"></div><div class="CBody">&</div><div class="CSep"></div><div class="CBody">donvoo</div><div class="CSep"></div><h3 class="CInfo">Hello!<br>Thank you for using NoobScript... We thank you from the bottom of our hearts! NoobScropt was created to make the joys of plug even better! We hope you enjoy our work!</h3><div class="CSep"></div><h3 class="CInfo">Please do not edit our script without our permission... <br>Because that would be like... stealing our work! We do not want that! :P</h3><div class="CSep"></div><div class="CTitle">Thank You!</div><div class="CClose">X</div>');
-                $('.CClose').click(function(){$('.CClose').remove();});
+                $('.CClose').click(function(){$('#credits').remove();});
             break;
             
             case "/NSkill":
