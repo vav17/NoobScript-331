@@ -235,3 +235,6 @@
   text-align: center;
   font-family: sans-serif;
 }
+.CLink:hover {
+  color: white;
+}
