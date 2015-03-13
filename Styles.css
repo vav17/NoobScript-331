@@ -177,3 +177,54 @@
   border-bottom:1px solid white;
   padding:3.5px;
 }
+#credits {
+  display: block;
+  height: 550px;
+  width: 500px;
+  z-index: 30;
+  border: 2px solid #00cbf6;
+  background-color: #111317;
+  margin: auto;
+  position: relative;
+  border-radius: 50px;
+}
+.CTitle {
+  display: block;
+  color: #00cbf6;
+  font-size: 30px;
+  text-align: center;
+  font-family: Impact;
+}
+.CSep {
+  background-color: #1C1F25;
+  height: 10px;
+  width: 500px;
+  border-radius: 20px;
+}
+.CBody {
+  display: block;
+  color: #00cbf6;
+  font-size: 35px;
+  text-align: center;
+  font-family: sans-serif;
+}
+.CInfo {
+  color: #00cbf6;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 15px;
+
+}
+.CClose {
+  display: block;
+  color: white;
+  font-size: 50px;
+  cursor: pointer;
+  text-align: center;
+  font-family: Impact;
+  height: 50px;
+  width: 50px;
+  border-radius: 5px;
+  background-color: red;
+  margin: auto;
+}

@@ -241,6 +241,10 @@ var noobScript = function() {
         }
     }
 
+    function removeCredits(){
+        $('#credits').remove();
+    }
+
     function copySong() {
         var cid = API.getMedia().cid;
         var author = API.getMedia().author;
