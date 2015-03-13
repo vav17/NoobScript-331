@@ -187,6 +187,7 @@
   margin: auto;
   position: relative;
   border-radius: 50px;
+  box-shadow: 15px 15px 30px black;
 }
 .CTitle {
   display: block;
