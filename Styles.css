@@ -218,15 +218,20 @@
 .CClose {
   display: block;
   color: white;
-  font-size: 50px;
+  font-size: 30px;
   cursor: pointer;
   text-align: center;
   font-family: Impact;
-  height: 50px;
-  width: 50px;
+  height: 30px;
+  width: 30px;
   border-radius: 5px;
   background-color: red;
   margin: auto;
+  padding: 3px;
+  position: relative;
+}
+.CClose:hover {
+  color: black;
 }
 .CLink {
   display: block;
