@@ -228,3 +228,10 @@
   background-color: red;
   margin: auto;
 }
+.CLink {
+  display: block;
+  color: #00cbf6;
+  font-size: 10px;
+  text-align: center;
+  font-family: sans-serif;
+}
