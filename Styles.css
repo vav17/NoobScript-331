@@ -185,9 +185,11 @@
   border: 2px solid #00cbf6;
   background-color: #111317;
   margin: auto;
-  position: relative;
+  position: absolute;
   border-radius: 50px;
   box-shadow: 15px 15px 30px black;
+  top: 53px;
+  left: 392px;
 }
 .CTitle {
   display: block;
