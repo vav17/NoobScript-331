@@ -528,7 +528,7 @@ var noobScript = function() {
         AutoJoin: false,
         Grabs: false,
         Mehs: false,
-        ChatCommandBox: false,
+        ChatCommandBox: false
     };
     if (localStorage.getItem("NSSET")){
         console.log("Settings Loaded!");
