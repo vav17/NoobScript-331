@@ -58,7 +58,7 @@ $("#InterfaceCCB").slideToggle();
 /*--------------functions for Interface------------------*/
 //Interface welcome
 $("#Interface").append('<div id="IFM">Interface<div id="IFI">Info/Credits</div></div>');
-creditNumber = 1;
+creditNumber = 0;
 $('#IFI').click(function(){
     creditNumber++;
     if (creditNumber === 1){
