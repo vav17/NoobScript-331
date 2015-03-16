@@ -1,6 +1,6 @@
 function startScript() {
     if (typeof API !== "object" || !API.enabled) {
-        $(document).ready(startScript());
+        setTimeout(startScript, 200);
     } else {
         loader();
     }
