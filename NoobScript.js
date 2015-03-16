@@ -241,6 +241,7 @@ var noobScript = function() {
             $(CSS[i]).remove();
             console.log("Removing: " + CSS[i]);
         }
+        $('#playback .background img').attr('src','https://cdn.plug.dj/_/static/images/community/custom/2014winter/videoframe.9315d245fd149d1b8bc62d371a80f3664bbe348e.png')
     }
 
     function copySong() {
