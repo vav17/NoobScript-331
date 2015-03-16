@@ -454,6 +454,30 @@ var noobScript = function() {
             RAINBOWZ(data, interval, type);
         }
     }
+/*
+    function rankedPerson(username,prefix) {
+    this.username = username;
+    this.prefix = prefix;
+    }
+
+    var rankedUsers = new Array();
+
+    rankedUsers[0] = new rankedPerson("SnakedMusique", "donvoo [NS DEV]");
+    rankedUsers[1] = new rankedPerson("donvoo", "SnakedMusique [NS DEV]");
+    rankedUsers[2] = new rankedPerson("# ๖ۣۜEɴʏxx", "# ๖ۣۜEɴʏxx [NS GOD]");
+
+    API.on(API.CHAT, rankForChat);
+    function rankForChat(user){
+        var names = document.getElementsByClassName("un clickable");
+        for (var i = 0; i < names.length; i++) {
+            if (names[i].innerHTML === rankedUsers[i].username) {
+                names[i].innerHTML = rankedUsers[i].prefix;
+            }
+        }
+    }
+*/
+
+
 
     API.on(API.CHAT, rankForChat);
     function rankForChat(data){
@@ -472,7 +496,7 @@ var noobScript = function() {
                 names[i].innerHTML = names[i].innerHTML+' [NS Pleb]';
             }
         }
-    }  
+    }
 
     function APITurnOff(){
         API.off(API.CHAT_COMMAND, commands);
