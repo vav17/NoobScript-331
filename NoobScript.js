@@ -505,7 +505,9 @@ var noobScript = function() {
 
     API.on(API.WAIT_LIST_UPDATE,AutoJoinWaitlist);
     function AutoJoinWaitlist(){
-        setTimeout(function(){autoJoin();},800);
+        if ($('#waitlist .header .title').text() === "DJ Wait List"){
+            setTimeout(function(){autoJoin();},800);
+        }
     }
 
     function autoJoin(){
