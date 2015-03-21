@@ -86,6 +86,9 @@ $("#IFCounters").on("click", NSTogglers.toggleCounters);
 //Copysong
 $("#Interface").append('<div class="IFFunction" id="IFCopysong">Copysong</div>');
 $("#IFCopysong").on("click", NSTogglers.toggleCopySong);
+//Emote Toggle
+$("#Interface").append('<div class="IFFunction" id="IFEmotes">Custom Emotes</div>');
+$("#IFEmotes").on("click", NSTogglers.toggleEmotes);
 //Hide Video
 $("#Interface").append('<div class="IFFunction" id="IFHideVideo">Hide Video</div>');
 $("#IFHideVideo").on("click", NSTogglers.toggleHideVideo);

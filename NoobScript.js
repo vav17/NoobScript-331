@@ -24,7 +24,7 @@ var noobScript = function() {
     $('#copysong').click(function(){copySong();});
     $('#chitoge').click(function(){newTab("http://animeshow.tv/Nisekoi/");});
     $('#ond').click(function(){newTab("http://animeshow.tv/Nisekoi/");});
-    $('#playback .background img').attr('src','http://i.imgur.com/x1YjQzm.png')
+    $('#playback .background img').attr('src','http://i.imgur.com/x1YjQzm.png');
     
     CT = ["BOW TO US"];
     CCBItems = ["/NSkill", "/NSreload", "/NSreset"];
@@ -34,6 +34,7 @@ var noobScript = function() {
     skipTestVar = 1;
     GrabsSet = false;
     MehsSet = false;
+    emoteSet = false;
     NisePos = 0;
     chat = $('#chat-messages');
     d = chat.scrollTop() > chat[0].scrollHeight - chat.height() - 28;
@@ -41,24 +42,13 @@ var noobScript = function() {
     random = Math.floor(Math.random(100) * 6);
     NSloadSettings();
     $.getScript("https://rawgit.com/vav17/NoobScript-331/master/Interface.js");
-    $.ajax({
-            cache: false,
-            url: "https://rawgit.com/vav17/NoobScript-331/master/Emotes.json",
-            dataType: "json",
-            success: function(a){
-                for (var i in a) {
-                    for (var j in a[i]) {
-                        NSEmotes[j] = a[i][j];
-                    }
-                }
-            }
-    });
     API.on(API.CHAT,emoteChat);
     function emoteChat(data){
     reg = /:([^:]*):/igm;
     messageClass = '.msg .cid-'+data.cid;
     message = $(messageClass).html();
     regmessage = reg.exec(message);
+    if (emoteSet === true){
     //console.log(regmessage);
         if (regmessage !== null){
             //console.log("BISH IM NOT NULL");
@@ -70,6 +60,7 @@ var noobScript = function() {
                 $(messageClass).html(regmessage[1].replace(regmessage[1],'<div class="custom-emote" style="background-image:url(' + NSEmotes[regmessage[1]].url + ');width:' + NSEmotes[regmessage[1]].width + ';height:' + NSEmotes[regmessage[1]].height + ';"></div>'));
                 if (d) chat.scrollTop(chat[0].scrollHeight); 
         }
+    }
     }
 
     API.on(API.CHAT_COMMAND, commands);
@@ -554,7 +545,8 @@ var noobScript = function() {
         AutoJoin: false,
         Grabs: false,
         Mehs: false,
-        ChatCommandBox: false
+        ChatCommandBox: false,
+        TheEmotes: false
     };
     if (localStorage.getItem("NSSET")){
         console.log("Settings Loaded!");
@@ -702,6 +694,32 @@ var noobScript = function() {
             }
             NSsaveSettings();
         },
+        toggleEmotes: function(){
+            if(NSLSS.TheEmotes=== true){
+                NSLSS.TheEmotes = false;
+                emoteSet = false;
+                $("#IFEmotes").css('background-color', '#1C1F25');
+                NSEmotes = null;
+            }
+            else {
+                NSLSS.TheEmotes = true;
+                emoteSet = true;
+                $("#IFEmotes").css('background-color', '#00cbf6');
+                $.ajax({
+                    cache: false,
+                    url: "https://rawgit.com/vav17/NoobScript-331/master/Emotes.json",
+                    dataType: "json",
+                    success: function(a){
+                        for (var i in a) {
+                            for (var j in a[i]) {
+                                NSEmotes[j] = a[i][j];
+                            }
+                        }
+                    }
+                });
+            }
+            NSsaveSettings();
+        },
         LoadInToggle: function(){
             $("#IFStudymode").css('background-color', '#1C1F25');
             $("#IFChatcolors").css('background-color', '#00cbf6');
@@ -755,6 +773,22 @@ var noobScript = function() {
             if (NSLSS.ChatCommandBox === true){
                 NSLSS.ChatCommandBox = false;
                 NSsaveSettings();
+            }
+            if (NSLSS.TheEmotes === true){
+                emoteSet = true;
+                $("#IFEmotes").css('background-color', '#00cbf6');
+                $.ajax({
+                    cache: false,
+                    url: "https://rawgit.com/vav17/NoobScript-331/master/Emotes.json",
+                    dataType: "json",
+                    success: function(a){
+                    for (var i in a) {
+                        for (var j in a[i]) {
+                            NSEmotes[j] = a[i][j];
+                        }
+                    }
+                }
+                });
             }
         }
     };
