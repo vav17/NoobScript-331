@@ -137,12 +137,22 @@ var noobScript = function() {
                 API.sendChat("A Wild "+P1+" Appeared... "+P1+" Used o On "+P2+" ...It's Not Very Effective!... "+P1+" Faints From Shame!");
             }   
             break;
+
+            case "/NSBackgroundReset":
+                $('.room-background').css('background','url(https://cdn.plug.dj/_/static/images/community/background.892bc86f530eb3f7a53a2cc60f0c0be481798175.jpg) no-repeat')
+            break;
         }
+        //For Chat With Slice
             if (this.data.slice(0,9) === '/bassdrop'){
                 number = this.data.slice(9,25);
                 API.sendChat("Dropping Bass In "+number+" Seconds!!!");
                 setTimeout(function(){API.sendChat("Bass Dropped!!!");},JSON.parse(number)*1000);
             }
+            if (this.data.slice(0,11) === '/background'){
+                theURL = this.data.slice(11,252);
+                $('.room-background').css('background','url('+theURL+') no-repeat')
+            }
+
     }
     $('head').append($('<audio id="DONVOO" src="http://puu.sh/6CVzc.wav" />'));
     $('head').append($('<audio id="KAMI" src="http://k007.kiwi6.com/hotlink/j4qk58007e/smobyp.mp3" />'));
