@@ -41,7 +41,7 @@ var noobScript = function() {
     NSEmotes = {};
     random = Math.floor(Math.random(100) * 6);
     NSloadSettings();
-    $.getScript("https://rawgit.com/vav17/NoobScript-331/master/Interface.js");
+    $.getScript("https://dl.dropboxusercontent.com/s/iwfau1o2ie5grpl/NewInterface.js");
     API.on(API.CHAT,emoteChat);
     function emoteChat(data){
     reg = /:([^:]*):/igm;
@@ -546,7 +546,7 @@ var noobScript = function() {
 
     function NSloadSettings(){
     NSsettings = {
-        CopySong: true,
+        //CopySong: true,
         Counter: true,
         ChatColors: true,
         StudyMode: false,
@@ -572,26 +572,26 @@ var noobScript = function() {
     }
 
     NSTogglers = {
-        toggleCopySong: function(){
+        /*toggleCopySong: function(){
             if(NSLSS.CopySong === true){
                 NSLSS.CopySong = false;
-                $("#IFCopysong").css('background-color', '#1C1F25');
+                $('#IFCopysong .checkMark').hide();
                 $("#copysong").remove();
             }else{
                 NSLSS.CopySong = true;
-                $("#IFCopysong").css('background-color', '#00cbf6');
+                $('#IFCopysong .checkMark').show();
                 $('#vote').append('<img id="copysong" src="http://i.imgur.com/ThOy4K5.png">');
                 $('#copysong').click(function(){copySong();});
             }
             NSsaveSettings();
-        },
+        },*/
         toggleCounters: function(){
             if(NSLSS.Counter === true){
                 NSLSS.Counter = false;
-                $("#IFCounters").css('background-color', '#1C1F25');
+                $('#IFCounters .checkMark').hide();
             }else{
                 NSLSS.Counter = true;
-                $("#IFCounters").css('background-color', '#00cbf6');
+                $('#IFCounters .checkMark').show();
             }
             $("#Stat").toggle("explode");
             NSsaveSettings();
@@ -599,24 +599,24 @@ var noobScript = function() {
         toggleChatColors: function(){
             if(NSLSS.ChatColors === true){
                 NSLSS.ChatColors = false;
-                $("#IFChatcolors").css('background-color', '#1C1F25');
+                $('#IFChatcolors .checkMark').hide();
                 $('#cssstaffcolors').remove();
             }else{
                 NSLSS.ChatColors = true;
                 $('head').append('<link id="cssstaffcolors" rel="stylesheet"type="text/css"href="https://dl.dropboxusercontent.com/s/usedz76mi8km5rq/Origem%20Colors.css">');
-                $("#IFChatcolors").css('background-color', '#00cbf6');
+                $('#IFChatcolors .checkMark').show();
             }
             NSsaveSettings();
         },
-        toggleStudyMode: function(){
+        /*toggleStudyMode: function(){
            if(NSLSS.StudyMode === true){
                 NSLSS.StudyMode = false;
                 $("#studymode").remove();
-                $("#IFStudymode").css('background-color', '#1C1F25');
+                $('#IFStudymode .checkMark').hide();
             }else{
                 NSLSS.StudyMode = true;
                 $("#app").append('<img id="studymode" width="100%" src="http://m.memegen.com/qluj1y.jpg">');
-                $("#IFStudymode").css('background-color', '#00cbf6');
+                $('#IFStudymode .checkMark').show();
             }
             $(".app-right").toggle();
             $("#playback").toggle();
@@ -626,17 +626,17 @@ var noobScript = function() {
             $("#dj-booth").toggle();
             $("#Stat").toggle();
             NSsaveSettings();
-        },
+        },*/
         toggleAutoWoot: function(){
             if(NSLSS.AutoWoot === true){
                 NSLSS.AutoWoot = false;
                 autoWootSet = false;
-                $("#IFAutoWoot").css('background-color', '#1C1F25');
+                $('#IFAutoWoot .checkMark').hide();
             }else{
                 NSLSS.AutoWoot = true;
                 autoWootSet = true;
                 $('#woot').click();
-                $("#IFAutoWoot").css('background-color', '#00cbf6');
+               $('#IFAutoWoot .checkMark').show();
             }
             NSsaveSettings();
         },
@@ -644,11 +644,11 @@ var noobScript = function() {
             if(NSLSS.HideVideo === true){
                 NSLSS.HideVideo = false;
                 $("#playback").fadeTo('slow',1);
-                $("#IFHideVideo").css('background-color', '#1C1F25');
+                $('#IFHideVideo .checkMark').hide();
             } else{
                 NSLSS.HideVideo = true;
                 $("#playback").fadeTo('slow',0);
-                $("#IFHideVideo").css('background-color', '#00cbf6');
+                $('#IFHideVideo .checkMark').show();
             }
             NSsaveSettings();
         },
@@ -656,14 +656,14 @@ var noobScript = function() {
             if(NSLSS.AutoJoin === true){
                 NSLSS.AutoJoin = false;
                 autoJoinSet = false;
-                $("#IFAutoJoin").css('background-color', '#1C1F25');
+                $('#IFAutoJoin .checkMark').hide();
             } else{
                 API.djJoin();
                 NSLSS.AutoJoin = true;
                 NSsaveSettings();
                 autoJoinSet = true;
                 setInterval(function(){autoJoin();},1000);
-                $("#IFAutoJoin").css('background-color', '#00cbf6');
+                $('#IFAutoJoin .checkMark').show();
             }
             NSsaveSettings();
         },
@@ -671,11 +671,11 @@ var noobScript = function() {
             if(NSLSS.Grabs === true){
                 NSLSS.Grabs = false;
                 GrabsSet = false;
-                $("#IFGrabs").css('background-color', '#1C1F25');
+                $('#IFGrabs .checkMark').hide();
             } else{
                 NSLSS.Grabs = true;
                 GrabsSet = true;
-                $("#IFGrabs").css('background-color', '#00cbf6');
+                $('#IFGrabs .checkMark').show();
             }
             NSsaveSettings();
         },
@@ -683,11 +683,11 @@ var noobScript = function() {
             if(NSLSS.Mehs === true){
                 NSLSS.Mehs = false;
                 MehsSet = false;
-                $("#IFMehs").css('background-color', '#1C1F25');
+                $('#IFMehs .checkMark').hide();
             } else{
                 NSLSS.Mehs = true;
                 MehsSet = true;
-                $("#IFMehs").css('background-color', '#00cbf6');
+                $('#IFMehs .checkMark').show();
             }
             NSsaveSettings();
         },
@@ -695,12 +695,12 @@ var noobScript = function() {
             if(NSLSS.ChatCommandBox === true){
                 NSLSS.ChatCommandBox = false;
                 $("#InterfaceCCB").slideUp();
-                $("#IFChatCommandBox").css('background-color', '#1C1F25');
+                $('#IFChatCommandBox .checkMark').hide();
             }
             else {
                 NSLSS.ChatCommandBox = true;
                 $("#InterfaceCCB").slideDown();
-                $("#IFChatCommandBox").css('background-color', '#00cbf6');
+                $('#IFChatCommandBox .checkMark').show();
             }
             NSsaveSettings();
         },
@@ -708,13 +708,13 @@ var noobScript = function() {
             if(NSLSS.TheEmotes=== true){
                 NSLSS.TheEmotes = false;
                 emoteSet = false;
-                $("#IFEmotes").css('background-color', '#1C1F25');
+                $('#IFEmotes .checkMark').hide();
                 NSEmotes = null;
             }
             else {
                 NSLSS.TheEmotes = true;
                 emoteSet = true;
-                $("#IFEmotes").css('background-color', '#00cbf6');
+                $('#IFEmotes .checkMark').show();
                 $.ajax({
                     cache: false,
                     url: "https://rawgit.com/vav17/NoobScript-331/master/Emotes.json",
@@ -731,54 +731,52 @@ var noobScript = function() {
             NSsaveSettings();
         },
         LoadInToggle: function(){
-            $("#IFStudymode").css('background-color', '#1C1F25');
-            $("#IFChatcolors").css('background-color', '#00cbf6');
-            $("#IFCounters").css('background-color', '#00cbf6');
-            $("#IFCopysong").css('background-color', '#00cbf6');
-            $("#IFAutoWoot").css('background-color', '#1C1F25');
-            $("#IFHideVideo").css('background-color', '#1C1F25');
-            $("#IFChatCommandBox").css('background-color', '#1C1F25');
-            $("#IFMehs").css('background-color', '#1C1F25');
-            $("#IFGrabs").css('background-color', '#1C1F25');
-            $("#IFChatCommandBox").css('background-color', '#1C1F25');
-            if (NSLSS.StudyMode === true){
-                NSLSS.StudyMode = false;
-            }
+            $('#IFChatcolors .checkMark').show();
+            $('#IFCounters .checkMark').show();
+            //$('#IFCopysong .checkMark').show();
+            $('#IFAutoWoot .checkMark').hide();
+            $('#IFHideVideo .checkMark').hide();
+            $('#IFAutoJoin .checkMark').hide();
+            $('#IFMehs .checkMark').hide();
+            $('#IFGrabs .checkMark').hide();
+            $('#IFChatCommandBox .checkMark').hide();
+            $('#IFEmotes .checkMark').hide();
             if (NSLSS.ChatColors === false){
-                $("#IFChatcolors").css('background-color', '#1C1F25');
                 $('#cssstaffcolors').remove();
+                $('#IFChatcolors .checkMark').hide();
             }
             if (NSLSS.Counter === false){
                 $("#Stat").toggle("explode");
-                $("#IFCounters").css('background-color', '#1C1F25');
+                $('#IFCounters .checkMark').hide();
             }
-            if (NSLSS.CopySong === false){
+            /*if (NSLSS.CopySong === false){
                 $("#copysong").remove();
-                $("#IFCopysong").css('background-color', '#1C1F25');
-            }
+                $('#IFCopysong .checkMark').hide();
+            }*/
             if (NSLSS.AutoWoot === true){
                 autoWootSet = true;
                 $('#woot').click();
-                $("#IFAutoWoot").css('background-color', '#00cbf6');
+                $('#IFAutoWoot .checkMark').show();
             }
             if (NSLSS.HideVideo === true){
                 $("#playback").fadeTo('slow',0);
-                $("#IFHideVideo").css('background-color', '#00cbf6');
+                $('#IFHideVideo .checkMark').show();
             }
             if (NSLSS.AutoJoin === true){
                 API.djJoin();
                 autoJoinSet = true;
                 NSsaveSettings();
                 setInterval(function(){autoJoin();},1000);
-                $("#IFAutoJoin").css('background-color', '#00cbf6');
+                $('#IFAutoJoin .checkMark').show();
+
             }
             if (NSLSS.Grabs === true){
                 GrabsSet = true;
-                $("#IFGrabs").css('background-color', '#00cbf6');
+                $('#IFGrabs .checkMark').show();
             }
             if (NSLSS.Mehs === true){
                 MehsSet = true;
-                $("#IFMehs").css('background-color', '#00cbf6');
+                $('#IFMehs .checkMark').show();
             }
             if (NSLSS.ChatCommandBox === true){
                 NSLSS.ChatCommandBox = false;
@@ -786,7 +784,7 @@ var noobScript = function() {
             }
             if (NSLSS.TheEmotes === true){
                 emoteSet = true;
-                $("#IFEmotes").css('background-color', '#00cbf6');
+                $('#IFEmotes .checkMark').show();
                 $.ajax({
                     cache: false,
                     url: "https://rawgit.com/vav17/NoobScript-331/master/Emotes.json",
