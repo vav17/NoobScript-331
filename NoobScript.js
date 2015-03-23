@@ -24,7 +24,7 @@ var noobScript = function() {
     $('#copysong').click(function(){copySong();});
     $('#chitoge').click(function(){newTab("http://animeshow.tv/Nisekoi/");});
     $('#ond').click(function(){newTab("http://animeshow.tv/Nisekoi/");});
-    $('#playback .background img').attr('src','http://i.imgur.com/x1YjQzm.png');
+    //$('#playback .background img').attr('src','http://i.imgur.com/x1YjQzm.png');
     
     CT = ["BOW TO US"];
     CCBItems = ["/NSkill", "/NSreload", "/NSreset"];
