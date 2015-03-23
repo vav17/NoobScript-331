@@ -85,6 +85,7 @@
   opacity: .95;
   text-align: center;
 }
+/*
 #InterfaceToggle{
   height: 40px;
   width: 40px;
@@ -135,7 +136,7 @@
 }
 #InterfaceCCB:hover{
   opacity: .95;
-}
+}*/
 #SecondChat{
   height:91%;
   width:99%;

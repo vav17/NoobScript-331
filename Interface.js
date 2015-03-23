@@ -72,31 +72,31 @@ $('#IFI').click(function(){
 });
 
 //Autojoin
-$("#Interface").append('<div class="IFFunction" id="IFAutoJoin">Autojoin</div>');
+$("#Interface").append('<div class="IFFunction" id="IFAutoJoin">Autojoin</div>');//
 $("#IFAutoJoin").on("click", NSTogglers.toggleAutoJoin);
 //AutoWoot
-$("#Interface").append('<div class="IFFunction" id="IFAutoWoot">Autowoot</div>');
+$("#Interface").append('<div class="IFFunction" id="IFAutoWoot">Autowoot</div>');//
 $("#IFAutoWoot").on("click", NSTogglers.toggleAutoWoot);
 //Chat colors
-$("#Interface").append('<div class="IFFunction" id="IFChatcolors">Chat Colors</div>');
+$("#Interface").append('<div class="IFFunction" id="IFChatcolors">Chat Colors</div>');//
 $("#IFChatcolors").on("click", NSTogglers.toggleChatColors);
 //Counters
-$("#Interface").append('<div class="IFFunction" id="IFCounters">Counters</div>');
+$("#Interface").append('<div class="IFFunction" id="IFCounters">Counters</div>');//
 $("#IFCounters").on("click", NSTogglers.toggleCounters);
 //Copysong
 $("#Interface").append('<div class="IFFunction" id="IFCopysong">Copysong</div>');
 $("#IFCopysong").on("click", NSTogglers.toggleCopySong);
 //Emote Toggle
-$("#Interface").append('<div class="IFFunction" id="IFEmotes">Custom Emotes</div>');
+$("#Interface").append('<div class="IFFunction" id="IFEmotes">Custom Emotes</div>');//
 $("#IFEmotes").on("click", NSTogglers.toggleEmotes);
 //Hide Video
-$("#Interface").append('<div class="IFFunction" id="IFHideVideo">Hide Video</div>');
+$("#Interface").append('<div class="IFFunction" id="IFHideVideo">Hide Video</div>'); //
 $("#IFHideVideo").on("click", NSTogglers.toggleHideVideo);
 //Who Grabs
-$("#Interface").append('<div class="IFFunction" id="IFGrabs">Show Grabs</div>');
+$("#Interface").append('<div class="IFFunction" id="IFGrabs">Show Grabs</div>');//
 $("#IFGrabs").on("click", NSTogglers.toggleGrabs);
 //Who Mehs
-$("#Interface").append('<div class="IFFunction" id="IFMehs">Show Mehs</div>');
+$("#Interface").append('<div class="IFFunction" id="IFMehs">Show Mehs</div>');//
 $("#IFMehs").on("click", NSTogglers.toggleMehs);
 //ChatCommandBox
 $("#Interface").append('<div class="IFFunction" id="IFChatCommandBox">Open Chat Command Box</div>');
