@@ -35,6 +35,7 @@ var noobScript = function() {
     GrabsSet = false;
     MehsSet = false;
     emoteSet = false;
+    autoJoinSet = false;
     NisePos = 0;
     chat = $('#chat-messages');
     d = chat.scrollTop() > chat[0].scrollHeight - chat.height() - 28;
