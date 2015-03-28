@@ -7,4 +7,16 @@ $(document).ready(function(){
 		$('head').append('<link id="cssstaffcolors" rel="stylesheet"type="text/css"href="https://dl.dropboxusercontent.com/s/usedz76mi8km5rq/Origem%20Colors.css">');
 		$("#Stat").draggable();
 		$('#chat-messages').append('<div class="NSalert">Heyo! Thanks For Using This Script <3 !</div>');
+		$('#volume').hover(function(){
+			$('#volume').bind('mousewheel',function(e){
+				if(e.originalEvent.wheelDelta /120 > 0) {
+            		//API.chatLog('Scrolling Up');
+            		API.setVolume(API.getVolume() + 1);
+        		}
+        		else{
+            		//API.chatLog('Scrolling Down');
+            		API.setVolume(API.getVolume() - 1);
+        		}
+			});
+		});
 });
