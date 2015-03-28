@@ -26,7 +26,7 @@ var noobScript = function() {
     $('#ond').click(function(){newTab("http://animeshow.tv/Nisekoi/");});
     //$('#playback .background img').attr('src','http://i.imgur.com/x1YjQzm.png');
 
-    $('#volume').hover(function(){
+    $('#volume').mouseenter(function(){
             $('#volume').bind('mousewheel',function(e){
                 if(e.originalEvent.wheelDelta /120 > 0) {
                     //API.chatLog('Scrolling Up');
@@ -37,6 +37,10 @@ var noobScript = function() {
                     API.setVolume(API.getVolume() - 1);
                 }
             });
+    });
+
+    $('#volume').mouseleave(function(){
+            $('#volume').unbind('mousewheel');
     });
     
     CT = ["BOW TO US"];
