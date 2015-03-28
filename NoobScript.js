@@ -25,6 +25,19 @@ var noobScript = function() {
     $('#chitoge').click(function(){newTab("http://animeshow.tv/Nisekoi/");});
     $('#ond').click(function(){newTab("http://animeshow.tv/Nisekoi/");});
     //$('#playback .background img').attr('src','http://i.imgur.com/x1YjQzm.png');
+
+    $('#volume').hover(function(){
+            $('#volume').bind('mousewheel',function(e){
+                if(e.originalEvent.wheelDelta /120 > 0) {
+                    //API.chatLog('Scrolling Up');
+                    API.setVolume(API.getVolume() + 1);
+                }
+                else{
+                    //API.chatLog('Scrolling Down');
+                    API.setVolume(API.getVolume() - 1);
+                }
+            });
+    });
     
     CT = ["BOW TO US"];
     CCBItems = ["/NSkill", "/NSreload", "/NSreset"];
