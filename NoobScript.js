@@ -284,7 +284,7 @@ var noobScript = function() {
         NSwaitList = API.getWaitListPosition() + 1;
         NStotalSeconds = NSetaForm * NSwaitList;
         NSminutes = Math.floor(NStotalSeconds/ 60);
-        NSseconds = NStotalSeconds- NSminutes * 60;
+        NSseconds = Math.floor(NStotalSeconds- NSminutes * 60);
         document.getElementById('Stat').innerHTML = "<p>Messages Sent: </p>"+localStorage.getItem("msgSent") +"<p>Characters:</p>" +localStorage.getItem("msglength") + "<p>Name Mentioned:</p>" + localStorage.getItem("nameSaid") + "<p>Loli Counter: </p>" + localStorage.getItem("lolicounter") + "<p>ETA:</p>"+ NSminutes+":"+NSseconds;
     }
 
