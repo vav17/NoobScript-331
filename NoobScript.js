@@ -20,7 +20,6 @@ var noobScript = function() {
     NSCL('icon icon-NS','red', '<span class="rainbow" style="position: relative;right: -43px; bottom: -5px;">Running NoobScript-331!</span>');
     $('<div id="Stat"></div>').appendTo("#app");
     //$('#vote').append('<img id="copysong" src="http://i.imgur.com/ThOy4K5.png">');
-    document.getElementById('Stat').innerHTML = "<p>Messages Sent: </p>"+localStorage.getItem("msgSent") +"<p>Characters:</p>" +localStorage.getItem("msglength") + "<p>Name Mentioned:</p>" + localStorage.getItem("nameSaid") + "<p>Loli Counter: </p>" + localStorage.getItem("lolicounter");
     //$('#copysong').click(function(){copySong();});
     $('#chitoge').click(function(){newTab("http://animeshow.tv/Nisekoi/");});
     $('#ond').click(function(){newTab("http://animeshow.tv/Nisekoi/");});
@@ -47,6 +46,11 @@ var noobScript = function() {
     CCBItems = ["/NSkill", "/NSreload", "/NSreset"];
     EmoteList = ["twerk", "SNM", "SnakedMusique", "CarltonDance", "Fireworks", "Headbang", "HighShere", "rspin", "jenny", "totoro", "amaze", "amazegif", "kawaii", "spamgif", "banned", "stitchbra", "stitchglasses", "rainbowllama", "dorito", "DNN", "dotaaxerage", "dotachicken", "dotahorse", "dotaaxecry", "nat", "crikawaii", "pug", "noice", "cute", "loli", "suchfan", "squid", "hi", "lick", "pets", "chickendance", "pingu", "flipstable", "lennygif", "firelenny", "miku", "nyannyan", "lolirekt", "NSLogo", "NO"];
     CSS = ["#Stat", "#copysong", ".main", "#Intro", "#autoWoot", "#foot", "#InterfaceToggle", "#Interface", "#IFAutoWoot", "#IFChatcolors", "#IFCounters", "#IFCopysong", "#IFHideVideo", "#IFStudymode", "#IFMehs", "#IFGrabs", "#chitoge", "#ond", "IFChatCommandBox", "#InterfaceCCB", "#SecondChatToggle", "#SecondChat", "#credits"];
+    NSetaNumber = 0;
+    NSetaArray = [];
+    NSetaLN = 0;
+    NSseconds = 0;
+    NSminutes = 0;
     autoWootSet = 0;
     skipTestVar = 1;
     GrabsSet = false;
@@ -58,6 +62,7 @@ var noobScript = function() {
     d = chat.scrollTop() > chat[0].scrollHeight - chat.height() - 28;
     NSEmotes = {};
     random = Math.floor(Math.random(100) * 6);
+    document.getElementById('Stat').innerHTML = "<p>Messages Sent: </p>"+localStorage.getItem("msgSent") +"<p>Characters:</p>" +localStorage.getItem("msglength") + "<p>Name Mentioned:</p>" + localStorage.getItem("nameSaid") + "<p>Loli Counter: </p>" + localStorage.getItem("lolicounter") + "<p>ETA:</p>"+ NSminutes+":"+NSseconds;
     NSloadSettings();
     $.getScript("https://dl.dropboxusercontent.com/s/iwfau1o2ie5grpl/NewInterface.js");
     API.on(API.CHAT,emoteChat);
@@ -199,7 +204,7 @@ var noobScript = function() {
         if (keyData.message.slice(0,API.getUser().username.length+1) === "@"+API.getUser().username) {
             if (localStorage.nameSaid){
                 localStorage.nameSaid = parseInt(localStorage.nameSaid) + 1;
-                document.getElementById('Stat').innerHTML = "<p>Messages Sent: </p>"+localStorage.getItem("msgSent") +"<p>Characters:</p>" +localStorage.getItem("msglength") + "<p>Name Mentioned:</p>" + localStorage.getItem("nameSaid") + "<p>Loli Counter: </p>" + localStorage.getItem("lolicounter");
+                document.getElementById('Stat').innerHTML = "<p>Messages Sent: </p>"+localStorage.getItem("msgSent") +"<p>Characters:</p>" +localStorage.getItem("msglength") + "<p>Name Mentioned:</p>" + localStorage.getItem("nameSaid") + "<p>Loli Counter: </p>" + localStorage.getItem("lolicounter") + "<p>ETA:</p>"+ NSminutes+":"+NSseconds;
             }
             else {localStorage.setItem("nameSaid", 1);}
             if (localStorage.nameSaid === null){
@@ -209,7 +214,7 @@ var noobScript = function() {
         if (keyData.un === API.getUser().username){
             if (localStorage.msgSent){
                 localStorage.msgSent = parseInt(localStorage.msgSent) + 1;
-                document.getElementById('Stat').innerHTML = "<p>Messages Sent: </p>"+localStorage.getItem("msgSent") +"<p>Characters:</p>" +localStorage.getItem("msglength") + "<p>Name Mentioned:</p>" + localStorage.getItem("nameSaid") + "<p>Loli Counter: </p>" + localStorage.getItem("lolicounter");
+                document.getElementById('Stat').innerHTML = "<p>Messages Sent: </p>"+localStorage.getItem("msgSent") +"<p>Characters:</p>" +localStorage.getItem("msglength") + "<p>Name Mentioned:</p>" + localStorage.getItem("nameSaid") + "<p>Loli Counter: </p>" + localStorage.getItem("lolicounter") + "<p>ETA:</p>"+ NSminutes+":"+NSseconds;
             }
             else {localStorage.setItem("msgSent", 1);}
             if (localStorage.msgSent === null){
@@ -219,7 +224,7 @@ var noobScript = function() {
         if (keyData.un === API.getUser().username){
             if (localStorage.msglength){
                 localStorage.msglength = parseInt(localStorage.msglength) + keyData.message.length;
-                document.getElementById('Stat').innerHTML = "<p>Messages Sent: </p>"+localStorage.getItem("msgSent") +"<p>Characters:</p>" +localStorage.getItem("msglength") + "<p>Name Mentioned:</p>" + localStorage.getItem("nameSaid") + "<p>Loli Counter: </p>" + localStorage.getItem("lolicounter");
+                document.getElementById('Stat').innerHTML = "<p>Messages Sent: </p>"+localStorage.getItem("msgSent") +"<p>Characters:</p>" +localStorage.getItem("msglength") + "<p>Name Mentioned:</p>" + localStorage.getItem("nameSaid") + "<p>Loli Counter: </p>" + localStorage.getItem("lolicounter") + "<p>ETA:</p>"+ NSminutes+":"+NSseconds;
             }
             else {localStorage.setItem("msglength", 1);}
             if (localStorage.msglength === null){
@@ -230,7 +235,7 @@ var noobScript = function() {
             if(keyData.type === "message"){
                 if (localStorage.lolicounter){
                 localStorage.lolicounter = parseInt(localStorage.lolicounter) + 1;
-                document.getElementById('Stat').innerHTML = "<p>Messages Sent: </p>"+localStorage.getItem("msgSent") +"<p>Characters:</p>" +localStorage.getItem("msglength") + "<p>Name Mentioned:</p>" + localStorage.getItem("nameSaid") + "<p>Loli Counter: </p>" + localStorage.getItem("lolicounter");
+                document.getElementById('Stat').innerHTML = "<p>Messages Sent: </p>"+localStorage.getItem("msgSent") +"<p>Characters:</p>" +localStorage.getItem("msglength") + "<p>Name Mentioned:</p>" + localStorage.getItem("nameSaid") + "<p>Loli Counter: </p>" + localStorage.getItem("lolicounter") + "<p>ETA:</p>"+ NSminutes+":"+NSseconds;
                 }
                 else {localStorage.setItem("lolicounter", 1);}
                 if (localStorage.lolicounter === null){
@@ -268,6 +273,19 @@ var noobScript = function() {
         var author = API.getMedia().author;
         var title = API.getMedia().title;
         window.prompt("Song Information:", author + " - " + title + " // " + "https://www.youtube.com/watch?v=" + cid);
+    }
+
+    API.on(API.ADVANCE,NSETA);
+    function NSETA(){
+        NSetaArray.push(API.getMedia().duration);
+        NSetaNumber++;
+        NSetaLN = NSetaLN+NSetaArray[NSetaArray.length  - 1];
+        NSetaForm = JSON.parse(NSetaLN) / NSetaNumber;
+        NSwaitList = API.getWaitListPosition() + 1;
+        NStotalSeconds = NSetaForm * NSwaitList;
+        NSminutes = Math.floor(NStotalSeconds/ 60);
+        NSseconds = NStotalSeconds- NSminutes * 60;
+        document.getElementById('Stat').innerHTML = "<p>Messages Sent: </p>"+localStorage.getItem("msgSent") +"<p>Characters:</p>" +localStorage.getItem("msglength") + "<p>Name Mentioned:</p>" + localStorage.getItem("nameSaid") + "<p>Loli Counter: </p>" + localStorage.getItem("lolicounter") + "<p>ETA:</p>"+ NSminutes+":"+NSseconds;
     }
 
     API.on(API.CHAT, lastMessageSent);
