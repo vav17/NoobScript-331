@@ -555,7 +555,7 @@ var noobScript = function() {
     }
 
     function autoJoin(){
-        if (autoJoinSet === true){
+        if (autoJoinSet === true && $('#waitlist .header .title').text() === "DJ Wait List"){
             if (API.getWaitListPosition() === -1 && API.getDJ().id != API.getUser().id){
                 API.djJoin();
             }
