@@ -580,19 +580,6 @@ var noobScript = function() {
         }
     }
 
-    function theButtonTest(){
-        if (openButton === true){
-            openButton = false;
-            $('#InterfaceButton').css('background-color','#0A0A0A');
-        }
-        if (openButton === false){
-            openButton = true;
-            $('#chat-button').removeClass('selected');
-            $('#users-button').removeClass('selected');
-            $('#waitlist-button').removeClass('selected');
-            $('#friends-button').removeClass('selected');
-        }
-    }
 
     function NSloadSettings(){
     NSsettings = {
