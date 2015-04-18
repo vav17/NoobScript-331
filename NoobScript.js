@@ -12,6 +12,7 @@ setTimeout(startScript, 200);
 
 var noobScript = function() {    
     //onStartup
+    //https://dl.dropboxusercontent.com/s/uiij7n3ah3jmp52/test.css?dl=0
     console.log("NoobScript-331 Imported!");
     setTimeout(function(){API.sendChat("/emotes https://fungustime.pw/tastyplug/emotes/json/emotes.json");},1000);
     setTimeout(function(){API.sendChat("/emotes https://rawgit.com/vav17/NoobScript-331/master/Emotes.json");},1000);
@@ -641,7 +642,7 @@ var noobScript = function() {
                 $('#cssstaffcolors').remove();
             }else{
                 NSLSS.ChatColors = true;
-                $('head').append('<link id="cssstaffcolors" rel="stylesheet"type="text/css"href="https://dl.dropboxusercontent.com/s/usedz76mi8km5rq/Origem%20Colors.css">');
+                $('head').append('<link id="cssstaffcolors" rel="stylesheet"type="text/css"href="https://dl.dropboxusercontent.com/s/uiij7n3ah3jmp52/test.css">');
                 $('#IFChatcolors .checkMark').show();
             }
             NSsaveSettings();
