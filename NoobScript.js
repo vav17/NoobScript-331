@@ -166,7 +166,7 @@ var noobScript = function() {
             break;
 
             case "/NSBackgroundReset":
-                $('.room-background').css('background','url(https://cdn.plug.dj/_/static/images/community/background.892bc86f530eb3f7a53a2cc60f0c0be481798175.jpg) no-repeat')
+                $('.room-background').css('background','url(https://cdn.plug.dj/_/static/images/community/background.892bc86f530eb3f7a53a2cc60f0c0be481798175.jpg) no-repeat');
             break;
             
             case "/check":
@@ -203,7 +203,7 @@ var noobScript = function() {
                 theURL = this.data.slice(11,252);
                 $('.room-background').css('background','url('+theURL+') no-repeat');
             }
-            if (this.data.slice(5,255) === '/msg'){
+            if (this.data.slice(0,4) === '/msg'){
                  setMessage = data.slice(5,255);
             }
 
