@@ -60,6 +60,7 @@ var noobScript = function() {
     emoteSet = false;
     autoJoinSet = false;
     NisePos = 0;
+    setMessage = 'Have Not Been Set!';
     chat = $('#chat-messages');
     d = chat.scrollTop() > chat[0].scrollHeight - chat.height() - 28;
     NSEmotes = {};
@@ -187,6 +188,10 @@ var noobScript = function() {
                     }
                 });
             break;
+
+            case "/send":
+                API.sendChat(setMessage);
+            break;
         }
         //For Chat With Slice
             if (this.data.slice(0,9) === '/bassdrop'){
@@ -196,7 +201,10 @@ var noobScript = function() {
             }
             if (this.data.slice(0,11) === '/background'){
                 theURL = this.data.slice(11,252);
-                $('.room-background').css('background','url('+theURL+') no-repeat')
+                $('.room-background').css('background','url('+theURL+') no-repeat');
+            }
+            if (this.data.slice(5,255) === '/msg'){
+                 setMessage = data.slice(5,255);
             }
 
     }
