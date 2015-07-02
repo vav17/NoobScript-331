@@ -167,6 +167,26 @@ var noobScript = function() {
             case "/NSBackgroundReset":
                 $('.room-background').css('background','url(https://cdn.plug.dj/_/static/images/community/background.892bc86f530eb3f7a53a2cc60f0c0be481798175.jpg) no-repeat')
             break;
+            
+            case "/check""
+                myHistory = $.ajax({
+        		    type: 'GET',
+        		    url: 'https://plug.dj/_/users/me/history',
+        		    dataType: 'json',
+        		    success: function(data){
+        		    	for (var i = 0;i < myHistory.responseJSON.data.length;i++){
+        		    		songName = myHistory.responseJSON.data[i].media.author + ' - ' + myHistory.responseJSON.data[i].media.title;
+        		    		if (songName === $('#your-next-media span').text()){
+        		    			API.chatLog(songName+' Is In Your Recent Plays!!!');
+        		    		}
+        
+        		    		else if (i === myHistory.responseJSON.data.length-1){
+        		    			API.chatLog('Check Done!');
+        		    		}
+        		    	}
+        		    }
+        		});
+            break;
         }
         //For Chat With Slice
             if (this.data.slice(0,9) === '/bassdrop'){
